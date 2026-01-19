@@ -1,0 +1,6 @@
+lightrag-hku
+fastapi
+python-dotenv
+uvicorn
+transformers
+tqdm

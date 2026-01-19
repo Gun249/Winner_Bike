@@ -1,0 +1,1951 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d13" for="edge" attr.name="truncate" attr.type="string"/>
+<key id="d12" for="edge" attr.name="created_at" attr.type="long"/>
+<key id="d11" for="edge" attr.name="file_path" attr.type="string"/>
+<key id="d10" for="edge" attr.name="source_id" attr.type="string"/>
+<key id="d9" for="edge" attr.name="keywords" attr.type="string"/>
+<key id="d8" for="edge" attr.name="description" attr.type="string"/>
+<key id="d7" for="edge" attr.name="weight" attr.type="double"/>
+<key id="d6" for="node" attr.name="truncate" attr.type="string"/>
+<key id="d5" for="node" attr.name="created_at" attr.type="long"/>
+<key id="d4" for="node" attr.name="file_path" attr.type="string"/>
+<key id="d3" for="node" attr.name="source_id" attr.type="string"/>
+<key id="d2" for="node" attr.name="description" attr.type="string"/>
+<key id="d1" for="node" attr.name="entity_type" attr.type="string"/>
+<key id="d0" for="node" attr.name="entity_id" attr.type="string"/>
+<graph edgedefault="undirected"><node id="TechnicalAnalysisReport">
+  <data key="d0">TechnicalAnalysisReport</data>
+  <data key="d1">content</data>
+  <data key="d2">The TechnicalAnalysisReport contains an analysis of the MotorcyclePremiumScooterMarket.</data>
+  <data key="d3">chunk-9bc1aea559d48934b375455f5c7e9261</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797258</data>
+  <data key="d6"></data>
+</node>
+<node id="MotorcyclePremiumScooterMarket">
+  <data key="d0">MotorcyclePremiumScooterMarket</data>
+  <data key="d1">concept</data>
+  <data key="d2">The MotorcyclePremiumScooterMarket is a concept discussed in the TechnicalAnalysisReport, focusing on premium scooters in Thailand.</data>
+  <data key="d3">chunk-9bc1aea559d48934b375455f5c7e9261</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797258</data>
+  <data key="d6"></data>
+</node>
+<node id="Thailand">
+  <data key="d0">Thailand</data>
+  <data key="d1">location</data>
+  <data key="d2">Thailand is the location where the MotorcyclePremiumScooterMarket is analyzed.</data>
+  <data key="d3">chunk-9bc1aea559d48934b375455f5c7e9261</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797258</data>
+  <data key="d6"></data>
+</node>
+<node id="HondaPCX160">
+  <data key="d0">HondaPCX160</data>
+  <data key="d1">artifact</data>
+  <data key="d2">The HondaPCX160 is a premium scooter produced by Honda and part of the MotorcyclePremiumScooterMarket in Thailand.&lt;SEP&gt;Honda PCX 160 is a motorcycle recommended for Touring Riders.</data>
+  <data key="d3">chunk-9bc1aea559d48934b375455f5c7e9261&lt;SEP&gt;chunk-cae2861d9037248b6aa9647d80426d94</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797258</data>
+  <data key="d6"></data>
+</node>
+<node id="HondaADV160">
+  <data key="d0">HondaADV160</data>
+  <data key="d1">artifact</data>
+  <data key="d2">The HondaADV160 is another premium scooter produced by Honda included in the MotorcyclePremiumScooterMarket analysis.&lt;SEP&gt;Honda ADV 160 is a motorcycle recommended for Adventure/Rough Road users.</data>
+  <data key="d3">chunk-9bc1aea559d48934b375455f5c7e9261&lt;SEP&gt;chunk-cae2861d9037248b6aa9647d80426d94&lt;SEP&gt;chunk-810ae33ed1033e6d55775973aa7169b3</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797258</data>
+  <data key="d6"></data>
+</node>
+<node id="YamahaNMAX155">
+  <data key="d0">YamahaNMAX155</data>
+  <data key="d1">artifact</data>
+  <data key="d2">The Yamaha NMAX 155 is a maxi-scooter.&lt;SEP&gt;The YamahaNMAX155 is a premium scooter produced by Yamaha featured in the MotorcyclePremiumScooterMarket report.</data>
+  <data key="d3">chunk-9bc1aea559d48934b375455f5c7e9261&lt;SEP&gt;chunk-308c55ac71ce6ec7ba94f05ad99c96cd</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797258</data>
+  <data key="d6"></data>
+</node>
+<node id="YamahaAerox155">
+  <data key="d0">YamahaAerox155</data>
+  <data key="d1">artifact</data>
+  <data key="d2">The YamahaAerox155 is another premium scooter from Yamaha mentioned in the analysis of the MotorcyclePremiumScooterMarket.</data>
+  <data key="d3">chunk-9bc1aea559d48934b375455f5c7e9261</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797258</data>
+  <data key="d6"></data>
+</node>
+<node id="Honda">
+  <data key="d0">Honda</data>
+  <data key="d1">organization</data>
+  <data key="d2">Honda is an organization that produces premium scooters like HondaPCX160 and HondaADV160 for the MotorcyclePremiumScooterMarket.&lt;SEP&gt;Honda is a manufacturing company that produces motorcycles such as the HondaGiorno + and HondaLead125.&lt;SEP&gt;Honda is an organization that manufactures scooters such as the PCX, ADV160, and Aerox155.&lt;SEP&gt;A major manufacturer of motorcycles and other vehicles.</data>
+  <data key="d3">chunk-9bc1aea559d48934b375455f5c7e9261&lt;SEP&gt;chunk-5cd05d93eb374f0d3f062a75fba91b69&lt;SEP&gt;chunk-810ae33ed1033e6d55775973aa7169b3&lt;SEP&gt;chunk-d8623dbbbb3e7f3d9c59ff00ace3bac5</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797258</data>
+  <data key="d6"></data>
+</node>
+<node id="Yamaha">
+  <data key="d0">Yamaha</data>
+  <data key="d1">organization</data>
+  <data key="d2">Yamaha is an organization producing premium scooters such as YamahaNMAX155 and YamahaAerox155 for the MotorcyclePremiumScooterMarket.&lt;SEP&gt;Yamaha is a manufacturing company that produces motorcycles such as the YamahaGrandFilanoHybrid3.1Giorno + and YamahaGrandFilanoHybrid.&lt;SEP&gt;Yamaha is an organization that produces scooters like the NMAX155.&lt;SEP&gt;A major manufacturer of motorcycles and other vehicles.</data>
+  <data key="d3">chunk-9bc1aea559d48934b375455f5c7e9261&lt;SEP&gt;chunk-5cd05d93eb374f0d3f062a75fba91b69&lt;SEP&gt;chunk-810ae33ed1033e6d55775973aa7169b3&lt;SEP&gt;chunk-d8623dbbbb3e7f3d9c59ff00ace3bac5</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797258</data>
+  <data key="d6"></data>
+</node>
+<node id="eSP+">
+  <data key="d0">eSP+</data>
+  <data key="d1">concept</data>
+  <data key="d2">The eSP+ method is an advanced engine technology utilized by Honda, offering enhanced power and efficiency.&lt;SEP&gt;The eSP+ is a concept associated with HondaPCX160 and HondaADV160, indicating their technological features.</data>
+  <data key="d3">chunk-9bc1aea559d48934b375455f5c7e9261&lt;SEP&gt;chunk-308c55ac71ce6ec7ba94f05ad99c96cd</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797258</data>
+  <data key="d6"></data>
+</node>
+<node id="BlueCoreVVA">
+  <data key="d0">BlueCoreVVA</data>
+  <data key="d1">concept</data>
+  <data key="d2">The BlueCoreVVA is a concept linked to YamahaNMAX155 and YamahaAerox155, highlighting the technological aspects of these scooters.</data>
+  <data key="d3">chunk-9bc1aea559d48934b375455f5c7e9261</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797258</data>
+  <data key="d6"></data>
+</node>
+<node id="Y - Connect">
+  <data key="d0">Y - Connect</data>
+  <data key="d1">organization</data>
+  <data key="d2">Y-Connect is an entity that has a feature called VehicleHealth.</data>
+  <data key="d3">chunk-cae2861d9037248b6aa9647d80426d94</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797258</data>
+  <data key="d6"></data>
+</node>
+<node id="RoadSync">
+  <data key="d0">RoadSync</data>
+  <data key="d1">organization</data>
+  <data key="d2">RoadSync is an organization that offers the Lifestyle &amp; Control concept.</data>
+  <data key="d3">chunk-cae2861d9037248b6aa9647d80426d94</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797258</data>
+  <data key="d6"></data>
+</node>
+<node id="VehicleHealth">
+  <data key="d0">VehicleHealth</data>
+  <data key="d1">concept</data>
+  <data key="d2">VehicleHealth is a feature related to vehicle maintenance and health tracking, offered by Y-Connect.</data>
+  <data key="d3">chunk-cae2861d9037248b6aa9647d80426d94</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797258</data>
+  <data key="d6"></data>
+</node>
+<node id="Lifestyle &amp; Control">
+  <data key="d0">Lifestyle &amp; Control</data>
+  <data key="d1">concept</data>
+  <data key="d2">Lifestyle &amp; Control refers to the control over lifestyle aspects through technology, provided by RoadSync.</data>
+  <data key="d3">chunk-cae2861d9037248b6aa9647d80426d94</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797258</data>
+  <data key="d6"></data>
+</node>
+<node id="CostofOwnership">
+  <data key="d0">CostofOwnership</data>
+  <data key="d1">concept</data>
+  <data key="d2">Cost of Ownership is a concept that includes factors like maintenance costs and other ownership expenses.</data>
+  <data key="d3">chunk-cae2861d9037248b6aa9647d80426d94</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797258</data>
+  <data key="d6"></data>
+</node>
+<node id="ChatbotUpsell">
+  <data key="d0">ChatbotUpsell</data>
+  <data key="d1">concept</data>
+  <data key="d2">ChatbotUpsell refers to the use of chatbots for upselling purposes.</data>
+  <data key="d3">chunk-cae2861d9037248b6aa9647d80426d94</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797258</data>
+  <data key="d6"></data>
+</node>
+<node id="DecisionTree">
+  <data key="d0">DecisionTree</data>
+  <data key="d1">concept</data>
+  <data key="d2">A Decision Tree is a method used in decision-making processes, utilized here for ChatbotUpsell.</data>
+  <data key="d3">chunk-cae2861d9037248b6aa9647d80426d94</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797258</data>
+  <data key="d6"></data>
+</node>
+<node id="ValueSeeker">
+  <data key="d0">ValueSeeker</data>
+  <data key="d1">concept</data>
+  <data key="d2">ValueSeeker refers to users who are seeking the best value for their money, influenced by factors like fuel costs and limited budgets.</data>
+  <data key="d3">chunk-cae2861d9037248b6aa9647d80426d94</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797258</data>
+  <data key="d6"></data>
+</node>
+<node id="TouringRider">
+  <data key="d0">TouringRider</data>
+  <data key="d1">concept</data>
+  <data key="d2">Touring Rider is a concept targeting riders who frequently travel across provinces and enjoy speed.</data>
+  <data key="d3">chunk-cae2861d9037248b6aa9647d80426d94</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797258</data>
+  <data key="d6"></data>
+</node>
+<node id="Adventure / RoughRoad">
+  <data key="d0">Adventure / RoughRoad</data>
+  <data key="d1">concept</data>
+  <data key="d2">Adventure/Rough Road refers to users who require vehicles suitable for off-road conditions such as rough roads and natural terrain exploration.</data>
+  <data key="d3">chunk-cae2861d9037248b6aa9647d80426d94</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797258</data>
+  <data key="d6"></data>
+</node>
+<node id="TechLover">
+  <data key="d0">TechLover</data>
+  <data key="d1">concept</data>
+  <data key="d2">Tech Lovers are individuals who enjoy technology, including advanced features like LCD screens and navigation aids.</data>
+  <data key="d3">chunk-cae2861d9037248b6aa9647d80426d94</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797258</data>
+  <data key="d6"></data>
+</node>
+<node id="YamahaGrandFilanoHybrid">
+  <data key="d0">YamahaGrandFilanoHybrid</data>
+  <data key="d1">artifact</data>
+  <data key="d2">YamahaGrandFilanoHybrid is a motorcycle model manufactured by Yamaha.&lt;SEP&gt;Yamaha Grand Filano Hybrid is a motorcycle recommended for Value Seekers.&lt;SEP&gt;A concept or feature of the Yamaha Grand Filano Hybrid motorcycle.</data>
+  <data key="d3">chunk-cae2861d9037248b6aa9647d80426d94&lt;SEP&gt;chunk-5cd05d93eb374f0d3f062a75fba91b69&lt;SEP&gt;chunk-d8623dbbbb3e7f3d9c59ff00ace3bac5&lt;SEP&gt;chunk-b8a5fe9ee0712dd2819e710a19e81b01</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797258</data>
+  <data key="d6"></data>
+</node>
+<node id="Forza350">
+  <data key="d0">Forza350</data>
+  <data key="d1">artifact</data>
+  <data key="d2">Forza 350 is an upsell option for Touring Riders.</data>
+  <data key="d3">chunk-cae2861d9037248b6aa9647d80426d94</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797258</data>
+  <data key="d6"></data>
+</node>
+<node id="YamahaXMAX300TechMax">
+  <data key="d0">YamahaXMAX300TechMax</data>
+  <data key="d1">artifact</data>
+  <data key="d2">A Yamaha motorcycle with a 4.2-inch TFT color screen separate from the LCD speedometer.&lt;SEP&gt;Yamaha XMAX 300 Tech Max is a motorcycle recommended for Tech Lovers.</data>
+  <data key="d3">chunk-cae2861d9037248b6aa9647d80426d94&lt;SEP&gt;chunk-b8a5fe9ee0712dd2819e710a19e81b01</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797258</data>
+  <data key="d6"></data>
+</node>
+<node id="NMAXTurbo">
+  <data key="d0">NMAXTurbo</data>
+  <data key="d1">artifact</data>
+  <data key="d2">NMAX Turbo is a vehicle that uses the Yamaha Electric CVT (YECVT) technology.</data>
+  <data key="d3">chunk-cae2861d9037248b6aa9647d80426d94</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797258</data>
+  <data key="d6"></data>
+</node>
+<node id="YamahaElectricCVT ( YECVT )">
+  <data key="d0">YamahaElectricCVT ( YECVT )</data>
+  <data key="d1">method</data>
+  <data key="d2">Yamaha Electric CVT (YECVT) is a method used in NMAX Turbo for advanced transmission technology.</data>
+  <data key="d3">chunk-cae2861d9037248b6aa9647d80426d94</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797258</data>
+  <data key="d6"></data>
+</node>
+<node id="Donald Duk">
+  <data key="d0">Donald Duk</data>
+  <data key="d1">person</data>
+  <data key="d2">Noah Carter is a sprinter who set a new record in the 100m sprint at the World Athletics Championship.</data>
+  <data key="d3">chunk-5cd05d93eb374f0d3f062a75fba91b69</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797258</data>
+  <data key="d6"></data>
+</node>
+<node id="Honda Giorno Donald Duk">
+  <data key="d0">Honda Giorno Donald Duk</data>
+  <data key="d1">artifact</data>
+  <data key="d2">A specific model of motorcycle related to Honda.</data>
+  <data key="d3">chunk-5cd05d93eb374f0d3f062a75fba91b69</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797258</data>
+  <data key="d6"></data>
+</node>
+<node id="Reddit">
+  <data key="d0">Reddit</data>
+  <data key="d1">organization</data>
+  <data key="d2">Reddit is an organization where discussions about various scooter models such as ADV160, AEROX160, and NMAX160 take place.&lt;SEP&gt;An online platform for discussion and content sharing.&lt;SEP&gt;Reddit is a social news and discussion website where users can post content, such as text, images, and videos.</data>
+  <data key="d3">chunk-5cd05d93eb374f0d3f062a75fba91b69&lt;SEP&gt;chunk-810ae33ed1033e6d55775973aa7169b3&lt;SEP&gt;chunk-4ff5b9b793c77a38bd5a0581983c3823&lt;SEP&gt;chunk-bbf75717d3a0499fb46a71d29fa205c7</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797258</data>
+  <data key="d6"></data>
+</node>
+<node id="ZigWheels">
+  <data key="d0">ZigWheels</data>
+  <data key="d1">organization</data>
+  <data key="d2">An online marketplace or information hub for motorized vehicles.</data>
+  <data key="d3">chunk-5cd05d93eb374f0d3f062a75fba91b69</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797258</data>
+  <data key="d6"></data>
+</node>
+<node id="NakedRacerMotoCo">
+  <data key="d0">NakedRacerMotoCo</data>
+  <data key="d1">organization</data>
+  <data key="d2">A company involved in the motorcycle industry.</data>
+  <data key="d3">chunk-5cd05d93eb374f0d3f062a75fba91b69</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="DreamPartsStore">
+  <data key="d0">DreamPartsStore</data>
+  <data key="d1">organization</data>
+  <data key="d2">A store that sells parts, likely for motorcycles.</data>
+  <data key="d3">chunk-5cd05d93eb374f0d3f062a75fba91b69</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="Pantip">
+  <data key="d0">Pantip</data>
+  <data key="d1">organization</data>
+  <data key="d2">Pantip is an organization where reviews and discussions about scooters like the PCX2025 take place.&lt;SEP&gt;An online forum or community platform.</data>
+  <data key="d3">chunk-5cd05d93eb374f0d3f062a75fba91b69&lt;SEP&gt;chunk-810ae33ed1033e6d55775973aa7169b3</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="PowerPhuket">
+  <data key="d0">PowerPhuket</data>
+  <data key="d1">organization</data>
+  <data key="d2">A company or organization related to motorcycle services in Phuket.</data>
+  <data key="d3">chunk-5cd05d93eb374f0d3f062a75fba91b69</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="InspiredbyLnwShop.com">
+  <data key="d0">InspiredbyLnwShop.com</data>
+  <data key="d1">organization</data>
+  <data key="d2">A website inspired by LnwShop, likely for selling motorcycle parts and accessories.</data>
+  <data key="d3">chunk-5cd05d93eb374f0d3f062a75fba91b69</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="LnwShop.com">
+  <data key="d0">LnwShop.com</data>
+  <data key="d1">organization</data>
+  <data key="d2">An online store or marketplace.</data>
+  <data key="d3">chunk-5cd05d93eb374f0d3f062a75fba91b69</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="bjlMotorbike">
+  <data key="d0">bjlMotorbike</data>
+  <data key="d1">organization</data>
+  <data key="d2">A company related to motorbikes.</data>
+  <data key="d3">chunk-5cd05d93eb374f0d3f062a75fba91b69</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="bjlmotorbike.com">
+  <data key="d0">bjlmotorbike.com</data>
+  <data key="d1">artifact</data>
+  <data key="d2">The website of bjlMotorbike.</data>
+  <data key="d3">chunk-5cd05d93eb374f0d3f062a75fba91b69</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="Yamaha XMAX 300">
+  <data key="d0">Yamaha XMAX 300</data>
+  <data key="d1">artifact</data>
+  <data key="d2">A specific model of Yamaha motorcycle.</data>
+  <data key="d3">chunk-5cd05d93eb374f0d3f062a75fba91b69</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="Honda Forza 350">
+  <data key="d0">Honda Forza 350</data>
+  <data key="d1">artifact</data>
+  <data key="d2">A specific model of Honda motorcycle.</data>
+  <data key="d3">chunk-5cd05d93eb374f0d3f062a75fba91b69</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="Piaggio Beverly 400">
+  <data key="d0">Piaggio Beverly 400</data>
+  <data key="d1">artifact</data>
+  <data key="d2">A specific model of Piaggio motorcycle.</data>
+  <data key="d3">chunk-5cd05d93eb374f0d3f062a75fba91b69</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="Yamaha Grand Filano Hybrid">
+  <data key="d0">Yamaha Grand Filano Hybrid</data>
+  <data key="d1">artifact</data>
+  <data key="d2">A hybrid motorcycle produced by Yamaha.</data>
+  <data key="d3">chunk-5cd05d93eb374f0d3f062a75fba91b69</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="Honda Giorno Plus">
+  <data key="d0">Honda Giorno Plus</data>
+  <data key="d1">artifact</data>
+  <data key="d2">An upgraded version of the Honda Giorno motorcycle.</data>
+  <data key="d3">chunk-5cd05d93eb374f0d3f062a75fba91b69</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="Honda PCX160">
+  <data key="d0">Honda PCX160</data>
+  <data key="d1">artifact</data>
+  <data key="d2">A specific model of Honda scooter.</data>
+  <data key="d3">chunk-5cd05d93eb374f0d3f062a75fba91b69</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="Yamaha Nmax155">
+  <data key="d0">Yamaha Nmax155</data>
+  <data key="d1">artifact</data>
+  <data key="d2">A specific model of Yamaha scooter.</data>
+  <data key="d3">chunk-5cd05d93eb374f0d3f062a75fba91b69</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="GarminStreetCrossApp">
+  <data key="d0">GarminStreetCrossApp</data>
+  <data key="d1">content</data>
+  <data key="d2">GarminStreetCrossApp is a navigation app provided by Garmin for use with motorcycles and scooters.&lt;SEP&gt;An application for Garmin devices related to motorcycle navigation or tracking.</data>
+  <data key="d3">chunk-5cd05d93eb374f0d3f062a75fba91b69&lt;SEP&gt;chunk-bbf75717d3a0499fb46a71d29fa205c7</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="GarminStreetCrossAppRequirements">
+  <data key="d0">GarminStreetCrossAppRequirements</data>
+  <data key="d1">concept</data>
+  <data key="d2">The requirements or specifications needed to use the Garmin Street Cross App.</data>
+  <data key="d3">chunk-5cd05d93eb374f0d3f062a75fba91b69</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="GIORNO + VSGrandFilanoHybridConnected">
+  <data key="d0">GIORNO + VSGrandFilanoHybridConnected</data>
+  <data key="d1">content</data>
+  <data key="d2">A comparison between the Honda Giorno and Yamaha Grand Filano Hybrid motorcycles.</data>
+  <data key="d3">chunk-5cd05d93eb374f0d3f062a75fba91b69</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="Top10Fuel-EfficientMotorcycles (2025)">
+  <data key="d0">Top10Fuel-EfficientMotorcycles (2025)</data>
+  <data key="d1">content</data>
+  <data key="d2">A list of the top 10 fuel-efficient motorcycles in the year 2025.</data>
+  <data key="d3">chunk-5cd05d93eb374f0d3f062a75fba91b69</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="Checkout the new Honda Forza 350!">
+  <data key="d0">Checkout the new Honda Forza 350!</data>
+  <data key="d1">content</data>
+  <data key="d2">Promotional content for the new Honda Forza 350 motorcycle model.</data>
+  <data key="d3">chunk-5cd05d93eb374f0d3f062a75fba91b69</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="ChangeOil : every1.5kor6k ?">
+  <data key="d0">ChangeOil : every1.5kor6k ?</data>
+  <data key="d1">method</data>
+  <data key="d2">A discussion or guideline on when to change oil, either after 1.5K kilometers or 6K kilometers.</data>
+  <data key="d3">chunk-5cd05d93eb374f0d3f062a75fba91b69</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="MaintenanceServicePartsHondaPCX1602021202220232024">
+  <data key="d0">MaintenanceServicePartsHondaPCX1602021202220232024</data>
+  <data key="d1">content</data>
+  <data key="d2">Information about maintenance services and parts for the Honda PCX160 motorcycle model from years 2021 to 2024.</data>
+  <data key="d3">chunk-5cd05d93eb374f0d3f062a75fba91b69</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="r/ Thailand">
+  <data key="d0">r/ Thailand</data>
+  <data key="d1">event</data>
+  <data key="d2">A subreddit or online community focused on motorcycles in Thailand.</data>
+  <data key="d3">chunk-5cd05d93eb374f0d3f062a75fba91b69</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="r/ PHMotorcycles">
+  <data key="d0">r/ PHMotorcycles</data>
+  <data key="d1">event</data>
+  <data key="d2">A subreddit or online community focused on motorcycles in the Philippines.</data>
+  <data key="d3">chunk-5cd05d93eb374f0d3f062a75fba91b69</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="Pantip topic (อาการ Forza350 หน้าสะบัดและสั่นเมื่อความเร็ว 60 +)">
+  <data key="d0">Pantip topic (อาการ Forza350 หน้าสะบัดและสั่นเมื่อความเร็ว 60 +)</data>
+  <data key="d1">content</data>
+  <data key="d2">A discussion topic on Pantip related to issues with the Honda Forza 350 motorcycle.</data>
+  <data key="d3">chunk-5cd05d93eb374f0d3f062a75fba91b69</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="Pantip topic (อาการสั่น FORZA350 ในระยะ 26,000KM)">
+  <data key="d0">Pantip topic (อาการสั่น FORZA350 ในระยะ 26,000KM)</data>
+  <data key="d1">content</data>
+  <data key="d2">Another discussion topic on Pantip about shaking issues with the Honda Forza 350 at 26,000 kilometers.</data>
+  <data key="d3">chunk-5cd05d93eb374f0d3f062a75fba91b69</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="HondaGiornoDonaldDukvsYamahaGrandFilanoHybrid">
+  <data key="d0">HondaGiornoDonaldDukvsYamahaGrandFilanoHybrid</data>
+  <data key="d1">concept</data>
+  <data key="d2">A comparison or contrast between Honda Giorno Donald Duk and Yamaha Grand Filano Hybrid motorcycles.</data>
+  <data key="d3">chunk-5cd05d93eb374f0d3f062a75fba91b69</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="BikeJunction">
+  <data key="d0">BikeJunction</data>
+  <data key="d1">organization</data>
+  <data key="d2">BikeJunction is an organization that compares various scooters like the PCX160 and NMAX155.</data>
+  <data key="d3">chunk-810ae33ed1033e6d55775973aa7169b3</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="Thebikejunction.com">
+  <data key="d0">Thebikejunction.com</data>
+  <data key="d1">artifact</data>
+  <data key="d2">Thebikejunction.com is a website artifact associated with BikeJunction.</data>
+  <data key="d3">chunk-810ae33ed1033e6d55775973aa7169b3</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="YouTube">
+  <data key="d0">YouTube</data>
+  <data key="d1">organization</data>
+  <data key="d2">YouTube is an organization that hosts videos such as scooter comparisons and friendly races.</data>
+  <data key="d3">chunk-810ae33ed1033e6d55775973aa7169b3</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="OverrideMag.com">
+  <data key="d0">OverrideMag.com</data>
+  <data key="d1">artifact</data>
+  <data key="d2">OverrideMag.com is a website artifact that reports on scooters like the All New PCX160.</data>
+  <data key="d3">chunk-810ae33ed1033e6d55775973aa7169b3</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="PCX160">
+  <data key="d0">PCX160</data>
+  <data key="d1">content</data>
+  <data key="d2">The PCX160 is a content type referring to a specific Honda scooter model.</data>
+  <data key="d3">chunk-810ae33ed1033e6d55775973aa7169b3</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="NMAX155">
+  <data key="d0">NMAX155</data>
+  <data key="d1">content</data>
+  <data key="d2">The NMAX155 is a content type representing a Yamaha scooter model.</data>
+  <data key="d3">chunk-810ae33ed1033e6d55775973aa7169b3</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="ADV160">
+  <data key="d0">ADV160</data>
+  <data key="d1">content</data>
+  <data key="d2">The ADV160 is a content type referring to another Honda scooter model.</data>
+  <data key="d3">chunk-810ae33ed1033e6d55775973aa7169b3&lt;SEP&gt;chunk-2d9b55124b45de391d25204258fb17df</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="AEROX160">
+  <data key="d0">AEROX160</data>
+  <data key="d1">content</data>
+  <data key="d2">The AEROX160 is a content type representing yet another Honda scooter model.</data>
+  <data key="d3">chunk-810ae33ed1033e6d55775973aa7169b3</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="Honda PCX">
+  <data key="d0">Honda PCX</data>
+  <data key="d1">content</data>
+  <data key="d2">Honda PCX refers to the overall series of Honda scooters.</data>
+  <data key="d3">chunk-810ae33ed1033e6d55775973aa7169b3</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="Yamaha NMAX">
+  <data key="d0">Yamaha NMAX</data>
+  <data key="d1">content</data>
+  <data key="d2">Yamaha NMAX refers to the overall series of Yamaha scooters.</data>
+  <data key="d3">chunk-810ae33ed1033e6d55775973aa7169b3</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="Honda ADV160">
+  <data key="d0">Honda ADV160</data>
+  <data key="d1">content</data>
+  <data key="d2">The Honda ADV160 is a specific model in the Honda scooter lineup.</data>
+  <data key="d3">chunk-810ae33ed1033e6d55775973aa7169b3</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="Aerox155">
+  <data key="d0">Aerox155</data>
+  <data key="d1">content</data>
+  <data key="d2">The Aerox 155 is a model of scooter in the maxi-scooter segment.&lt;SEP&gt;The Aerox155 is another content type representing a Honda scooter variant.</data>
+  <data key="d3">chunk-810ae33ed1033e6d55775973aa7169b3&lt;SEP&gt;chunk-308c55ac71ce6ec7ba94f05ad99c96cd</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="Forza2018">
+  <data key="d0">Forza2018</data>
+  <data key="d1">content</data>
+  <data key="d2">The Forza2018 refers to a specific scooter model or series from an unspecified brand.</data>
+  <data key="d3">chunk-810ae33ed1033e6d55775973aa7169b3&lt;SEP&gt;chunk-bbf75717d3a0499fb46a71d29fa205c7</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="XMAX">
+  <data key="d0">XMAX</data>
+  <data key="d1">artifact</data>
+  <data key="d2">The XMAX is a series of maxi-scooters produced by Piaggio and Yamaha.&lt;SEP&gt;A motorcycle model that uses DualClamp technology for better stability and handling at high speeds compared to Forza.</data>
+  <data key="d3">chunk-308c55ac71ce6ec7ba94f05ad99c96cd&lt;SEP&gt;chunk-b8a5fe9ee0712dd2819e710a19e81b01</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="HondaForza350">
+  <data key="d0">HondaForza350</data>
+  <data key="d1">artifact</data>
+  <data key="d2">The Honda Forza 350 is a popular model in the maxi-scooter segment featuring an electric windshield.&lt;SEP&gt;A motorcycle model for which the chatbot recommends an electric windshield.</data>
+  <data key="d3">chunk-308c55ac71ce6ec7ba94f05ad99c96cd&lt;SEP&gt;chunk-b8a5fe9ee0712dd2819e710a19e81b01</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="YamahaXMAX300">
+  <data key="d0">YamahaXMAX300</data>
+  <data key="d1">artifact</data>
+  <data key="d2">The Yamaha XMAX 300 is another model of maxi-scooters, equipped with manual windshields.</data>
+  <data key="d3">chunk-308c55ac71ce6ec7ba94f05ad99c96cd</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="Maxi-ScooterSegment">
+  <data key="d0">Maxi-ScooterSegment</data>
+  <data key="d1">concept</data>
+  <data key="d2">The Maxi-Scooter Segment refers to the market segment for large capacity scooters designed for touring and commuting.</data>
+  <data key="d3">chunk-308c55ac71ce6ec7ba94f05ad99c96cd</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="TouringAuthority">
+  <data key="d0">TouringAuthority</data>
+  <data key="d1">concept</data>
+  <data key="d2">TouringAuthority is a concept or platform related to reviews and comparisons of maxi-scooters.</data>
+  <data key="d3">chunk-308c55ac71ce6ec7ba94f05ad99c96cd</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="BlueCore">
+  <data key="d0">BlueCore</data>
+  <data key="d1">method</data>
+  <data key="d2">The BlueCore method refers to the engine technology used in some Yamaha models for efficient performance.</data>
+  <data key="d3">chunk-308c55ac71ce6ec7ba94f05ad99c96cd</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="Chatbot">
+  <data key="d0">Chatbot</data>
+  <data key="d1">concept</data>
+  <data key="d2">A digital conversational agent providing recommendations.</data>
+  <data key="d3">chunk-b8a5fe9ee0712dd2819e710a19e81b01</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="ElectricWindshield">
+  <data key="d0">ElectricWindshield</data>
+  <data key="d1">artifact</data>
+  <data key="d2">An accessory recommended by the chatbot for use on HondaForza350 motorcycles, adjustable with the left thumb while driving.</data>
+  <data key="d3">chunk-b8a5fe9ee0712dd2819e710a19e81b01</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="GarminStreetCross">
+  <data key="d0">GarminStreetCross</data>
+  <data key="d1">artifact</data>
+  <data key="d2">A GPS navigation system that provides full map navigation on display through a mobile app.</data>
+  <data key="d3">chunk-b8a5fe9ee0712dd2819e710a19e81b01</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="DualClamp">
+  <data key="d0">DualClamp</data>
+  <data key="d1">method</data>
+  <data key="d2">Technology used in XMAX for better stability and handling at high speeds compared to Forza.</data>
+  <data key="d3">chunk-b8a5fe9ee0712dd2819e710a19e81b01</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="TFT">
+  <data key="d0">TFT</data>
+  <data key="d1">concept</data>
+  <data key="d2">Refers to Thin Film Transistor technology, which is utilized in the display of YamahaXMAX300TechMax.</data>
+  <data key="d3">chunk-b8a5fe9ee0712dd2819e710a19e81b01</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797259</data>
+  <data key="d6"></data>
+</node>
+<node id="LCD">
+  <data key="d0">LCD</data>
+  <data key="d1">concept</data>
+  <data key="d2">Liquid Crystal Display technology used in conjunction with TFT screens on some motorcycles.</data>
+  <data key="d3">chunk-b8a5fe9ee0712dd2819e710a19e81b01</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797260</data>
+  <data key="d6"></data>
+</node>
+<node id="OilLeakageIssue">
+  <data key="d0">OilLeakageIssue</data>
+  <data key="d1">concept</data>
+  <data key="d2">A maintenance issue identified for YamahaXMAX300.</data>
+  <data key="d3">chunk-b8a5fe9ee0712dd2819e710a19e81b01</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797260</data>
+  <data key="d6"></data>
+</node>
+<node id="ClutchNoiseAndVibrationProblems">
+  <data key="d0">ClutchNoiseAndVibrationProblems</data>
+  <data key="d1">concept</data>
+  <data key="d2">Maintenance issues associated with HondaForza350, including clutch noise and vibration.</data>
+  <data key="d3">chunk-b8a5fe9ee0712dd2819e710a19e81b01</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797260</data>
+  <data key="d6"></data>
+</node>
+<node id="PumpLeaks">
+  <data key="d0">PumpLeaks</data>
+  <data key="d1">concept</data>
+  <data key="d2">Another maintenance issue identified for HondaForza350.</data>
+  <data key="d3">chunk-b8a5fe9ee0712dd2819e710a19e81b01</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797260</data>
+  <data key="d6"></data>
+</node>
+<node id="GiornoPlusVsGrandFilanoHybridComparison">
+  <data key="d0">GiornoPlusVsGrandFilanoHybridComparison</data>
+  <data key="d1">event</data>
+  <data key="d2">A comparison event focusing on design and performance aspects between Giorno+ and Grand Filano Hybrid models.</data>
+  <data key="d3">chunk-b8a5fe9ee0712dd2819e710a19e81b01</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797260</data>
+  <data key="d6"></data>
+</node>
+<node id="HondaGiorno +">
+  <data key="d0">HondaGiorno +</data>
+  <data key="d1">artifact</data>
+  <data key="d2">HondaGiorno + is a motorcycle model manufactured by Honda.</data>
+  <data key="d3">chunk-d8623dbbbb3e7f3d9c59ff00ace3bac5</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797260</data>
+  <data key="d6"></data>
+</node>
+<node id="HondaLead125">
+  <data key="d0">HondaLead125</data>
+  <data key="d1">artifact</data>
+  <data key="d2">HondaLead125 is a motorcycle model manufactured by Honda.</data>
+  <data key="d3">chunk-d8623dbbbb3e7f3d9c59ff00ace3bac5</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797260</data>
+  <data key="d6"></data>
+</node>
+<node id="YamahaGrandFilanoHybrid3.1Giorno +">
+  <data key="d0">YamahaGrandFilanoHybrid3.1Giorno +</data>
+  <data key="d1">artifact</data>
+  <data key="d2">YamahaGrandFilanoHybrid3.1Giorno + is a motorcycle model manufactured by Yamaha.</data>
+  <data key="d3">chunk-d8623dbbbb3e7f3d9c59ff00ace3bac5</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797260</data>
+  <data key="d6"></data>
+</node>
+<node id="r/scooters">
+  <data key="d0">r/scooters</data>
+  <data key="d1">content</data>
+  <data key="d2">r/scooters is a subreddit dedicated to discussions about scooters, including advice on purchasing decisions.</data>
+  <data key="d3">chunk-4ff5b9b793c77a38bd5a0581983c3823</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797260</data>
+  <data key="d6"></data>
+</node>
+<node id="Yamaha All New NMAX 2025">
+  <data key="d0">Yamaha All New NMAX 2025</data>
+  <data key="d1">artifact</data>
+  <data key="d2">The Yamaha All New NMAX 2025 is a scooter model that includes new technology and costs 113,500 baht.</data>
+  <data key="d3">chunk-4ff5b9b793c77a38bd5a0581983c3823</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797260</data>
+  <data key="d6"></data>
+</node>
+<node id="YECVT Autofun Technology">
+  <data key="d0">YECVT Autofun Technology</data>
+  <data key="d1">concept</data>
+  <data key="d2">YECVT Autofun refers to the new technology incorporated in the Yamaha All New NMAX 2025.</data>
+  <data key="d3">chunk-4ff5b9b793c77a38bd5a0581983c3823</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797260</data>
+  <data key="d6"></data>
+</node>
+<node id="Scooter Purchasing Decisions">
+  <data key="d0">Scooter Purchasing Decisions</data>
+  <data key="d1">concept</data>
+  <data key="d2">Discussions on r/scooters include advice related to making scooter purchasing decisions.</data>
+  <data key="d3">chunk-4ff5b9b793c77a38bd5a0581983c3823</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797260</data>
+  <data key="d6"></data>
+</node>
+<node id="Pantip.com">
+  <data key="d0">Pantip.com</data>
+  <data key="d1">organization</data>
+  <data key="d2">Pantip.com hosts discussions related to motorcycles and scooters.</data>
+  <data key="d3">chunk-bbf75717d3a0499fb46a71d29fa205c7</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797260</data>
+  <data key="d6"></data>
+</node>
+<node id="HondaForza3502021">
+  <data key="d0">HondaForza3502021</data>
+  <data key="d1">artifact</data>
+  <data key="d2">HondaForza3502021 is a motorcycle model being compared with other models.</data>
+  <data key="d3">chunk-bbf75717d3a0499fb46a71d29fa205c7</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797260</data>
+  <data key="d6"></data>
+</node>
+<node id="YamahaXMAX3002023">
+  <data key="d0">YamahaXMAX3002023</data>
+  <data key="d1">artifact</data>
+  <data key="d2">YamahaXMAX3002023 is another motorcycle model in comparison and discussion.</data>
+  <data key="d3">chunk-bbf75717d3a0499fb46a71d29fa205c7</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797260</data>
+  <data key="d6"></data>
+</node>
+<node id="XMAX300TechMAX">
+  <data key="d0">XMAX300TechMAX</data>
+  <data key="d1">artifact</data>
+  <data key="d2">XMAX300TechMAX is a specific variant of YamahaXMAX discussed on various platforms.</data>
+  <data key="d3">chunk-bbf75717d3a0499fb46a71d29fa205c7</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797260</data>
+  <data key="d6"></data>
+</node>
+<node id="BikeBD">
+  <data key="d0">BikeBD</data>
+  <data key="d1">organization</data>
+  <data key="d2">BikeBD is a platform that hosts comparisons and reviews of motorcycles like HondaForza3502021 and YamahaXMAX300.</data>
+  <data key="d3">chunk-bbf75717d3a0499fb46a71d29fa205c7</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797260</data>
+  <data key="d6"></data>
+</node>
+<node id="Garmin.com.my">
+  <data key="d0">Garmin.com.my</data>
+  <data key="d1">organization</data>
+  <data key="d2">Garmin.com.my is a website that provides information and services related to Garmin products such as the StreetCross App.</data>
+  <data key="d3">chunk-bbf75717d3a0499fb46a71d29fa205c7</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797260</data>
+  <data key="d6"></data>
+</node>
+<node id="Sharp Handling">
+  <data key="d0">Sharp Handling</data>
+  <data key="d1">concept</data>
+  <data key="d2">Sharp Handling refers to a characteristic of the ADV160.</data>
+  <data key="d3">chunk-2d9b55124b45de391d25204258fb17df</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797260</data>
+  <data key="d6"></data>
+</node>
+<node id="Upright">
+  <data key="d0">Upright</data>
+  <data key="d1">concept</data>
+  <data key="d2">Upright is a characteristic feature of the PCX.</data>
+  <data key="d3">chunk-2d9b55124b45de391d25204258fb17df</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797260</data>
+  <data key="d6"></data>
+</node>
+<node id="Cavitation">
+  <data key="d0">Cavitation</data>
+  <data key="d1">concept</data>
+  <data key="d2">Cavitation is an issue associated with the Showa sub-tank.</data>
+  <data key="d3">chunk-2d9b55124b45de391d25204258fb17df</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797260</data>
+  <data key="d6"></data>
+</node>
+<node id="Ground Clearance">
+  <data key="d0">Ground Clearance</data>
+  <data key="d1">concept</data>
+  <data key="d2">Ground Clearance is a part or feature of the ADV160.</data>
+  <data key="d3">chunk-2d9b55124b45de391d25204258fb17df</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797260</data>
+  <data key="d6"></data>
+</node>
+<node id="Windscreen">
+  <data key="d0">Windscreen</data>
+  <data key="d1">artifact</data>
+  <data key="d2">Windscreen is a part or feature of the ADV160.</data>
+  <data key="d3">chunk-2d9b55124b45de391d25204258fb17df</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797260</data>
+  <data key="d6"></data>
+</node>
+<node id="CVT Judder">
+  <data key="d0">CVT Judder</data>
+  <data key="d1">concept</data>
+  <data key="d2">CVT Judder is a problem faced by the Honda PCX 160.</data>
+  <data key="d3">chunk-2d9b55124b45de391d25204258fb17df</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797260</data>
+  <data key="d6"></data>
+</node>
+<node id="Oil Consumption">
+  <data key="d0">Oil Consumption</data>
+  <data key="d1">concept</data>
+  <data key="d2">Oil Consumption is a problem faced by both Yamaha NMAX 155 and Aerox 155.</data>
+  <data key="d3">chunk-2d9b55124b45de391d25204258fb17df</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797260</data>
+  <data key="d6"></data>
+</node>
+<node id="Showa Sub-tank">
+  <data key="d0">Showa Sub-tank</data>
+  <data key="d1">artifact</data>
+  <data key="d2">The Showa sub-tank is associated with the ADV160.</data>
+  <data key="d3">chunk-2d9b55124b45de391d25204258fb17df</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797260</data>
+  <data key="d6"></data>
+</node>
+<node id="HAS_FEATURE">
+  <data key="d0">HAS_FEATURE</data>
+  <data key="d3">chunk-cae2861d9037248b6aa9647d80426d94</data>
+  <data key="d2">Y-Connect offers the VehicleHealth feature.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797260</data>
+  <data key="d6"></data>
+</node>
+<node id="HAS_DATA">
+  <data key="d0">HAS_DATA</data>
+  <data key="d3">chunk-cae2861d9037248b6aa9647d80426d94</data>
+  <data key="d2">Cost of Ownership includes data on spare parts and maintenance costs.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797260</data>
+  <data key="d6"></data>
+</node>
+<node id="TRIGGER">
+  <data key="d0">TRIGGER</data>
+  <data key="d3">chunk-cae2861d9037248b6aa9647d80426d94</data>
+  <data key="d2">Value Seekers are triggered by factors such as fuel costs, limited budgets, and commuting needs.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797260</data>
+  <data key="d6"></data>
+</node>
+<node id="USED_FOR">
+  <data key="d0">USED_FOR</data>
+  <data key="d3">chunk-cae2861d9037248b6aa9647d80426d94</data>
+  <data key="d2">A Decision Tree is used for ChatbotUpsell purposes.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797260</data>
+  <data key="d6"></data>
+</node>
+<node id="RECOMMENDED_FOR">
+  <data key="d0">RECOMMENDED_FOR</data>
+  <data key="d3">chunk-cae2861d9037248b6aa9647d80426d94</data>
+  <data key="d2">The Yamaha Grand Filano Hybrid is recommended for Value Seekers.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797260</data>
+  <data key="d6"></data>
+</node>
+<node id="UPSELL_TO">
+  <data key="d0">UPSELL_TO</data>
+  <data key="d3">chunk-cae2861d9037248b6aa9647d80426d94</data>
+  <data key="d2">The Forza 350 is an upsell option for Touring Riders.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797260</data>
+  <data key="d6"></data>
+</node>
+<node id="USES_TECHNOLOGY">
+  <data key="d0">USES_TECHNOLOGY</data>
+  <data key="d3">chunk-cae2861d9037248b6aa9647d80426d94</data>
+  <data key="d2">The NMAX Turbo uses the Yamaha Electric CVT (YECVT) technology.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797260</data>
+  <data key="d6"></data>
+</node>
+<node id="World Athletics Championship">
+  <data key="d0">World Athletics Championship</data>
+  <data key="d3">chunk-5cd05d93eb374f0d3f062a75fba91b69</data>
+  <data key="d2">Noah Carter is competing at the World Athletics Championship.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797260</data>
+  <data key="d6"></data>
+</node>
+<node id="100m Sprint Record">
+  <data key="d0">100m Sprint Record</data>
+  <data key="d3">chunk-5cd05d93eb374f0d3f062a75fba91b69</data>
+  <data key="d2">Noah Carter set a new 100m sprint record at the championship.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797260</data>
+  <data key="d6"></data>
+</node>
+<node id="Noah Carter">
+  <data key="d0">Noah Carter</data>
+  <data key="d3">chunk-5cd05d93eb374f0d3f062a75fba91b69</data>
+  <data key="d2">Noah Carter set a new 100m sprint record at the championship.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797261</data>
+  <data key="d6"></data>
+</node>
+<node id="Tokyo">
+  <data key="d0">Tokyo</data>
+  <data key="d3">chunk-5cd05d93eb374f0d3f062a75fba91b69</data>
+  <data key="d2">The World Athletics Championship is being hosted in Tokyo.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797261</data>
+  <data key="d6"></data>
+</node>
+<node id="FRIENDLYRACE">
+  <data key="d0">FRIENDLYRACE</data>
+  <data key="d3">chunk-810ae33ed1033e6d55775973aa7169b3</data>
+  <data key="d2">YouTube hosts videos featuring friendly races between different scooter models.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797261</data>
+  <data key="d6"></data>
+</node>
+<node id="AllNewPCX160">
+  <data key="d0">AllNewPCX160</data>
+  <data key="d3">chunk-810ae33ed1033e6d55775973aa7169b3</data>
+  <data key="d2">OverrideMag.com reports on the All New PCX160 scooter model.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797261</data>
+  <data key="d6"></data>
+</node>
+<node id="Carbon-Fiber Spikes">
+  <data key="d0">Carbon-Fiber Spikes</data>
+  <data key="d3">chunk-5cd05d93eb374f0d3f062a75fba91b69</data>
+  <data key="d2">Noah Carter used carbon-fiber spikes to enhance performance during the race.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797261</data>
+  <data key="d6"></data>
+</node>
+<node id="ScooterComparison">
+  <data key="d0">ScooterComparison</data>
+  <data key="d3">chunk-810ae33ed1033e6d55775973aa7169b3</data>
+  <data key="d2">YouTube hosts videos comparing different scooter models and their features.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797261</data>
+  <data key="d6"></data>
+</node>
+<node id="CarmudiPhilippines">
+  <data key="d0">CarmudiPhilippines</data>
+  <data key="d3">chunk-810ae33ed1033e6d55775973aa7169b3</data>
+  <data key="d2">Carmudi Philippines compares various Honda ADV160 scooters.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797261</data>
+  <data key="d6"></data>
+</node>
+<node id="PCX2025">
+  <data key="d0">PCX2025</data>
+  <data key="d3">chunk-810ae33ed1033e6d55775973aa7169b3&lt;SEP&gt;chunk-bbf75717d3a0499fb46a71d29fa205c7</data>
+  <data key="d2">Pantip provides reviews of the PCX2025 scooter model.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797261</data>
+  <data key="d6"></data>
+</node>
+<node id="NMAX160">
+  <data key="d0">NMAX160</data>
+  <data key="d3">chunk-810ae33ed1033e6d55775973aa7169b3</data>
+  <data key="d2">Discussions on Reddit include topics related to the NMAX160 scooter.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797261</data>
+  <data key="d6"></data>
+</node>
+<node id="คลัชคาร์บอน Forza2018">
+  <data key="d0">คลัชคาร์บอน Forza2018</data>
+  <data key="d3">chunk-810ae33ed1033e6d55775973aa7169b3</data>
+  <data key="d2">Discussions on Pantip include topics about the carbon clutch for the Forza2018 scooter model.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797261</data>
+  <data key="d6"></data>
+</node>
+<node id="น้ำมันเครื่อง">
+  <data key="d0">น้ำมันเครื่อง</data>
+  <data key="d3">chunk-810ae33ed1033e6d55775973aa7169b3</data>
+  <data key="d2">Users on Pantip ask questions regarding motor oil for scooters.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797261</data>
+  <data key="d6"></data>
+</node>
+<node id="MaintenanceAndModelSpecificIssuesYamahaXMAX300">
+  <data key="d0">MaintenanceAndModelSpecificIssuesYamahaXMAX300</data>
+  <data key="d3">chunk-b8a5fe9ee0712dd2819e710a19e81b01</data>
+  <data key="d2">YamahaXMAX300 has been noted for oil leakage problems.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797261</data>
+  <data key="d6"></data>
+</node>
+<node id="HondaForza350Problems">
+  <data key="d0">HondaForza350Problems</data>
+  <data key="d3">chunk-b8a5fe9ee0712dd2819e710a19e81b01</data>
+  <data key="d2">The HondaForza350 is known to have clutch noise and vibration issues.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797261</data>
+  <data key="d6"></data>
+</node>
+<node id="HondaGiorno+">
+  <data key="d0">HondaGiorno+</data>
+  <data key="d3">chunk-b8a5fe9ee0712dd2819e710a19e81b01</data>
+  <data key="d2">The Giorno+ model is part of the comparative evaluation between it and the Grand Filano Hybrid in terms of design and performance aspects.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797261</data>
+  <data key="d6"></data>
+</node>
+<node id="YamahaMotorEurope">
+  <data key="d0">YamahaMotorEurope</data>
+  <data key="d3">chunk-bbf75717d3a0499fb46a71d29fa205c7</data>
+  <data key="d2">YamahaMotorEurope provides details about XMAX300TechMAX.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797262</data>
+  <data key="d6"></data>
+</node>
+<node id="PCX">
+  <data key="d0">PCX</data>
+  <data key="d3">chunk-2d9b55124b45de391d25204258fb17df</data>
+  <data key="d2">The PCX features an upright riding position.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797262</data>
+  <data key="d6"></data>
+</node>
+<node id="Honda PCX 160">
+  <data key="d0">Honda PCX 160</data>
+  <data key="d3">chunk-2d9b55124b45de391d25204258fb17df</data>
+  <data key="d2">The Honda PCX 160 experiences CVT judder as a problem.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797262</data>
+  <data key="d6"></data>
+</node>
+<node id="Yamaha NMAX 155">
+  <data key="d0">Yamaha NMAX 155</data>
+  <data key="d3">chunk-2d9b55124b45de391d25204258fb17df</data>
+  <data key="d2">The Yamaha NMAX 155 faces oil consumption issues.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797262</data>
+  <data key="d6"></data>
+</node>
+<node id="PistonHeadsUK">
+  <data key="d0">PistonHeadsUK</data>
+  <data key="d3">chunk-bbf75717d3a0499fb46a71d29fa205c7</data>
+  <data key="d2">PistonHeadsUK hosts discussions comparing HondaForza3502021 with other models.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797262</data>
+  <data key="d6"></data>
+</node>
+<node id="Aerox 155">
+  <data key="d0">Aerox 155</data>
+  <data key="d3">chunk-2d9b55124b45de391d25204258fb17df</data>
+  <data key="d2">The Aerox 155 also experiences oil consumption problems.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1768797262</data>
+  <data key="d6"></data>
+</node>
+<edge source="TechnicalAnalysisReport" target="MotorcyclePremiumScooterMarket">
+  <data key="d7">1.0</data>
+  <data key="d8">The TechnicalAnalysisReport contains an analysis of the MotorcyclePremiumScooterMarket in Thailand.</data>
+  <data key="d9">analysis_of</data>
+  <data key="d10">chunk-9bc1aea559d48934b375455f5c7e9261</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797260</data>
+  <data key="d13"></data>
+</edge>
+<edge source="HondaPCX160" target="Honda">
+  <data key="d7">1.0</data>
+  <data key="d8">The HondaPCX160 is produced by Honda for the MotorcyclePremiumScooterMarket.</data>
+  <data key="d9">produced_by</data>
+  <data key="d10">chunk-9bc1aea559d48934b375455f5c7e9261</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797260</data>
+  <data key="d13"></data>
+</edge>
+<edge source="HondaPCX160" target="eSP+">
+  <data key="d7">1.0</data>
+  <data key="d8">The HondaPCX160 uses the eSP+ technology, a concept highlighting its features.</data>
+  <data key="d9">associated_with</data>
+  <data key="d10">chunk-9bc1aea559d48934b375455f5c7e9261</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797260</data>
+  <data key="d13"></data>
+</edge>
+<edge source="HondaPCX160" target="RECOMMENDED_FOR">
+  <data key="d7">1.0</data>
+  <data key="d8">The Honda PCX 160 is recommended for Touring Riders.</data>
+  <data key="d9">TouringRider</data>
+  <data key="d10">chunk-cae2861d9037248b6aa9647d80426d94</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797260</data>
+  <data key="d13"></data>
+</edge>
+<edge source="HondaADV160" target="eSP+">
+  <data key="d7">1.0</data>
+  <data key="d8">The HondaADV160 also uses the eSP+ technology.</data>
+  <data key="d9">associated_with</data>
+  <data key="d10">chunk-9bc1aea559d48934b375455f5c7e9261</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797260</data>
+  <data key="d13"></data>
+</edge>
+<edge source="HondaADV160" target="Honda">
+  <data key="d7">1.0</data>
+  <data key="d8">The HondaADV160 is another scooter produced by Honda included in the analysis.</data>
+  <data key="d9">produced_by</data>
+  <data key="d10">chunk-9bc1aea559d48934b375455f5c7e9261</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797260</data>
+  <data key="d13"></data>
+</edge>
+<edge source="HondaADV160" target="RECOMMENDED_FOR">
+  <data key="d7">1.0</data>
+  <data key="d8">The Honda ADV 160 is recommended for Adventure/Rough Road users.</data>
+  <data key="d9">Adventure / RoughRoad</data>
+  <data key="d10">chunk-cae2861d9037248b6aa9647d80426d94</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797260</data>
+  <data key="d13"></data>
+</edge>
+<edge source="HondaADV160" target="CarmudiPhilippines">
+  <data key="d7">1.0</data>
+  <data key="d8">Carmudi Philippines compares various Honda ADV160 scooters.</data>
+  <data key="d9">compare</data>
+  <data key="d10">chunk-810ae33ed1033e6d55775973aa7169b3</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+<edge source="YamahaNMAX155" target="Yamaha">
+  <data key="d7">1.0</data>
+  <data key="d8">The YamahaNMAX155 is a premium scooter produced by Yamaha featured in the report.</data>
+  <data key="d9">produced_by</data>
+  <data key="d10">chunk-9bc1aea559d48934b375455f5c7e9261</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797260</data>
+  <data key="d13"></data>
+</edge>
+<edge source="YamahaNMAX155" target="BlueCoreVVA">
+  <data key="d7">1.0</data>
+  <data key="d8">The YamahaNMAX155 is associated with BlueCoreVVA technology.</data>
+  <data key="d9">associated_with</data>
+  <data key="d10">chunk-9bc1aea559d48934b375455f5c7e9261</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797260</data>
+  <data key="d13"></data>
+</edge>
+<edge source="YamahaNMAX155" target="Maxi-ScooterSegment">
+  <data key="d7">1.0</data>
+  <data key="d8">The Yamaha NMAX 155 belongs to the Maxi-Scooter Segment.</data>
+  <data key="d9">inclusion,segment membership</data>
+  <data key="d10">chunk-308c55ac71ce6ec7ba94f05ad99c96cd</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+<edge source="YamahaAerox155" target="Yamaha">
+  <data key="d7">1.0</data>
+  <data key="d8">The YamahaAerox155 is another scooter from Yamaha mentioned in the analysis of the MotorcyclePremiumScooterMarket.</data>
+  <data key="d9">produced_by</data>
+  <data key="d10">chunk-9bc1aea559d48934b375455f5c7e9261</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797260</data>
+  <data key="d13"></data>
+</edge>
+<edge source="YamahaAerox155" target="BlueCoreVVA">
+  <data key="d7">1.0</data>
+  <data key="d8">The YamahaAerox155 uses the BlueCoreVVA technology as well.</data>
+  <data key="d9">associated_with</data>
+  <data key="d10">chunk-9bc1aea559d48934b375455f5c7e9261</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797260</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Honda" target="HondaGiorno +">
+  <data key="d7">1.0</data>
+  <data key="d8">Honda manufactures the HondaGiorno + motorcycle.</data>
+  <data key="d9">manufacturing,production</data>
+  <data key="d10">chunk-d8623dbbbb3e7f3d9c59ff00ace3bac5</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Honda" target="HondaLead125">
+  <data key="d7">1.0</data>
+  <data key="d8">Honda manufactures the HondaLead125 motorcycle.</data>
+  <data key="d9">manufacturing,production</data>
+  <data key="d10">chunk-d8623dbbbb3e7f3d9c59ff00ace3bac5</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Yamaha" target="YamahaGrandFilanoHybrid3.1Giorno +">
+  <data key="d7">1.0</data>
+  <data key="d8">Yamaha manufactures the YamahaGrandFilanoHybrid3.1Giorno + motorcycle.</data>
+  <data key="d9">manufacturing,production</data>
+  <data key="d10">chunk-d8623dbbbb3e7f3d9c59ff00ace3bac5</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Yamaha" target="YamahaGrandFilanoHybrid">
+  <data key="d7">1.0</data>
+  <data key="d8">Yamaha manufactures the YamahaGrandFilanoHybrid motorcycle.</data>
+  <data key="d9">manufacturing,production</data>
+  <data key="d10">chunk-d8623dbbbb3e7f3d9c59ff00ace3bac5</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797262</data>
+  <data key="d13"></data>
+</edge>
+<edge source="eSP+" target="HondaForza350">
+  <data key="d7">1.0</data>
+  <data key="d8">The Honda Forza 350 utilizes eSP+ engine technology for performance.</data>
+  <data key="d9">engine technology,hasComponent</data>
+  <data key="d10">chunk-308c55ac71ce6ec7ba94f05ad99c96cd</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Y - Connect" target="HAS_FEATURE">
+  <data key="d7">1.0</data>
+  <data key="d8">Y-Connect offers the VehicleHealth feature.</data>
+  <data key="d9">VehicleHealth</data>
+  <data key="d10">chunk-cae2861d9037248b6aa9647d80426d94</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797260</data>
+  <data key="d13"></data>
+</edge>
+<edge source="RoadSync" target="HAS_FEATURE">
+  <data key="d7">1.0</data>
+  <data key="d8">RoadSync provides the Lifestyle &amp; Control concept.</data>
+  <data key="d9">Lifestyle &amp; Control</data>
+  <data key="d10">chunk-cae2861d9037248b6aa9647d80426d94</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797260</data>
+  <data key="d13"></data>
+</edge>
+<edge source="CostofOwnership" target="HAS_DATA">
+  <data key="d7">1.0</data>
+  <data key="d8">Cost of Ownership includes data on spare parts and maintenance costs.</data>
+  <data key="d9">ราคาอะไหล่และการบํารุงรักษา</data>
+  <data key="d10">chunk-cae2861d9037248b6aa9647d80426d94</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797260</data>
+  <data key="d13"></data>
+</edge>
+<edge source="DecisionTree" target="USED_FOR">
+  <data key="d7">1.0</data>
+  <data key="d8">A Decision Tree is used for ChatbotUpsell purposes.</data>
+  <data key="d9">ChatbotUpsell</data>
+  <data key="d10">chunk-cae2861d9037248b6aa9647d80426d94</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797260</data>
+  <data key="d13"></data>
+</edge>
+<edge source="ValueSeeker" target="TRIGGER">
+  <data key="d7">1.0</data>
+  <data key="d8">Value Seekers are triggered by factors such as fuel costs, limited budgets, and commuting needs.</data>
+  <data key="d9">งบจํากัด,ราคาน้ำมัน,ใช้ขี่ไปทํางานใกล้ๆ</data>
+  <data key="d10">chunk-cae2861d9037248b6aa9647d80426d94</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797260</data>
+  <data key="d13"></data>
+</edge>
+<edge source="TouringRider" target="TRIGGER">
+  <data key="d7">1.0</data>
+  <data key="d8">Touring Riders are motivated by cross-province riding, speed preference, and dislike of wind blasts.</data>
+  <data key="d9">ขี่ข้ามจังหวัด,ชอบความเร็ว,เบื่อลมปะทะ</data>
+  <data key="d10">chunk-cae2861d9037248b6aa9647d80426d94</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797260</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Adventure / RoughRoad" target="TRIGGER">
+  <data key="d7">1.0</data>
+  <data key="d8">Adventure/Rough Road users are driven by poor road conditions, flood-prone areas, and a love for nature exploration.</data>
+  <data key="d9">ชอบเที่ยวธรรมชาติ,ถนนซอยบ้านไม่ดี,น้ำท่วมขัง</data>
+  <data key="d10">chunk-cae2861d9037248b6aa9647d80426d94</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797260</data>
+  <data key="d13"></data>
+</edge>
+<edge source="TechLover" target="TRIGGER">
+  <data key="d7">1.0</data>
+  <data key="d8">Tech Lovers are interested in LCD screens, navigation aids, and technology-based features.</data>
+  <data key="d9">กลัวหลงทาง,ชอบของเล่น,หน้าจอล าๆ</data>
+  <data key="d10">chunk-cae2861d9037248b6aa9647d80426d94</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+<edge source="YamahaGrandFilanoHybrid" target="RECOMMENDED_FOR">
+  <data key="d7">1.0</data>
+  <data key="d8">The Yamaha Grand Filano Hybrid is recommended for Value Seekers.</data>
+  <data key="d9">ValueSeeker</data>
+  <data key="d10">chunk-cae2861d9037248b6aa9647d80426d94</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797260</data>
+  <data key="d13"></data>
+</edge>
+<edge source="YamahaGrandFilanoHybrid" target="GiornoPlusVsGrandFilanoHybridComparison">
+  <data key="d7">1.0</data>
+  <data key="d8">The YamahaGrandFilanoHybrid model is part of the comparative evaluation focusing on design and performance aspects with Honda Giorno+.</data>
+  <data key="d9">design and performance analysis,model comparison</data>
+  <data key="d10">chunk-b8a5fe9ee0712dd2819e710a19e81b01</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797262</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Forza350" target="UPSELL_TO">
+  <data key="d7">1.0</data>
+  <data key="d8">The Forza 350 is an upsell option for Touring Riders.</data>
+  <data key="d9">TouringRider</data>
+  <data key="d10">chunk-cae2861d9037248b6aa9647d80426d94</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797260</data>
+  <data key="d13"></data>
+</edge>
+<edge source="YamahaXMAX300TechMax" target="RECOMMENDED_FOR">
+  <data key="d7">1.0</data>
+  <data key="d8">The Yamaha XMAX 300 Tech Max is recommended for Tech Lovers.</data>
+  <data key="d9">TechLover</data>
+  <data key="d10">chunk-cae2861d9037248b6aa9647d80426d94</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+<edge source="YamahaXMAX300TechMax" target="GarminStreetCross">
+  <data key="d7">1.0</data>
+  <data key="d8">GarminStreetCross provides full map navigation on YamahaXMAX300TechMax through its mobile app.</data>
+  <data key="d9">GPSNavigation,motorcycle compatibility</data>
+  <data key="d10">chunk-b8a5fe9ee0712dd2819e710a19e81b01</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+<edge source="YamahaXMAX300TechMax" target="TFT">
+  <data key="d7">1.0</data>
+  <data key="d8">The YamahaXMAX300TechMax features a 4.2-inch TFT color screen.</data>
+  <data key="d9">display technology,motorcycle integration</data>
+  <data key="d10">chunk-b8a5fe9ee0712dd2819e710a19e81b01</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+<edge source="YamahaXMAX300TechMax" target="LCD">
+  <data key="d7">1.0</data>
+  <data key="d8">The YamahaXMAX300TechMax also includes an LCD speedometer.</data>
+  <data key="d9">display technology,motorcycle integration</data>
+  <data key="d10">chunk-b8a5fe9ee0712dd2819e710a19e81b01</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+<edge source="NMAXTurbo" target="USES_TECHNOLOGY">
+  <data key="d7">1.0</data>
+  <data key="d8">The NMAX Turbo uses the Yamaha Electric CVT (YECVT) technology.</data>
+  <data key="d9">YamahaElectricCVT ( YECVT )</data>
+  <data key="d10">chunk-cae2861d9037248b6aa9647d80426d94</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797260</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Donald Duk" target="World Athletics Championship">
+  <data key="d7">1.0</data>
+  <data key="d8">Noah Carter is competing at the World Athletics Championship.</data>
+  <data key="d9">athlete participation,competition</data>
+  <data key="d10">chunk-5cd05d93eb374f0d3f062a75fba91b69</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797260</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Reddit" target="ADV160">
+  <data key="d7">1.0</data>
+  <data key="d8">Reddit users discuss various features and aspects of the ADV160 scooter.</data>
+  <data key="d9">discuss</data>
+  <data key="d10">chunk-810ae33ed1033e6d55775973aa7169b3</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Reddit" target="AEROX160">
+  <data key="d7">1.0</data>
+  <data key="d8">Reddit also facilitates discussions about the AEROX160 model.</data>
+  <data key="d9">discuss</data>
+  <data key="d10">chunk-810ae33ed1033e6d55775973aa7169b3</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Reddit" target="NMAX160">
+  <data key="d7">1.0</data>
+  <data key="d8">Discussions on Reddit include topics related to the NMAX160 scooter.</data>
+  <data key="d9">discuss</data>
+  <data key="d10">chunk-810ae33ed1033e6d55775973aa7169b3</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Reddit" target="r/scooters">
+  <data key="d7">1.0</data>
+  <data key="d8">The subreddit r/scooters is hosted on Reddit and contains discussions related to scooters.</data>
+  <data key="d9">platform,subreddit</data>
+  <data key="d10">chunk-4ff5b9b793c77a38bd5a0581983c3823</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Reddit" target="Forza2018">
+  <data key="d7">1.0</data>
+  <data key="d8">Reddit hosts discussions comparing Forza2018.</data>
+  <data key="d9">artifact discussion,hosting</data>
+  <data key="d10">chunk-bbf75717d3a0499fb46a71d29fa205c7</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797262</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Pantip" target="PCX2025">
+  <data key="d7">1.0</data>
+  <data key="d8">Pantip provides reviews of the PCX2025 scooter model.</data>
+  <data key="d9">review</data>
+  <data key="d10">chunk-810ae33ed1033e6d55775973aa7169b3</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Pantip" target="คลัชคาร์บอน Forza2018">
+  <data key="d7">1.0</data>
+  <data key="d8">Discussions on Pantip include topics about the carbon clutch for the Forza2018 scooter model.</data>
+  <data key="d9">discuss</data>
+  <data key="d10">chunk-810ae33ed1033e6d55775973aa7169b3</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Pantip" target="น้ำมันเครื่อง">
+  <data key="d7">1.0</data>
+  <data key="d8">Users on Pantip ask questions regarding motor oil for scooters.</data>
+  <data key="d9">ask_about</data>
+  <data key="d10">chunk-810ae33ed1033e6d55775973aa7169b3</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+<edge source="GarminStreetCrossApp" target="Garmin.com.my">
+  <data key="d7">1.0</data>
+  <data key="d8">GarminStreetCrossApp is available at Garmin.com.my.</data>
+  <data key="d9">artifact availability,hosting</data>
+  <data key="d10">chunk-bbf75717d3a0499fb46a71d29fa205c7</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797262</data>
+  <data key="d13"></data>
+</edge>
+<edge source="BikeJunction" target="PCX160">
+  <data key="d7">1.0</data>
+  <data key="d8">BikeJunction compares different scooter models, including the PCX160.</data>
+  <data key="d9">compare</data>
+  <data key="d10">chunk-810ae33ed1033e6d55775973aa7169b3</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+<edge source="BikeJunction" target="NMAX155">
+  <data key="d7">1.0</data>
+  <data key="d8">BikeJunction also compares the NMAX155 with other scooters.</data>
+  <data key="d9">compare</data>
+  <data key="d10">chunk-810ae33ed1033e6d55775973aa7169b3</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+<edge source="YouTube" target="FRIENDLYRACE">
+  <data key="d7">1.0</data>
+  <data key="d8">YouTube hosts videos featuring friendly races between different scooter models.</data>
+  <data key="d9">host</data>
+  <data key="d10">chunk-810ae33ed1033e6d55775973aa7169b3</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+<edge source="YouTube" target="ScooterComparison">
+  <data key="d7">1.0</data>
+  <data key="d8">YouTube hosts videos comparing different scooter models and their features.</data>
+  <data key="d9">host</data>
+  <data key="d10">chunk-810ae33ed1033e6d55775973aa7169b3</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+<edge source="OverrideMag.com" target="AllNewPCX160">
+  <data key="d7">1.0</data>
+  <data key="d8">OverrideMag.com reports on the All New PCX160 scooter model.</data>
+  <data key="d9">report</data>
+  <data key="d10">chunk-810ae33ed1033e6d55775973aa7169b3</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+<edge source="ADV160" target="Sharp Handling">
+  <data key="d7">1.0</data>
+  <data key="d8">The ADV160 has a sharp handling feature that enhances its performance.</data>
+  <data key="d9">hasFeature,performance enhancement</data>
+  <data key="d10">chunk-2d9b55124b45de391d25204258fb17df</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797262</data>
+  <data key="d13"></data>
+</edge>
+<edge source="ADV160" target="Ground Clearance">
+  <data key="d7">1.0</data>
+  <data key="d8">The ADV160 has ground clearance as one of its features.</data>
+  <data key="d9">feature,hasPart</data>
+  <data key="d10">chunk-2d9b55124b45de391d25204258fb17df</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797262</data>
+  <data key="d13"></data>
+</edge>
+<edge source="ADV160" target="Windscreen">
+  <data key="d7">1.0</data>
+  <data key="d8">The ADV160 includes a windscreen as part of its design.</data>
+  <data key="d9">component,hasPart</data>
+  <data key="d10">chunk-2d9b55124b45de391d25204258fb17df</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797262</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Aerox155" target="Maxi-ScooterSegment">
+  <data key="d7">1.0</data>
+  <data key="d8">The Aerox 155 is part of the Maxi-Scooter Segment.</data>
+  <data key="d9">inclusion,segment membership</data>
+  <data key="d10">chunk-308c55ac71ce6ec7ba94f05ad99c96cd</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Forza2018" target="Pantip.com">
+  <data key="d7">1.0</data>
+  <data key="d8">Pantip.com hosts a review of Forza2018.</data>
+  <data key="d9">artifact review,hosting</data>
+  <data key="d10">chunk-bbf75717d3a0499fb46a71d29fa205c7</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797262</data>
+  <data key="d13"></data>
+</edge>
+<edge source="XMAX" target="Maxi-ScooterSegment">
+  <data key="d7">1.0</data>
+  <data key="d8">The XMAX series belongs to the Maxi-Scooter Segment.</data>
+  <data key="d9">inclusion,segment membership</data>
+  <data key="d10">chunk-308c55ac71ce6ec7ba94f05ad99c96cd</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+<edge source="XMAX" target="DualClamp">
+  <data key="d7">1.0</data>
+  <data key="d8">DualClamp technology is used in XMAX to improve stability and handling at high speeds.</data>
+  <data key="d9">performance improvement,technology application</data>
+  <data key="d10">chunk-b8a5fe9ee0712dd2819e710a19e81b01</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+<edge source="HondaForza350" target="Maxi-ScooterSegment">
+  <data key="d7">1.0</data>
+  <data key="d8">The Honda Forza 350 is included in the Maxi-Scooter Segment.</data>
+  <data key="d9">inclusion,segment membership</data>
+  <data key="d10">chunk-308c55ac71ce6ec7ba94f05ad99c96cd</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+<edge source="HondaForza350" target="Chatbot">
+  <data key="d7">1.0</data>
+  <data key="d8">The chatbot recommends the ElectricWindshield for HondaForza350 motorcycles.</data>
+  <data key="d9">motorcycle accessory,recommendation</data>
+  <data key="d10">chunk-b8a5fe9ee0712dd2819e710a19e81b01</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+<edge source="HondaForza350" target="ElectricWindshield">
+  <data key="d7">1.0</data>
+  <data key="d8">The electric windshield can be adjusted with the left thumb while driving on a HondaForza350 motorcycle.</data>
+  <data key="d9">motorcycle accessory,usability enhancement</data>
+  <data key="d10">chunk-b8a5fe9ee0712dd2819e710a19e81b01</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+<edge source="YamahaXMAX300" target="BlueCore">
+  <data key="d7">1.0</data>
+  <data key="d8">The Yamaha XMAX 300 features BlueCore engine technology.</data>
+  <data key="d9">engine technology,hasComponent</data>
+  <data key="d10">chunk-308c55ac71ce6ec7ba94f05ad99c96cd</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+<edge source="YamahaXMAX300" target="Maxi-ScooterSegment">
+  <data key="d7">1.0</data>
+  <data key="d8">The Yamaha XMAX 300 belongs to the Maxi-Scooter Segment.</data>
+  <data key="d9">inclusion,segment membership</data>
+  <data key="d10">chunk-308c55ac71ce6ec7ba94f05ad99c96cd</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+<edge source="OilLeakageIssue" target="MaintenanceAndModelSpecificIssuesYamahaXMAX300">
+  <data key="d7">1.0</data>
+  <data key="d8">YamahaXMAX300 has been noted for oil leakage problems.</data>
+  <data key="d9">maintenance problem,motorcycle issue tracking</data>
+  <data key="d10">chunk-b8a5fe9ee0712dd2819e710a19e81b01</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+<edge source="ClutchNoiseAndVibrationProblems" target="HondaForza350Problems">
+  <data key="d7">1.0</data>
+  <data key="d8">The HondaForza350 is known to have clutch noise and vibration issues.</data>
+  <data key="d9">maintenance concerns,motorcycle issues</data>
+  <data key="d10">chunk-b8a5fe9ee0712dd2819e710a19e81b01</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+<edge source="GiornoPlusVsGrandFilanoHybridComparison" target="HondaGiorno+">
+  <data key="d7">1.0</data>
+  <data key="d8">The Giorno+ model is part of the comparative evaluation between it and the Grand Filano Hybrid in terms of design and performance aspects.</data>
+  <data key="d9">design and performance analysis,model comparison</data>
+  <data key="d10">chunk-b8a5fe9ee0712dd2819e710a19e81b01</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+<edge source="r/scooters" target="Scooter Purchasing Decisions">
+  <data key="d7">1.0</data>
+  <data key="d8">The subreddit r/scooters includes discussions and advice about making scooter purchasing decisions.</data>
+  <data key="d9">discussion topic,user engagement</data>
+  <data key="d10">chunk-4ff5b9b793c77a38bd5a0581983c3823</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797262</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Yamaha All New NMAX 2025" target="YECVT Autofun Technology">
+  <data key="d7">1.0</data>
+  <data key="d8">The Yamaha All New NMAX 2025 features YECVT Autofun technology.</data>
+  <data key="d9">product specification,technological feature</data>
+  <data key="d10">chunk-4ff5b9b793c77a38bd5a0581983c3823</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Pantip.com" target="PCX2025">
+  <data key="d7">1.0</data>
+  <data key="d8">Pantip.com hosts queries related to the purchase of PCX2025.</data>
+  <data key="d9">artifact query,hosting</data>
+  <data key="d10">chunk-bbf75717d3a0499fb46a71d29fa205c7</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797262</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Pantip.com" target="HondaForza3502021">
+  <data key="d7">1.0</data>
+  <data key="d8">Pantip.com hosts forum discussions involving the HondaForza3502021.</data>
+  <data key="d9">artifact discussion,hosting</data>
+  <data key="d10">chunk-bbf75717d3a0499fb46a71d29fa205c7</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797262</data>
+  <data key="d13"></data>
+</edge>
+<edge source="HondaForza3502021" target="PistonHeadsUK">
+  <data key="d7">1.0</data>
+  <data key="d8">PistonHeadsUK hosts discussions comparing HondaForza3502021 with other models.</data>
+  <data key="d9">artifact discussion,hosting</data>
+  <data key="d10">chunk-bbf75717d3a0499fb46a71d29fa205c7</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797262</data>
+  <data key="d13"></data>
+</edge>
+<edge source="XMAX300TechMAX" target="YamahaMotorEurope">
+  <data key="d7">1.0</data>
+  <data key="d8">YamahaMotorEurope provides details about XMAX300TechMAX.</data>
+  <data key="d9">artifact detail,provision</data>
+  <data key="d10">chunk-bbf75717d3a0499fb46a71d29fa205c7</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797262</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Upright" target="PCX">
+  <data key="d7">1.0</data>
+  <data key="d8">The PCX features an upright riding position.</data>
+  <data key="d9">hasFeature,riding position</data>
+  <data key="d10">chunk-2d9b55124b45de391d25204258fb17df</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797262</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Cavitation" target="Showa Sub-tank">
+  <data key="d7">1.0</data>
+  <data key="d8">The Showa sub-tank experiences cavitation as a technical issue.</data>
+  <data key="d9">experiencesProblem,technical issue</data>
+  <data key="d10">chunk-2d9b55124b45de391d25204258fb17df</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797262</data>
+  <data key="d13"></data>
+</edge>
+<edge source="CVT Judder" target="Honda PCX 160">
+  <data key="d7">1.0</data>
+  <data key="d8">The Honda PCX 160 experiences CVT judder as a problem.</data>
+  <data key="d9">experiencesProblem,technical issue</data>
+  <data key="d10">chunk-2d9b55124b45de391d25204258fb17df</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797262</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Oil Consumption" target="Yamaha NMAX 155">
+  <data key="d7">1.0</data>
+  <data key="d8">The Yamaha NMAX 155 faces oil consumption issues.</data>
+  <data key="d9">experiencesProblem,technical issue</data>
+  <data key="d10">chunk-2d9b55124b45de391d25204258fb17df</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797262</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Oil Consumption" target="Aerox 155">
+  <data key="d7">1.0</data>
+  <data key="d8">The Aerox 155 also experiences oil consumption problems.</data>
+  <data key="d9">experiencesProblem,technical issue</data>
+  <data key="d10">chunk-2d9b55124b45de391d25204258fb17df</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797262</data>
+  <data key="d13"></data>
+</edge>
+<edge source="World Athletics Championship" target="Tokyo">
+  <data key="d7">1.0</data>
+  <data key="d8">The World Athletics Championship is being hosted in Tokyo.</data>
+  <data key="d9">event location,international competition</data>
+  <data key="d10">chunk-5cd05d93eb374f0d3f062a75fba91b69</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+<edge source="100m Sprint Record" target="Noah Carter">
+  <data key="d7">1.0</data>
+  <data key="d8">Noah Carter set a new 100m sprint record at the championship.</data>
+  <data key="d9">athlete achievement,record-breaking</data>
+  <data key="d10">chunk-5cd05d93eb374f0d3f062a75fba91b69</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Noah Carter" target="Carbon-Fiber Spikes">
+  <data key="d7">1.0</data>
+  <data key="d8">Noah Carter used carbon-fiber spikes to enhance performance during the race.</data>
+  <data key="d9">athletic equipment,performance boost</data>
+  <data key="d10">chunk-5cd05d93eb374f0d3f062a75fba91b69</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1768797261</data>
+  <data key="d13"></data>
+</edge>
+</graph></graphml>

@@ -1,0 +1,50 @@
+# Created by www.toptal.com
+# community templates base
+# Python
+
+## Compiled Python files ##
+*.pyc
+__pycache__/
+*.pyd
+*.pyo
+*.egg-info/
+.hypothesis/
+.pytest_cache/
+
+## Distribution / Packaging ##
+.Python
+build/
+dist/
+wheels/
+*.egg-info/
+*.eggs
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+
+## Environments ##
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+## Editors and IDEs ##
+# VS Code
+.vscode/
+# PyCharm
+.idea/
+
+## Miscellaneous ##
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# OS generated files
+.DS_Store
+.Trash
+Data
