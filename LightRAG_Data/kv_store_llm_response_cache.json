@@ -1412,5 +1412,131 @@
     "create_time": 1768931988,
     "update_time": 1768931988,
     "_id": "global:query:116bebe9811e61a00ce2ec41b2c24b1a"
+  },
+  "global:keywords:88f922160532ebf9abb1f8ff119c06bc": {
+    "return": "{\"high_level_keywords\": [\"alternatives\", \"comparable models\"], \"low_level_keywords\": [\"Honda PCX 160\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "Honda PCX 160 alternatives",
+    "queryparam": {
+      "mode": "global",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": true
+    },
+    "create_time": 1768932597,
+    "update_time": 1768932597,
+    "_id": "global:keywords:88f922160532ebf9abb1f8ff119c06bc"
+  },
+  "global:query:0a245ba383270d82ed0a77b8d782ebdb": {
+    "return": "If you are looking for alternatives to the Honda PCX 160, several other scooter models offer comparable features and performance, particularly within the 150-160cc premium entry segment, or as an upgrade to a larger maxi-scooter.\n\n### Direct Competitors (150-160cc Segment)\n\n*   **Yamaha NMAX 155**: This model is a direct competitor to the PCX 160 and is often recommended for those who prioritize agility and city riding. It features a BlueCore VVA 4-valve 155cc engine, providing good low-end torque for fuel efficiency and consistent power at higher RPMs. However, some users have reported issues with oil consumption in earlier BlueCore engines and a stiffer suspension [1].\n*   **Honda ADV 160**: Positioned as a more rugged alternative, the Honda ADV 160 utilizes the same eSP+ 4-valve 156.9cc engine technology as the PCX 160. Its key selling points include Showa Sub-tank rear shock absorbers, a higher ground clearance of 165mm (compared to PCX's 134mm), and a two-level adjustable windscreen. It is particularly recommended for riders who encounter poor road conditions, flood-prone areas, or enjoy nature exploration [1].\n*   **Yamaha Aerox 155**: Similar to the NMAX 155, the Aerox 155 also features Yamaha's BlueCore VVA 4-valve 155cc engine. It shares some of the same reported issues as the NMAX 155, such as oil consumption in earlier models and a characteristically stiff suspension [1].\n\n### Maxi-Scooter Alternatives (300-350cc Segment)\n\nFor riders looking for a significant upgrade or who frequently undertake long-distance travel, larger maxi-scooters can be considered:\n\n*   **Honda Forza 350**: This model is an upsell option for touring riders. It is equipped with an eSP+ 329.6cc engine, delivering substantial torque at lower RPMs. A notable feature is its electric windshield, which can be adjusted on the go for enhanced comfort during varying riding conditions. Some reported issues include clutch noise and vibration, as well as water pump leaks in certain units [2, 3].\n*   **Yamaha XMAX 300 Tech Max**: Competing with the Forza 350, the XMAX 300 Tech Max is recommended for tech lovers. It features a BlueCore 292cc engine and stands out with a dual-screen setup, including a 4.2-inch TFT color screen separate from the LCD speedometer. It integrates Garmin StreetCross for full map navigation on its display via a mobile app. The XMAX also boasts a dual-clamp front suspension, offering better stability at high speeds and improved cornering. Earlier models (pre-2023) have been associated with oil consumption issues [2, 3].\n\n### References\n\n*   [1] รายงานการวิเคราะห์เชิงลึกด้านเทคนิคและกลยุทธ์การขายสําหรับรถจักรยานยนต์กลุ่มพรีเมียมสกู๊ตเตอร์ในประเทศไทย ( พ.ศ.2567 - 2569 )\n*   [2] www.zigwheels.co.th / en / new - motorcycles / yamaha / xmax - tech - max / standard\n*   [3] Update อาการ Forza350 หน้าสะบัดและสั่นเมื่อความเร็ว 60 + - Pantip",
+    "cache_type": "query",
+    "chunk_id": null,
+    "original_prompt": "Honda PCX 160 alternatives",
+    "queryparam": {
+      "mode": "global",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "hl_keywords": "alternatives, comparable models",
+      "ll_keywords": "Honda PCX 160",
+      "user_prompt": "",
+      "enable_rerank": true
+    },
+    "create_time": 1768932611,
+    "update_time": 1768932611,
+    "_id": "global:query:0a245ba383270d82ed0a77b8d782ebdb"
+  },
+  "global:keywords:7f5b9ac9bb09d6d94f5e0314e788365f": {
+    "return": "{\"high_level_keywords\": [\"Specifications\"], \"low_level_keywords\": [\"Yamaha Aerox 155\", \"Aerox 155\", \"Yamaha\", \"specs\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "Yamaha Aerox 155 specs",
+    "queryparam": {
+      "mode": "global",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": true
+    },
+    "create_time": 1768932699,
+    "update_time": 1768932699,
+    "_id": "global:keywords:7f5b9ac9bb09d6d94f5e0314e788365f"
+  },
+  "global:query:e1de58421ff9d5a3ba9f9c177796babf": {
+    "return": "The Yamaha Aerox 155 features a BlueCoreVVA 4-valve engine with a cylinder capacity of 155cc. Its engine specifications include a bore x stroke of 58.0x58.7 mm, indicative of a square-type engine design that provides a good balance between torque and rotational speed. The engine produces a maximum horsepower of 15.1 HP at 8,500 rpm. This model also utilizes Variable Valve Actuation (VVA) technology, which includes two camshaft sets for intake valves—one for low-to-mid RPM and another for high RPM, switching at 6,000 rpm to ensure good torque at low speeds for fuel efficiency and sustained torque at higher speeds for acceleration [1].\n\n### References\n\n- [1] รายงานการวิเคราะห์เชิงลึกด้านเทคนิคและกลยุทธ์การขายสําหรับรถจักรยานยนต์กลุ่มพรีเมียมสกู๊ตเตอร์ในประเทศไทย ( พ.ศ.2567 - 2569 ) ส่วนที่ 1 : การวิเคราะห์กลุ่มพรีเมียมเอนทรี ( PremiumEntrySegment : 150cc - 160cc ) กลุ่มนี้คือฐานลูกค้าที่ใหญ่ที่สุดสําหรับตลาดพรีเมียมเป็นจุดเปลี่ยนสําคัญจากรถใช้งานขนาดเล็ก ( 110 - 125cc ) ขึ้นมาสู่รถที่มีสมรรถนะสําหรับการเดินทางระยะกลางคู่แข่งหลักคือ Honda และ Yamaha ที่ต่างงัดเทคโนโลยีเครื่องยนต์ยุคใหม่มาประชันกัน 1.1 การเปรียบเทียบเชิงวิศวกรรมเครื่องยนต์ : eSP + ปะทะ BlueCoreVVA หัวใจสําคัญของการ Upsell ในกลุ่มนี้คือการชี้ให้เห็นถึงความแตกต่างของคาแรคเตอร์เครื่องยนต์ซึ่งส่งผลโดยตรงต่อความรู้สึกในการขับขี่ HondaPCX160 และ ADV160 : วิวัฒนาการสู่ 4 วาล์ว ( eSP + ) เครื่องยนต์ eSP + ( EnhancedSmartPowerPlus ) ขนาด 156.93 ซีซีเป็นการก้าวกระโดดทางวิศวกรรมจากรุ่น 150 เดิมโดยเปลี่ยนจากระบบ 2 วาล์วมาเป็น 4 วาล์วเพื่อเพิ่มประสิทธิภาพในการนําไอดีเข้าและระบายไอเสียออกที่รอบเครื่องยนต์สูง ● ขนาดกระบอกสูบ x ระยะชัก : 60.0x55.5 มม.1 การใช้ลูกสูบขนาดใหญ่ ( BigBore ) และระยะชักที่สั้นลง ( ShortStroke ) เมื่อเทียบกับรุ่นก่อนหน้าบ่งบอกถึงเจตนาในการลดแรงเสียดทานของลูกสูบที่ความเร็วรอบสูงทําให้เครื่องยนต์สามารถลากรอบได้ลึกขึ้นและตอบสนองได้ดีขึ้นในย่านความเร็วปลาย ● เพลาข้อเหวี่ยง : มีการใช้ RollerBearing เพื่อลดแรงสั่นสะเทือนและแรงเสียดทานซึ่งเป็นเทคโนโลยีที่มักพบในรถบิ๊กไบค์ช่วยให้เครื่องยนต์เดินนิ่งขึ้น 3 ● OilJet : ระบบฉีดน ามันหล่อลื่นใต้ลูกสูบช่วยระบายความร้อนและลดการขยายตัวของลูกสูบเมื่อขับขี่ทางไกลด้วยความเร็วสูงต่อเนื่อง 3YamahaNMAX155 และ Aerox155 : ความอัจฉริยะของวาล์วแปรผัน ( VVA ) เครื่องยนต์ BlueCore ขนาด 155 ซีซีของยามาฮ่ามีจุดขายที่แข็งแกร่งคือระบบ VVA ( VariableValveActuation ) ● หลักการทํางาน : ระบบจะมีลูกเบี้ยว ( Camshaft ) สองชุดสําหรับวาล์วไอดีชุดหนึ่งสําหรับรอบต า - กลางและอีกชุดสําหรับรอบสูงโดยมีโซลินอยด์ทําหน้าที่สลับการทํางานที่ 6 , 000 รอบต่อนาที 4 ● ผลลัพธ์ : ทําให้รถมีแรงบิดที่ดีในรอบต าเพื่อการออกตัวที่ประหยัดน ามันแต่เมื่อต้องการเร่งแซงระบบจะสลับไปใช้แคมองศาสูงทําให้กราฟแรงบิดไม่ตกในช่วงปลาย 4 ● ขนาดกระบอกสูบ x ระยะชัก : 58.0x58.7 มม.6 ซึ่งเป็นแบบ Square ( ใกล้เคียงกัน ) ให้สมดุลที่ดีระหว่างแรงบิดและการหมุนรอบตารางเปรียบเทียบสเปกเครื่องยนต์ 150 - 160cc หัวข้อเปรียบเทียบ HondaPCX160YamahaNMAX155HondaADV160YamahaAerox155 รหัสเครื่องยนต์ eSP + 4 วาล์ว BlueCoreVVA4 วาล์ว eSP + 4 วาล์ว BlueCoreVVA4 วาล์วปริมาตรกระบอกสูบ 156.93cc7155cc6156.9cc2155cc6 แรงม้าสูงสุด 15.8HP @ 8 , 500rpm615.1",
+    "cache_type": "query",
+    "chunk_id": null,
+    "original_prompt": "Yamaha Aerox 155 specs",
+    "queryparam": {
+      "mode": "global",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "hl_keywords": "Specifications",
+      "ll_keywords": "Yamaha Aerox 155, Aerox 155, Yamaha, specs",
+      "user_prompt": "",
+      "enable_rerank": true
+    },
+    "create_time": 1768932706,
+    "update_time": 1768932706,
+    "_id": "global:query:e1de58421ff9d5a3ba9f9c177796babf"
+  },
+  "global:keywords:9f6d6bdb14b9bfce592891272a52f00c": {
+    "return": "{\"high_level_keywords\": [\"Product alternatives\", \"Vehicle comparison\"], \"low_level_keywords\": [\"NMAX 155\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "NMAX 155 alternatives",
+    "queryparam": {
+      "mode": "global",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": true
+    },
+    "create_time": 1768933259,
+    "update_time": 1768933259,
+    "_id": "global:keywords:9f6d6bdb14b9bfce592891272a52f00c"
+  },
+  "global:query:72a1c5781e27fed87001679b603a597a": {
+    "return": "If you are looking for alternatives to the Yamaha NMAX 155, the primary options within the premium entry scooter segment (150cc - 160cc) include the Honda PCX160, Honda ADV160, and Yamaha Aerox155 [1].\n\nHere's a breakdown of these alternatives:\n\n*   **Honda PCX160**\n    The Honda PCX160 features an eSP+ 4-valve engine with a displacement of 156.93cc. Its engineering includes a larger piston and shorter stroke to reduce friction at high RPMs, allowing the engine to rev deeper and respond better at higher speeds. It also utilizes Roller Bearings for reduced vibration and friction, and an Oil Jet system for piston cooling during extended high-speed rides. This model is generally recommended for Touring Riders who prioritize long-distance comfort [1, 5]. Common issues reported by users include CVT judder (vibration during initial acceleration) and, in early 2021 models, issues with the engine oil pump gear, although Honda has since improved these parts in later production batches [3].\n\n*   **Honda ADV160**\n    The Honda ADV160, also equipped with an eSP+ 4-valve engine (156.9cc), is specifically engineered to handle challenging road conditions. A key feature is its Showa Sub-tank twin rear shock absorbers, which maintain consistent damping on rough roads. It boasts a higher ground clearance of 165mm, compared to the PCX's 134mm, making it suitable for traversing bumps or low-level floodwaters. The ADV160 also has an adjustable windscreen. This model is recommended for Adventure/Rough Road users who frequently encounter poor road conditions, flood-prone areas, or enjoy exploring nature [1, 3].\n\n*   **Yamaha Aerox155**\n    The Yamaha Aerox155 shares the same BlueCore VVA (Variable Valve Actuation) 4-valve 155cc engine as the NMAX155. The VVA system ensures good torque at low to mid-range RPMs for economical starts and transitions to a high-lift cam profile at 6,000 RPM for sustained power at higher speeds. Like the NMAX155, early models with BlueCore engines, including the Aerox155, had a reputation for oil consumption, particularly during continuous high-RPM usage, and are noted for having stiff suspension [3].\n\nFor individuals focused on value, the Yamaha Grand Filano Hybrid is suggested for its fuel efficiency and affordability of spare parts, with the Honda Giorno+ as an upsell option for those desiring more speed [5, 4].\n\n### References\n- [1] รายงานการวิเคราะห์เชิงลึกด้านเทคนิคและกลยุทธ์การขายสำหรับรถจักรยานยนต์กลุ่มพรีเมียมสกู๊ตเตอร์ในประเทศไทย (พ.ศ.2567 - 2569)\n- [2] NMAXvs.PCXvs.ADV160vs.Aerox | ScooterComparison - YouTube\n- [3] จุดเด่น : การควบคุมที่เฉียบคม (SharpHandling) เหมาะสำหรับการมุดในเมืองท่านั่งจะมีความตั้งตรง (Upright) มากกว่า PCX เล็กน้อยทำให้ควบคุมรถได้ง่ายในความเร็วต่ำ 10 ● ข้อสังเกต : ช่วงล่างเดิมค่อนข้างแข็งกระด้าง (Stiff) สะเทือนขึ้นถึงแฮนด์เมื่อเจอหลุมบ่อซึ่งผู้ใช้งานในไทยจำนวนมากต้องเปลี่ยนโช้คอัพหลังเพื่อแก้ปัญหานี้ 13Logic สำหรับ ChatbotUpsell : ● หากลูกค้าเน้น \"ขับขี่ทางไกลออกทริปนั่งสบาย\" -> แนะนำ PCX160 โดยอ้างอิงเรื่องยางรองแฮนด์และท่านั่ง ● หากลูกค้าเน้น \"ขับขี่ในเมืองชอบความคล่องตัว\" -> แนะนำ NMAX155 โดยอ้างอิงเฟรมและอัตราเร่งช่วงต้นจาก VVA1.3HondaADV160 : กลยุทธ์การ Upsell ด้วยช่วงล่างและภาพลักษณ์ ADV160 ไม่ใช่แค่ PCX ยกสูงแต่เป็นการปรับจูนวิศวกรรมเพื่อรองรับสภาพถนนที่เลวร้าย ● โช้คอัพ ShowaSub-tank : จุดขายที่แข็งแรงที่สุดคือโช้คหลังคู่พร้อมซับแทงค์ (กระปุกแยก) จากโรงงาน 1 ซับแทงค์ช่วยแยกน้ำมันและแก๊สออกจากกันป้องกันการเกิดฟองอากาศ (Cavitation) เมื่อโช้คทำงานหนักๆบนถนนขรุขระทำให้แรงหนืดคงที่ตลอดเวลา ● ระยะยุบตัวและระยะห่างจากพื้น : ด้วย GroundClearance ที่ 165 มม.(เทียบกับ PCX ที่ 134 มม.) ทำให้ ADV160 สามารถรูดผ่านลูกระนาดหรือน้ำท่วมขังระดับต่ำได้ดีกว่ามาก 1 ● Windscreen ปรับระดับได้ : ชิลด์หน้าสามารถปรับความสูงได้ 2 ระดับซึ่ง PCX ทำไม่ได้ 1Logic สำหรับ Chatbot : ใช้ ADV160 เป็นตัว Upsell เมื่อลูกค้าบ่นเรื่อง \"ถนนแถวบ้านไม่ดี\" , \"น้ำท่วมขังบ่อย\" หรือ \"ชอบเที่ยวธรรมชาติ\" โดยเน้นความคุ้มค่าของโช้ค Showa ที่ไม่ต้องไปเสียเงินเปลี่ยนเอง 1.4 จุดอ่อนและปัญหาที่พบบ่อย (DefectAnalysis) เพื่อสร้างความเชื่อถือ Chatbot ที่ดีต้องไม่เพียงแค่เชียร์สินค้าแต่ต้องให้คำแนะนำในการดูแลรักษาได้ด้วย ● HondaPCX160 : ○ อาการสั่นขณะออกตัว (CVTJudder) : ผู้ใช้จำนวนมากรายงานอาการสั่นที่ความเร็วต่ำสาเหตุเกิดจากฝุ่นผ้าคลัชสะสมในกะโหลกคลัชหรือหน้าสัมผัสไม่จับตัวกันดีพอ 15 ○ เฟืองปั๊มน้ำมันเครื่อง : ในรุ่นปีแรกๆ (2021) มีรายงานปัญหาเฟืองปั๊มน้ำมันเครื่องรูดแต่ Honda ได้มีการปรับปรุงพาร์ทในล็อตหลังๆแล้ว 15 ● YamahaNMAX155 / Aerox155 : ○ น้ำมันเครื่องหาย (OilConsumption) : เครื่องยนต์ BlueCore ในยุคแรกๆและ XMAX รุ่นก่อนปี 2023 มีชื่อเสียงเรื่องการกินน้ำมันเครื่องหากใช้รอบสูงต่อเนื่องแม้ใน NMAX155 จะพบน้อยกว่า XMAX แต่ก็เป็นสิ่งที่ผู้ใช้ควรหมั่นตรวจสอบ 19 ○ โช้คแข็ง : ดังที่กล่าวไปข้างต้นเป็นคาแรคเตอร์ประจำตัวที่ผู้ใช้อาจต้องยอมรับหรือแก้ไข 12 ส่วนที่ 2 : การวิเคราะห์กลุ่มบิ๊กสกู๊ตเตอร์ (Maxi-ScooterSegment : 300cc - 350cc) การขยับจาก 150cc มาเป็น 300cc + คือการมองหา \"อำนาจในการเดินทาง\" (TouringAuthority) คู่แข่งหลักคือ HondaForza350 และ YamahaXMAX300 ซึ่งมีจุดเด่นที่กินกันไม่ลงคนละด้าน 2.1 ศึกชิงจ้าว\n- [4] YamahaGrandFilanoHybrid3.1Giorno + vsGrandFilanoHybrid : ปะทะด้วยแนวคิด HondaGiorno + : โมเดิร์นคลาสสิกสายแรง Honda เลือกใช้เครื่องยนต์ eSP + 4 วาล์ว 125cc ระบายความร้อนด้วยน้ำ (ยกมาจาก HondaLead125) ใส่ในบอดี้สไตล์คลาสสิก 34 ● จุดเด่น : สมรรถนะที่เหนือกว่าอย่างชัดเจนในการขับขี่ระยะไกลหรือเร่งแซงระบบระบายความร้อนด้วยน้ำทำให้เครื่องยนต์ยืนระยะได้ดีกว่าเมื่อรถติดหนักๆหรือขี่แช่ยาวๆ ● ดีไซน์ : เน้นความอูบอ่า (Voluminous) และเป็นรถ Fashion ที่ \"แต่งขึ้น\" มีของแต่งรองรับมหาศาล YamahaGrandFilanoHybrid : ความประหยัดและความละมุน Yamaha ใช้เครื่องยนต์ BlueCoreHybrid ระบายความร้อนด้วยอากาศ ● HybridSystem : ไม่ใช่ไฮบริดเต็มระบบแต่เป็นมอเตอร์สตาร์ท (SMG) ที่ช่วยส่งกำลังเสริมเครื่องยนต์เป็นเวลา 3 วินาทีแรกที่ออกตัว 4 ช่วยลดภาระเครื่องยนต์และประหยัดน้ำมัน ● ความประหยัด : ผู้ใช้งานจริงทำตัวเลขได้ถึง 55 - 60 กม./ลิตรได้ง่ายกว่า Giorno + 363.2Logic การ Upsell : คนซ้อนคือผู้ตัดสินข้อมูลจากกระทู้แนะนำการซื้อรถระบุชัดเจนว่า GrandFilanoHybrid ชนะขาดในเรื่องคนซ้อน 37 ● เหตุผล : เบาะนั่งของ GrandFilano มีขนาดกว้างและแบนราบกว่าพักเท้าคนซ้อนมีขนาดใหญ่และวางตำแหน่งได้ดีทำให้คนซ้อนไม่ไหลมาชนคนขับ ● ChatbotTrigger : หากลูกค้าบอกว่า \"ซื้อไปรับส่งแฟน\" หรือ \"มีคนซ้อนประจำ\" -> เชียร์ GrandFilano Hybrid ทันทีส่วนที่ 4 : เจาะลึกเทคโนโลยีเพื่อการขาย (TechnologyDeepDives) Chatbot ต้องสามารถอธิบายศัพท์เทคนิคให้เป็นภาษามนุษย์ได้ 4.1TractionControl : HSTCvsTCS ทั้ง Honda (HSTC - HondaSelectableTorqueControl) และ Yamaha (TCS - TractionControlSystem) มีหลักการทำงานเหมือนกันคือการใช้เซ็นเซอร์วัดความเร็วล้อหน้าและหลัง 3 ● การทำงาน : เมื่อล้อหลังหมุนเร็วกว่าล้อหน้า (เกิดการฟรีทิ้ง) กล่อง ECU จะสั่งลดการจ่ายน้ำมันหรือตัดไฟจุดระเบิดชั่วคราวเพื่อลดกำลังเครื่องยนต์จนกว่าล้อจะกลับมาเกาะถนน ● บทพูดปิดการขาย : \"ระบบนี้ไม่ใช่แค่ของเล่นครับแต่มันคือความปลอดภัยบนเส้นขาวทางม้าลายเวลาฝนตกหรือฝาท่อระบายน้ำลื่นๆระบบจะช่วยตัดกำลังไม่ให้รถปัดป้องกันการล้มสไลด์ได้จริง\" 4.2 การเชื่อมต่อ : Y - ConnectvsRoadSync ● Y - Connect (Yamaha) : เน้น \"VehicleHealth\" (สุขภาพรถ) แจ้งเตือนน้ำมันเครื่องแบตเตอรี่และจุดจอดรถล่าสุดเหมาะกับคนที่ดูแลรถไม่เก่ง 36 ● RoadSync (Honda) : เน้น \"Lifestyle & Control\" สั่งงานด้วยเสียงรับสายโทรออกฟังเพลงผ่านปุ่มที่แฮนด์เหมาะกับคนที่ใช้ชีวิตติดมือถือและต้องสื่อสารตลอดเวลา 38 ส่วนที่ 5 : ต้นทุนการเป็นเจ้าของ (CostofOwnership) ข้อมูลราคาอะไหล่และการบำรุงรักษาจากศูนย์บริการในไทยเพื่อความโปร่งใสในการขายตารางค่าใช้จ่ายอะไหล่สิ้นเปลืองโดยประมาณ (บาท) รายการ HondaPCX160 / ADV160YamahaNMAX155 / Aerox หมายเหตุน้ำมันเครื่อง (สังเคราะห์) ~ 250 - 350 ~ 250 - 350 เปลี่ยนทุก 4 , 000 - 6 , 000 กม.39 สายพานขับเคลื่อน (V\n- [5] Y - ConnectvsRoadSync ● Y - Connect (Yamaha) : เน้น \"VehicleHealth\" (สุขภาพรถ) แจ้งเตือนน้ำมันเครื่องแบตเตอรี่และจุดจอดรถล่าสุดเหมาะกับคนที่ดูแลรถไม่เก่ง 36 ● RoadSync (Honda) : เน้น \"Lifestyle & Control\" สั่งงานด้วยเสียงรับสายโทรออกฟังเพลงผ่านปุ่มที่แฮนด์เหมาะกับคนที่ใช้ชีวิตติดมือถือและต้องสื่อสารตลอดเวลา 38 ส่วนที่ 5 : ต้นทุนการเป็นเจ้าของ (CostofOwnership) ข้อมูลราคาอะไหล่และการบำรุงรักษาจากศูนย์บริการในไทยเพื่อความโปร่งใสในการขายตารางค่าใช้จ่ายอะไหล่สิ้นเปลืองโดยประมาณ (บาท) รายการ HondaPCX160 / ADV160YamahaNMAX155 / Aerox หมายเหตุน้ำมันเครื่อง (สังเคราะห์) ~ 250 - 350 ~ 250 - 350 เปลี่ยนทุก 4 , 000 - 6 , 000 กม.39 สายพานขับเคลื่อน (V - Belt) ~ 66041 ~ 430 - 45042Yamaha ถูกกว่าอย่างมีนัยสำคัญผ้าเบรกหน้า ~ 51041 ~ 250 - 41044Yamaha มีเกรดเทียบแท้ให้เลือกเยอะกว่าชุดตุ้มน้ำหนัก (เม็ด) ~ 32041 ~ 300 ราคาใกล้เคียงกัน รอบเช็คระยะใหญ่ 24 , 000 กม.20 , 000 - 24 , 000 กม.เปลี่ยนสายพาน , เม็ด , น้ำยาหม้อน้ำวิเคราะห์ : โดยรวมแล้วอะไหล่สิ้นเปลืองของ Yamaha มีราคาถูกกว่า Honda ประมาณ 15 - 20 % 45 ซึ่งเป็นจุดขายที่ดีสำหรับลูกค้าที่กังวลเรื่องค่าใช้จ่ายระยะยาวส่วนที่ 6 : บทสรุปและกลยุทธ์ ChatbotUpsell (StrategicRecommendations) จากการวิเคราะห์ข้อมูลรอบด้านเราสามารถสร้าง DecisionTree สำหรับ Chatbot ได้ดังนี้ : 6.1 โปรไฟล์ : \"เน้นใช้งานคุ้มค่า\" (ValueSeeker) ● Trigger : บ่นเรื่องราคาน้ำมัน , งบจำกัด , ใช้ขี่ไปทำงานใกล้ๆ ● แนะนำ : YamahaGrandFilanoHybrid ● เหตุผล : ประหยัดน้ำมันที่สุด (Hybrid) , ราคาอะไหล่ถูก , ที่เก็บของใหญ่ , คนซ้อนนั่งสบาย ● Upsell : ถ้าอยากได้ความเร็วเพิ่ม -> ไป Giorno + (เครื่องแรงกว่า) 6.2 โปรไฟล์ : \"เดินทางไกล / ออกทริป\" (TouringRider) ● Trigger : ขี่ข้ามจังหวัด , ชอบความเร็ว , เบื่อลมปะทะ ● แนะนำ : HondaPCX160 (เริ่มต้น) หรือ Forza350 (ที่สุด) ● UpselltoForza : \"ถ้าพี่ต้องขี่ 100 - 120 กม./ชม.ยาวๆ Forza จะทำให้เครื่องไม่โทรมและชิลด์ไฟฟ้าจะช่วยให้พี่ไม่เหนื่อยจากลมตีครับ\" 6.3 โปรไฟล์ : \"สายลุย / ถนนพัง\" (Adventure / RoughRoad) ● Trigger : ถนนซอยบ้านไม่ดี , น้ำท่วมขัง , ชอบเที่ยวธรรมชาติ ● แนะนำ : HondaADV160 ● KeyMessage : \"โช้ค Showa ซับแทงค์ไม่ได้มีไว้เท่ๆครับแต่มันช่วยให้รถนิ่งเวลาเจอหลุมรูดผ่านได้มั่นใจกว่า PCX เยอะครับ\" 6.4 โปรไฟล์ : \"สายเทคโนโลยี / Gadget\" (TechLover) ● Trigger : ชอบหน้าจอหล้ำๆ , กลัวหลงทาง , ชอบของเล่น ● แนะนำ : YamahaXMAX300TechMax ● KeyMessage : \"ตัวนี้จบเลยครับมีแผนที่ Garmin บนหน้าจอไม่ต้องเอามือถือมาตากแดดตากฝนประหยัดค่า GPS แยกไปได้เป็นหมื่นครับ\" 6.5 มุมมองอนาคตปี 2025 / 2026 (FutureOutlook) ● YamahaNMAXTurbo : มีข่าวลือหนาหูเกี่ยวกับการเปิดตัว NMAX ที่ใช้ระบบเกียร์ไฟฟ้า YECVT (YamahaElectricCVT) ที่จำล",
+    "cache_type": "query",
+    "chunk_id": null,
+    "original_prompt": "NMAX 155 alternatives",
+    "queryparam": {
+      "mode": "global",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "hl_keywords": "Product alternatives, Vehicle comparison",
+      "ll_keywords": "NMAX 155",
+      "user_prompt": "",
+      "enable_rerank": true
+    },
+    "create_time": 1768933280,
+    "update_time": 1768933280,
+    "_id": "global:query:72a1c5781e27fed87001679b603a597a"
   }
 }

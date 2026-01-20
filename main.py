@@ -3,23 +3,22 @@ import json
 import os
 import asyncio
 import re
-import traceback
 from typing import List, Optional, Dict, Any
 
 # Third-party imports
 import uvicorn
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI
 from pydantic import BaseModel
 from openai import OpenAI
 from tqdm import tqdm
 
 # LightRAG imports
-from lightrag import LightRAG, QueryParam
+from lightrag import QueryParam
 
 # Local imports
 from lib.logger import logger
 from lib.initialize_lightrag import initialize_lightrag
-from lib.pdf import load_pdfs_to_rag
+# from lib.pdf import load_pdfs_to_rag
 
 
 # ============================================
@@ -111,24 +110,21 @@ async def lightrag_tool(query: str) -> str:
     )
     return result
 
-def check_stock_logic(model_name: str) -> str:
-    """Check stock logic and return formatted string"""
-    for item in product_stock_price:
-        if item.get("product_name", "").lower() == model_name.lower():
-            stock = item.get("stock_quantity", 0)
-            price = item.get("price", "N/A")
+def create_check_stock_logic(inventory_data: List[Dict[str, Any]]):
+    """Factory function to create check_stock_logic with inventory data"""
+    def check_stock_logic(model_name: str) -> str:
+        """Check stock logic and return formatted string"""
+        for item in inventory_data:
+            if item.get("product_name", "").lower() == model_name.lower():
+                stock = item.get("stock_quantity", 0)
+                price = item.get("price", "N/A")
 
-            if stock > 0:
-                return f"Model: {model_name}, Price: {price}, Stock: {stock}"
-            else:
-                return f"""
-                {{
-                    "model": "{item["product_name"]}",
-                    "status": "Out of Stock",
-                    "SYSTEM_INSTRUCTION": "The product is out of stock. STOP! Do not apologize yet. You MUST immediately call 'lightrag_tool' with query '{item["product_name"]} competitors' to find an alternative product. Do this BEFORE replying to the user."
-                }}
-                """
-    return f"Model: {model_name} not found in inventory."
+                if stock > 0:
+                    return f"✅ Available | Model: {model_name} | Price: {price} บาท | Stock: {stock} units"
+                else:
+                    return f"❌ Out of Stock | Model: {model_name} | INSTRUCTION: Call lightrag_tool(query='{model_name} alternatives') immediately."
+        return f"❓ Not Found | Model: {model_name} not in inventory."
+    return check_stock_logic
 
 # Tool schema for function calling
 tools_schema = [
@@ -170,12 +166,11 @@ tools_schema = [
 
 
 
-def check_tool_call_in_text(content: str,tool_calls :List) -> Optional[Dict[str, Any]]:
+def check_tool_call_in_text(content: str, tool_calls: List) -> Optional[List]:
     """Check for tool call in text content and extract JSON arguments"""
     if not tool_calls and content and "<tool_call>" in content:
-        print("⚠️ ตรวจพบ Tool Call ในรูปแบบ Text! กำลังแปลงข้อมูล...")
+        logger.warning("⚠️ Detected text-based tool call")
         
-        # ใช้ Regex ดึง JSON ออกมาจาก Tag
         pattern = r'<tool_call>(.*?)</tool_call>'
         match = re.search(pattern, content, re.DOTALL)
         
@@ -184,20 +179,20 @@ def check_tool_call_in_text(content: str,tool_calls :List) -> Optional[Dict[str,
             try:
                 tool_data = json.loads(json_str)
                 
-                # สร้าง Object หลอกๆ ขึ้นมาให้เหมือน OpenAI tool_calls
                 class FakeToolCall:
                     def __init__(self, name, args):
-                        self.id = "call_fake_123" # มั่ว ID ไป
+                        self.id = "call_fake_123"
                         self.type = "function"
-                        self.function = type('obj', (object,), {'name': name, 'arguments': json.dumps(args)})
+                        self.function = type('obj', (object,), {
+                            'name': name,
+                            'arguments': json.dumps(args)
+                        })
 
-                # ยัดใส่ตัวแปร tool_calls เพื่อให้ Code ด้านล่างทำงานต่อได้
-                tool_calls = [FakeToolCall(tool_data["name"], tool_data["arguments"])]
-
-                return tool_calls
+                return [FakeToolCall(tool_data["name"], tool_data["arguments"])]
                 
             except Exception as e:
-                print(f"❌ Error parsing manual tool call: {e}")
+                logger.error(f"❌ Error parsing tool call: {e}")
+    return None
 
 
 def create_chat_history(chat):
@@ -224,311 +219,111 @@ def create_chat_history(chat):
 async def run_chat(query: RunChatRequest) -> Dict[str, str]:
     """Chat endpoint with tool calling support"""
     
-
     system_prompt_for_typhoon = """
-    ### ROLE & PERSONA
-    You are the "Technical Motorcycle & Parts Consultant & Seller" at "Winner Bike".
-    - Vibe: Pro mechanic, honest, friendly (Thai local shop style).
-    - Goal: Help customers find the right bike. **Check stock first, then sell.**
+        ### ROLE & PERSONA
+        You are a motorcycle consultant at "Winner Bike" (Thai local shop style).
+        - Speak Thai, friendly, honest. Use "ผม" and "ครับ".
+        - Answer directly. Short and clear. No fluff.
 
-    ### TOOLS PROTOCOL (STRICT ORDER)
-    You have 2 tools. Do NOT hallucinate info.
-    1. `check_stock_logic`: USE FIRST for availability/price questions.
-    2. `lightrag_tool`: USE SECOND for specs, details, or finding ALTERNATIVES.
+        ### TOOLS (Use them, don't guess)
+        1. `check_stock_logic`: Check availability/price
+        2. `lightrag_tool`: Get specs/alternatives
 
-    ### WORKFLOW SCENARIOS
+        ### WORKFLOW
+        **Stock Check:**
+        - Call check_stock_logic first
+        - ✅ Available → Say: "มีครับ [Model] ราคา [Price] บาท"
+        - ❌ Out of Stock → Call lightrag_tool for alternatives, then recommend
 
-    1. **CASE: CHECK STOCK (ถามสต็อก/มีของไหม/ราคาเท่าไหร่)**
-    - **Step 1:** Call `check_stock_logic(model_name="...")`.
-    - **Step 2:** Observe the tool result:
-        - **IF status="Available":**
-        - Say: "มีของครับพี่ [Model Name] ที่ Winner Bike ยังมีสต็อกครับ ราคา [Price] บาท"
-        - Action: **STOP.** Wait for user to ask for specs.
-        - **IF status="Out of Stock" OR "Not Found":**
-        - Say: "ขออภัยครับ [Model Name] ตอนนี้ที่ร้านหมดชั่วคราวครับ"
-        - **Action:** IMMEDIATELY call `lightrag_tool(query="[Model Name] competitors/alternatives")` to find a substitute.
-        - **Step 3:** Recommend the substitute found by LightRAG.
-        - Response: "...แต่ผมแนะนำลองดูเป็น [Alternative Model] ไหมครับ สเปคใกล้กันมาก พี่สนใจให้ผมเล่าตัวนี้แทนไหม?"
+        **Explain Product:**
+        - Trigger: "สเปค", "ดียังไง", "อธิบายหน่อย"
+        - Call lightrag_tool → Summarize in plain Thai (focus on benefits)
 
-    2. **CASE: EXPLAIN PRODUCT (ถามสเปค/ดียังไง)**
-    - **Trigger:** "ขอสเปค", "ดียังไง", "เล่าหน่อย".
-    - **Action:** Call `lightrag_tool(query="[Model] specs features")`.
-    - **Response:** Summarize benefits (Real-world usage > technical numbers).
+        **Recommendation:**
+        - Trigger: "แนะนำรถ", "รถไหนดี"
+        - Call lightrag_tool → Only recommend what the tool returns
 
-    3. **CASE: RECOMMENDATION (ถามแนะนำรถ)**
-    - **Trigger:** "ขับในเมืองรุ่นไหนดี", "รถออกทริป".
-    - **Action:** Call `lightrag_tool(query="best motorcycle for [usage]")`.
-    - **Constraint:** Only recommend models returned by the tool.
+        ### RESPONSE RULES (CRITICAL)
+        Your response MUST be a polished Thai customer chat reply that:
+        1. Answers ONLY what the customer asked - don't volunteer extra info
+        2. Keeps it SHORT and DIRECT - no lengthy explanations
+        3. Sounds like a real person chatting, NOT an advertisement or sales pitch
+        4. Does NOT introduce new topics unless the customer asks
+        5. Provides technical details ONLY when customer explicitly requests them
+        6. Is conversational and natural (like talking to a friend at a shop)
+        7. Never mentions "draft", "raw data", "database", or technical processes
 
-    ### TONE & RULES
-    - Language: Thai (Natural, Polite "ครับ").
-    - Identity: Use "ผม" or "ทางร้าน Winner Bike".
-    - **Rule:** If stock tool says 0, you MUST say "Out of stock". Do not lie.
+        ### STRICT RULES
+        - Always respond in FINAL Thai. No English unless technical terms.
+        - Don't lie about stock availability.
+        - Be honest if you don't know something.
     """
-    logger.info(f"Running chat for query: {query.message[:50]}...")
-
-    global product_stock_price
-    product_stock_price = query.Data_model_stock_price
-
-    chat_history = create_chat_history(query.chat_history)
-    print(chat_history)
     
-    messages = [
-        {"role": "system", "content": system_prompt_for_typhoon},
-        {"role": "user", "content": f"""Here is the chat history:{chat_history}"""},
-        {"role": "user", "content": query.message}
-    ]
-    MAX_LOOP = 5
+    logger.info(f"Running chat for query: {query.message[:50]}...")
+    
+    # Create closure with inventory data
+    check_stock_fn = create_check_stock_logic(query.Data_model_stock_price)
+    
+    chat_history = create_chat_history(query.chat_history)
+    
+    messages = [{"role": "system", "content": system_prompt_for_typhoon}]
+    
+    if chat_history:
+        messages.append({"role": "user", "content": f"Chat History:\n{chat_history}"})
+    
+    messages.append({"role": "user", "content": query.message})
+    
+    MAX_LOOP = 3  
     count = 0
+    
     while count < MAX_LOOP:
         count += 1
-        logger.info(f"Chat Loop Iteration: {count}")
+        logger.info(f"Loop {count}/{MAX_LOOP}")
         response = client.chat.completions.create(
             model="typhoon-v2.5-30b-a3b-instruct",
             messages=messages,
             temperature=0.2,
-            max_completion_tokens=50000,
+            max_completion_tokens=50000,  
             tools=tools_schema,
             tool_choice="auto"
         )
-        logger.info("Processing tool calls if any...")
-        response_message = response.choices[0].message
-        logger.info(f"Response Message: {response_message}")
         
-        tool_calls = response_message.tool_calls
-        logger.info(f"Tool calls: {tool_calls}")
-
-        tool_calls = check_tool_call_in_text(response_message.content, tool_calls)
+        response_message = response.choices[0].message
+        tool_calls = response_message.tool_calls or check_tool_call_in_text(response_message.content, None)
         
         if tool_calls:
-            logger.info(f"Tool calls detected: {len(tool_calls)}")
+            logger.info(f"🔧 Tool calls: {len(tool_calls)}")
             messages.append(response_message)
 
             for tool_call in tool_calls:
-                logger.info(f"Processing tool call: {tool_call.function.name}")
                 tool_name = tool_call.function.name
                 function_args = json.loads(tool_call.function.arguments)
+                logger.info(f"→ {tool_name}: {function_args}")
 
                 if tool_name == "lightrag_tool":
-                    
-                    logger.info(f"Calling lightrag_tool with args: {function_args}")
                     function_response = await lightrag_tool(query=function_args.get("query"))
-                    logger.info(f"Tool response: {function_response[:100]}...")
-                    messages.append({
-                        "role": "tool",
-                        "tool_call_id": tool_call.id,
-                        "name": tool_name,
-                        "content": function_response
-                    })
+                    logger.info(f"← lightrag: {function_response[:80]}...")
                 elif tool_name == "check_stock_logic":
+                    function_response = check_stock_fn(model_name=function_args.get("model_name"))
+                    logger.info(f"← stock: {function_response}")
+                else:
+                    logger.warning(f"Unknown tool: {tool_name}")
+                    continue
+                
+                messages.append({
+                    "role": "tool",
+                    "tool_call_id": tool_call.id,
+                    "name": tool_name,
+                    "content": function_response
+                })
 
-                    logger.info(f"Calling check_stock_logic with args: {function_args}")
-                    function_response = check_stock_logic(model_name=function_args.get("model_name"))
-                    logger.info(f"Tool response: {function_response}")
-                    messages.append({
-                        "role": "tool",
-                        "tool_call_id": tool_call.id,
-                        "name": tool_name,
-                        "content": function_response
-                    })
-
-            
-            
-
-            continue  # Restart loop to process any new tool calls
+            continue  
         else:
-            logger.info("No tool calls detected. Refining final response...")
-            refine_instruction = f"""
-
-
-                Below is accurate raw information (Draft):
-                "{response_message.content}"
-
-                Task:
-                Rewrite the draft into a Thai customer chat response.
-
-                Rules:
-                - Answer only what the customer asked.
-                - Keep the response short and direct.
-                - Do not add explanations unless required to answer the question.
-                - Do not sound like an advertisement.
-                - Do not introduce new topics on your own.
-                - Provide deeper technical details only if the customer asks a follow-up question.
-            """
-            
-            messages.append({"role": "user", "content": refine_instruction})
-            
-            final_response = client.chat.completions.create(
-                model="typhoon-v2.5-30b-a3b-instruct",
-                messages=messages,
-                temperature=0.2,
-                max_completion_tokens=50000
-            )
-            
-            logger.info("Final response generated.")
-            logger.info("No tool calls detected.")
-            return {'response': final_response.choices[0].message.content}
-
-@app.post("/query")
-async def query_endpoint(request: QueryRequest):
-    """Query endpoint for in-stock products"""
-    try:
-        logger.info(f"Received query: {request.message[:50]}...")
-        
-
-        formatted_history = ""
-        if request.chat_history:
-            formatted_history = "--- Conversation History ---\n"
-            for msg in request.chat_history:
-
-                role = msg.get("role", "Unknown")
-                content = msg.get("content", "")
-                
-
-                display_role = "User" if role.lower() == "user" else "AI"
-                
-                formatted_history += f"{display_role}: {content}\n"
-            formatted_history += "----------------------------\n"
-
-
-        prompt = f"""
-            {formatted_history}
-
-            Current Question: {request.message}
-
-
-            Stock Availability: {request.stock}
-
-            Instruction:
-            If the requested product is in stock, clearly confirm availability.
-            Keep the response short and direct.
-            Do NOT explain specifications, features, or benefits unless the customer asks.
-            You may ask one short, optional follow-up question.
-            Wait for the customer to request more details before providing any technical explanation."""
-
-
-        # print(prompt) 
-
-
-        result = await rag.aquery(
-            prompt,
-            param=QueryParam(mode=request.mode)
-        )
-
-        return {'response': clean_Reference(result)}
-
-    except Exception as e:
-        logger.error(f"Error processing query: {e}")
-
-        traceback.print_exc()
-        raise HTTPException(status_code=500, detail=str(e))
-
-@app.post("/query_sale")
-async def query_sale_endpoint(request: QueryRequest):
-    """Query endpoint for out-of-stock products with alternatives"""
-    try:
-        logger.info(f"Received sales query: {request.message[:50]}...")
-        
-
-        formatted_history = ""
-        if request.chat_history:
-            formatted_history = "--- Conversation History ---\n"
-            for msg in request.chat_history:
-
-                role = msg.get("role", "Unknown")
-                content = msg.get("content", "")
-                
-
-                display_role = "User" if role.lower() == "user" else "AI"
-                
-                formatted_history += f"{display_role}: {content}\n"
-            formatted_history += "----------------------------\n"
-
-
-        prompt = f"""
-       {formatted_history}
-
-        Current Question: {request.message}
-
-        Stock Availability: {request.stock}
-
-        Instruction:
-        If the requested product is out of stock, inform the customer clearly and politely.
-        Then suggest 1–2 closest available alternatives.
-        Keep the response short and concise.
-        Do NOT explain specifications, features, or comparisons.
-        Wait for the customer to ask before providing more details.
-        """
-
-        # print(prompt) 
-
-
-        result = await rag.aquery(
-            prompt,
-            param=QueryParam(mode=request.mode)
-        )
-
-        return {'response': clean_Reference(result)}
-    except Exception as e:
-        logger.error(f"Error processing sales query: {e}")
-        traceback.print_exc()
-        raise HTTPException(status_code=500, detail=str(e))
-
-@app.post("/explain_product")
-async def explain_product_endpoint(request: ExplainProductRequest):
-    """Endpoint for detailed product explanations"""
-    try:
-        logger.info(f"Received product explanation query: {request.message[:50]}...")
-        
-
-        formatted_history = ""
-        if request.chat_history:
-            formatted_history = "--- Conversation History ---\n"
-            for msg in request.chat_history:
-
-                role = msg.get("role", "Unknown")
-                content = msg.get("content", "")
-                
-
-                display_role = "User" if role.lower() == "user" else "AI"
-                
-                formatted_history += f"{display_role}: {content}\n"
-            formatted_history += "----------------------------\n"
-
-
-        prompt = f"""
-       {formatted_history}
-
-        Current Question: {request.message}
-
-
-        Instruction:
-        Provide a clear and honest explanation of the product's specifications, features, and benefits.
-        Keep the response informative yet concise.
-        Do NOT introduce new topics on your own.
-        Wait for the customer to ask before giving suggestions or alternatives.
-        """
-
-        # print(prompt) 
-
-
-        result = await rag.aquery(
-            prompt,
-            param=QueryParam(mode=request.mode)
-        )
-
-        return {'response': clean_Reference(result)}
-
-
-    except Exception as e:
-        logger.error(f"Error processing sales query: {e}")
-
-        traceback.print_exc()
-        raise HTTPException(status_code=500, detail=str(e))
-
-# ============================================
-# Main Entry Point
-# ============================================
+            logger.info("✓ Final response ready")
+            return {'response': response_message.content}
+    
+    logger.warning(f"⚠️ Max loop ({MAX_LOOP}) reached")
+    return {'response': response_message.content if response_message else "ขออภัยครับ เกิดข้อผิดพลาด"}
 
 if __name__ == "__main__":
     uvicorn.run(app, host="localhost", port=8000)
