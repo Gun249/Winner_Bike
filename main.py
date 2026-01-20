@@ -58,6 +58,8 @@ class ExplainProductRequest(BaseModel):
 
 class RunChatRequest(BaseModel):
     message: str
+    Data_model_stock_price : List[Dict[str, Any]] = []
+    chat_history: List[Dict[str, Any]] = []
 
 # ============================================
 # Helper Functions
@@ -109,28 +111,55 @@ async def lightrag_tool(query: str) -> str:
     )
     return result
 
+def check_stock_logic(model_name: str) -> str:
+    """Check stock logic and return formatted string"""
+    for item in product_stock_price:
+        if item.get("product_name", "").lower() == model_name.lower():
+            stock = item.get("stock_quantity", 0)
+            price = item.get("price", "N/A")
+
+            if stock > 0:
+                return f"Model: {model_name}, Price: {price}, Stock: {stock}"
+            else:
+                return f"""
+                {{
+                    "model": "{item["product_name"]}",
+                    "status": "Out of Stock",
+                    "SYSTEM_INSTRUCTION": "The product is out of stock. STOP! Do not apologize yet. You MUST immediately call 'lightrag_tool' with query '{item["product_name"]} competitors' to find an alternative product. Do this BEFORE replying to the user."
+                }}
+                """
+    return f"Model: {model_name} not found in inventory."
+
 # Tool schema for function calling
-tool_schema = [
+tools_schema = [
+    {
+        "type": "function",
+        "function": {
+            "name": "check_stock_logic",
+            "description": "Check real-time stock and price. Use this whenever user asks about availability.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "model_name": {
+                        "type": "string",
+                        "description": "The model name to check (e.g. 'PCX 160', 'Wave')."
+                    }
+                },
+                "required": ["model_name"]
+            }
+        }
+    },
     {
         "type": "function",
         "function": {
             "name": "lightrag_tool",
-            "description": (
-                "THE KNOWLEDGE BASE. Strictly use this tool to retrieve technical facts, "
-                "specifications, compatibility, model comparisons, and troubleshooting advice. "
-                "AI MUST use this tool before answering any technical questions to ensure accuracy. "
-                "Do NOT use this for checking stock availability."
-            ),
+            "description": "Retrieve technical specs, pros/cons, and FIND ALTERNATIVES if stock is empty.",
             "parameters": {
                 "type": "object",
                 "properties": {
                     "query": {
                         "type": "string",
-                        "description": (
-                            "Targeted search keywords extracted from the user's request. "
-                            "Example: If user asks 'Does PCX 160 use synthetic oil?', "
-                            "the query should be 'PCX 160 synthetic oil recommendation'."
-                        )
+                        "description": "Search keyword (e.g. 'PCX 160 specs', 'PCX 160 competitors')."
                     }
                 },
                 "required": ["query"]
@@ -170,136 +199,175 @@ def check_tool_call_in_text(content: str,tool_calls :List) -> Optional[Dict[str,
             except Exception as e:
                 print(f"❌ Error parsing manual tool call: {e}")
 
+
+def create_chat_history(chat):
+        formatted_history = ""
+        if chat:
+            formatted_history = "--- Conversation History ---\n"
+            for msg in chat:
+
+                role = msg.get("role", "Unknown")
+                content = msg.get("content", "")
+                
+
+                display_role = "User" if role.lower() == "user" else "AI"
+                
+                formatted_history += f"{display_role}: {content}\n"
+            formatted_history += "----------------------------\n"
+        return formatted_history
+
 # ============================================
 # API Routes
 # ============================================
 
 @app.post("/run_chat")
-async def run_chat(query: RunChatRequest) -> str:
+async def run_chat(query: RunChatRequest) -> Dict[str, str]:
     """Chat endpoint with tool calling support"""
+    
+
     system_prompt_for_typhoon = """
     ### ROLE & PERSONA
     You are the "Technical Motorcycle & Parts Consultant & Seller" at "Winner Bike".
-    - Your vibe: Professional mechanic-turned-seller. Experienced, honest, friendly (trusted local shop style).
-    - Your goal: Help customers find the right bike/parts from Winner Bike using accurate facts.
-    - You act like a real staff at Winner Bike replying in chat.
+    - Vibe: Pro mechanic, honest, friendly (Thai local shop style).
+    - Goal: Help customers find the right bike. **Check stock first, then sell.**
 
-    ### TOOL USAGE PROTOCOL (CRITICAL)
-    Winner Bike has a massive database. You MUST use `lightrag_tool` to get accurate facts.
-    - **NEVER guess specs.** If asked about details/pros/cons, use the tool.
-    - **Query Style:** Extract keywords (e.g., "PCX 160 pros cons", "best city riding motorcycle recommendations").
+    ### TOOLS PROTOCOL (STRICT ORDER)
+    You have 2 tools. Do NOT hallucinate info.
+    1. `check_stock_logic`: USE FIRST for availability/price questions.
+    2. `lightrag_tool`: USE SECOND for specs, details, or finding ALTERNATIVES.
 
-    ### SCENARIO LOGIC & WORKFLOW (STRICT)
-    Analyze the user's intent and follow these cases:
+    ### WORKFLOW SCENARIOS
 
-    1. **CASE: CHECK STOCK (ถามสต็อก/มีของไหม)**
-    - **Context:** You receive stock status (Available/Out of Stock).
-    - **IF IN STOCK:** - Say: "มีของครับพี่ รุ่นนี้ที่ Winner Bike ยังมีสต็อกครับ"
-        - Action: **STOP.** Do not explain specs yet. Wait for the user to ask.
-    - **IF OUT OF STOCK:**
-        - Say: "ขออภัยครับ ตัวนี้ที่ร้านหมดชั่วคราวครับ"
-        - Action: **IMMEDIATELY call `lightrag_tool`** to find a substitute.
+    1. **CASE: CHECK STOCK (ถามสต็อก/มีของไหม/ราคาเท่าไหร่)**
+    - **Step 1:** Call `check_stock_logic(model_name="...")`.
+    - **Step 2:** Observe the tool result:
+        - **IF status="Available":**
+        - Say: "มีของครับพี่ [Model Name] ที่ Winner Bike ยังมีสต็อกครับ ราคา [Price] บาท"
+        - Action: **STOP.** Wait for user to ask for specs.
+        - **IF status="Out of Stock" OR "Not Found":**
+        - Say: "ขออภัยครับ [Model Name] ตอนนี้ที่ร้านหมดชั่วคราวครับ"
+        - **Action:** IMMEDIATELY call `lightrag_tool(query="[Model Name] competitors/alternatives")` to find a substitute.
+        - **Step 3:** Recommend the substitute found by LightRAG.
         - Response: "...แต่ผมแนะนำลองดูเป็น [Alternative Model] ไหมครับ สเปคใกล้กันมาก พี่สนใจให้ผมเล่าตัวนี้แทนไหม?"
 
-    2. **CASE: EXPLAIN PRODUCT (ถามรายละเอียด/สเปค/ดียังไง)**
-    - **Trigger:** User asks "ขอสเปค...", "รุ่นนี้ดียังไง", "ช่วยอธิบายหน่อย", "ช่วยอธิบายสินค้าหน่อย", or says "เล่ามาเลย".
-    - **Action:** **IMMEDIATELY call `lightrag_tool`** with query "[Model Name] specs features selling points".
-    - **Response:** Summarize the tool data focusing on real-world benefits (e.g., "ประหยัดน้ำมัน", "U-Box ใหญ่").
+    2. **CASE: EXPLAIN PRODUCT (ถามสเปค/ดียังไง)**
+    - **Trigger:** "ขอสเปค", "ดียังไง", "เล่าหน่อย".
+    - **Action:** Call `lightrag_tool(query="[Model] specs features")`.
+    - **Response:** Summarize benefits (Real-world usage > technical numbers).
 
-    3. **CASE: RECOMMENDATION (แนะนำรถตามการใช้งาน)**
-    - **Trigger:** User asks "ขับในเมืองรุ่นไหนดี?", "แนะนำรถออกทริปหน่อย", "รถผู้หญิงขับง่ายๆ", or describe their usage style.
-    - **Action:** **IMMEDIATELY call `lightrag_tool`** with query based on usage (e.g., "best motorcycles for city traffic", "touring motorcycle recommendations").
-    - **Constraint:** **DO NOT** recommend any model based on your own knowledge. **ONLY** recommend models returned by the tool.
-    - **Response:** "ถ้าเน้นใช้งานแบบ [User's Style] ผมแนะนำเป็นตัว [Model from Tool] ครับ เพราะ [Reason from Tool]"
+    3. **CASE: RECOMMENDATION (ถามแนะนำรถ)**
+    - **Trigger:** "ขับในเมืองรุ่นไหนดี", "รถออกทริป".
+    - **Action:** Call `lightrag_tool(query="best motorcycle for [usage]")`.
+    - **Constraint:** Only recommend models returned by the tool.
 
-    ### CONVERSATION RULES
-    1. **Winner Bike Identity:** Refer to yourself as "ผม" or "ทางร้าน Winner Bike".
-    2. **Short & Sharp:** Answer only what is asked. Don't overwhelm the customer.
-
-    ### TONE & LANGUAGE
-    - Language: Thai (ภาษาไทย).
-    - Tone: Natural, friendly, mechanic style. ❌ No emojis. ❌ No formal "ท่าน/เรียนแจ้ง".
-    - ❌ NO sales hype. Be realistic.
-
-    ### STRICT RESTRICTIONS
-    - Do not mention "database". Say "เดี๋ยวผมดูข้อมูลสเปคให้ครับ".
-    - **Strictly recommend ONLY products found in the `lightrag_tool` results.**
+    ### TONE & RULES
+    - Language: Thai (Natural, Polite "ครับ").
+    - Identity: Use "ผม" or "ทางร้าน Winner Bike".
+    - **Rule:** If stock tool says 0, you MUST say "Out of stock". Do not lie.
     """
     logger.info(f"Running chat for query: {query.message[:50]}...")
+
+    global product_stock_price
+    product_stock_price = query.Data_model_stock_price
+
+    chat_history = create_chat_history(query.chat_history)
+    print(chat_history)
     
     messages = [
         {"role": "system", "content": system_prompt_for_typhoon},
+        {"role": "user", "content": f"""Here is the chat history:{chat_history}"""},
         {"role": "user", "content": query.message}
     ]
-
-    response = client.chat.completions.create(
-        model="typhoon-v2.5-30b-a3b-instruct",
-        messages=messages,
-        temperature=0.2,
-        max_completion_tokens=50000,
-        tools=tool_schema,
-        tool_choice="auto"
-    )
-    logger.info("Processing tool calls if any...")
-    response_message = response.choices[0].message
-    logger.info(f"Response Message: {response_message}")
-    
-    tool_calls = response_message.tool_calls
-    logger.info(f"Tool calls: {tool_calls}")
-
-    tool_calls = check_tool_call_in_text(response_message.content, tool_calls)
-    
-    if tool_calls:
-        logger.info(f"Tool calls detected: {len(tool_calls)}")
-        messages.append(response_message)
-
-        for tool_call in tool_calls:
-            logger.info(f"Processing tool call: {tool_call.function.name}")
-            tool_name = tool_call.function.name
-            function_args = json.loads(tool_call.function.arguments)
-
-            if tool_name == "lightrag_tool":
-                logger.info(f"Calling lightrag_tool with args: {function_args}")
-                function_response = await lightrag_tool(query=function_args.get("query"))
-                logger.info(f"Tool response: {function_response[:100]}...")
-                messages.append({
-                    "role": "tool",
-                    "name": tool_name,
-                    "content": function_response
-                })
-        
-        logger.info("Generating final response after tool calls...")
-        
-        refine_instruction = f"""
-            Below is accurate raw information (Draft):
-            "{response_message.content}"
-
-            Task:
-            Rewrite the draft into a Thai customer chat response.
-
-            Rules:
-            - Answer only what the customer asked.
-            - Keep the response short and direct.
-            - Do not add explanations unless required to answer the question.
-            - Do not sound like an advertisement.
-            - Do not introduce new topics on your own.
-            - Provide deeper technical details only if the customer asks a follow-up question.
-        """
-        
-        messages.append({"role": "user", "content": refine_instruction})
-        
-        final_response = client.chat.completions.create(
+    MAX_LOOP = 5
+    count = 0
+    while count < MAX_LOOP:
+        count += 1
+        logger.info(f"Chat Loop Iteration: {count}")
+        response = client.chat.completions.create(
             model="typhoon-v2.5-30b-a3b-instruct",
             messages=messages,
             temperature=0.2,
-            max_completion_tokens=50000
+            max_completion_tokens=50000,
+            tools=tools_schema,
+            tool_choice="auto"
         )
+        logger.info("Processing tool calls if any...")
+        response_message = response.choices[0].message
+        logger.info(f"Response Message: {response_message}")
         
-        logger.info("Final response generated.")
-        return final_response.choices[0].message.content
-    else:
-        logger.info("No tool calls detected.")
-        return response_message.content
+        tool_calls = response_message.tool_calls
+        logger.info(f"Tool calls: {tool_calls}")
+
+        tool_calls = check_tool_call_in_text(response_message.content, tool_calls)
+        
+        if tool_calls:
+            logger.info(f"Tool calls detected: {len(tool_calls)}")
+            messages.append(response_message)
+
+            for tool_call in tool_calls:
+                logger.info(f"Processing tool call: {tool_call.function.name}")
+                tool_name = tool_call.function.name
+                function_args = json.loads(tool_call.function.arguments)
+
+                if tool_name == "lightrag_tool":
+                    
+                    logger.info(f"Calling lightrag_tool with args: {function_args}")
+                    function_response = await lightrag_tool(query=function_args.get("query"))
+                    logger.info(f"Tool response: {function_response[:100]}...")
+                    messages.append({
+                        "role": "tool",
+                        "tool_call_id": tool_call.id,
+                        "name": tool_name,
+                        "content": function_response
+                    })
+                elif tool_name == "check_stock_logic":
+
+                    logger.info(f"Calling check_stock_logic with args: {function_args}")
+                    function_response = check_stock_logic(model_name=function_args.get("model_name"))
+                    logger.info(f"Tool response: {function_response}")
+                    messages.append({
+                        "role": "tool",
+                        "tool_call_id": tool_call.id,
+                        "name": tool_name,
+                        "content": function_response
+                    })
+
+            
+            
+
+            continue  # Restart loop to process any new tool calls
+        else:
+            logger.info("No tool calls detected. Refining final response...")
+            refine_instruction = f"""
+
+
+                Below is accurate raw information (Draft):
+                "{response_message.content}"
+
+                Task:
+                Rewrite the draft into a Thai customer chat response.
+
+                Rules:
+                - Answer only what the customer asked.
+                - Keep the response short and direct.
+                - Do not add explanations unless required to answer the question.
+                - Do not sound like an advertisement.
+                - Do not introduce new topics on your own.
+                - Provide deeper technical details only if the customer asks a follow-up question.
+            """
+            
+            messages.append({"role": "user", "content": refine_instruction})
+            
+            final_response = client.chat.completions.create(
+                model="typhoon-v2.5-30b-a3b-instruct",
+                messages=messages,
+                temperature=0.2,
+                max_completion_tokens=50000
+            )
+            
+            logger.info("Final response generated.")
+            logger.info("No tool calls detected.")
+            return {'response': final_response.choices[0].message.content}
 
 @app.post("/query")
 async def query_endpoint(request: QueryRequest):

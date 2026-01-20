@@ -1286,5 +1286,131 @@
     "create_time": 1768914639,
     "update_time": 1768914639,
     "_id": "global:query:da2acdf87035c813b03b667d84d9cae7"
+  },
+  "global:keywords:80724e6654c5bba3ea31a0d329b1755b": {
+    "return": "{\"high_level_keywords\": [\"Yamaha Grand Filano information\", \"Product details\", \"Vehicle specifications\"], \"low_level_keywords\": [\"Yamaha Grand Filano\", \"specs\", \"features\", \"selling points\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "Yamaha Grand Filano specs features selling points",
+    "queryparam": {
+      "mode": "global",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": true
+    },
+    "create_time": 1768922058,
+    "update_time": 1768922058,
+    "_id": "global:keywords:80724e6654c5bba3ea31a0d329b1755b"
+  },
+  "global:query:027f4a6d98d6b196fd7dc2b461f2bf56": {
+    "return": "The Yamaha Grand Filano Hybrid is designed with a focus on fuel efficiency and passenger comfort, making it a suitable option for \"Value Seekers\" [36].\n\nKey specifications, features, and selling points include:\n\n*   **Engine and Hybrid System**\n    The Grand Filano Hybrid is equipped with a Yamaha BlueCoreHybrid engine that utilizes air cooling [34]. Its hybrid system functions as a Starter Motor Generator (SMG) that provides power assistance to the engine for the first three seconds upon acceleration. This feature helps to reduce the engine's workload and improve fuel economy [34].\n*   **Fuel Efficiency**\n    Users of the Yamaha Grand Filano Hybrid can easily achieve a fuel efficiency of 55-60 kilometers per liter [34, 36].\n*   **Design and Passenger Comfort**\n    The scooter's design emphasizes passenger comfort, particularly noting that its seat is wider and flatter than some competitors. The passenger footrests are also larger and optimally positioned, which prevents passengers from sliding forward into the rider [37]. These aspects make the Grand Filano Hybrid distinctly superior for those who frequently carry passengers [37].\n*   **Cost of Ownership**\n    For customers concerned about long-term expenses, the Yamaha Grand Filano Hybrid offers an advantage with its spare parts being approximately 15-20% cheaper than those for Honda models [45]. This, combined with its fuel efficiency, makes it an economical choice [36].\n\n### References\n\n*   [34] HondaGiornoDonaldDukvsYamahaGrandFilanoHybrid | ZigWheels\n*   [36] Top10Fuel‑EfficientMotorcycles ( 2025 ) - NakedRacerMotoCo\n*   [37] ShouldIbuyaYamahaGrandFilanoorHondaGiornoPlusscooter ? : r / Thailand - Reddit\n*   [45] Whichoneshouldibuy ? : r / scooters - Reddit",
+    "cache_type": "query",
+    "chunk_id": null,
+    "original_prompt": "Yamaha Grand Filano specs features selling points",
+    "queryparam": {
+      "mode": "global",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "hl_keywords": "Yamaha Grand Filano information, Product details, Vehicle specifications",
+      "ll_keywords": "Yamaha Grand Filano, specs, features, selling points",
+      "user_prompt": "",
+      "enable_rerank": true
+    },
+    "create_time": 1768922069,
+    "update_time": 1768922069,
+    "_id": "global:query:027f4a6d98d6b196fd7dc2b461f2bf56"
+  },
+  "global:keywords:8fde8c877f9078a61a8999210d460954": {
+    "return": "{\"high_level_keywords\": [\"competitors\", \"alternatives\", \"model comparison\"], \"low_level_keywords\": [\"Honda PCX 160\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "Honda PCX 160 competitors alternatives",
+    "queryparam": {
+      "mode": "global",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": true
+    },
+    "create_time": 1768930868,
+    "update_time": 1768930868,
+    "_id": "global:keywords:8fde8c877f9078a61a8999210d460954"
+  },
+  "global:query:4c9f0d46b776e3ec866839913c0df84f": {
+    "return": "The Honda PCX 160 operates in the premium entry scooter segment (150cc-160cc), where its primary competitors include models from Yamaha and other Honda scooters within a similar class.\n\nKey alternatives to the Honda PCX 160 are:\n\n*   **Yamaha NMAX 155**: This model is often compared with the PCX 160, especially for city riding due to its agility. It features BlueCore VVA engine technology. [1]\n*   **Yamaha Aerox 155**: Like the NMAX 155, the Aerox 155 also utilizes Yamaha's BlueCore VVA engine and is considered a competitor in the premium scooter market. [1]\n*   **Honda ADV 160**: While also a Honda model, the ADV 160 is positioned as an alternative for riders who face challenging road conditions or enjoy adventure/rough road riding, offering features like Showa Sub-tank shock absorbers and higher ground clearance. [1]\n\nThese scooters are often compared in terms of engine technology, handling, and features, catering to different rider preferences such as touring, city commuting, or off-road capabilities.\n\n### References\n- [1] รายงานการวิเคราะห์เชิงลึกด้านเทคนิคและกลยุทธ์การขายสําหรับรถจักรยานยนต์กลุ่มพรีเมียมสกู๊ตเตอร์ในประเทศไทย ( พ.ศ.2567 - 2569 ) ส่วนที่ 1 : การวิเคราะห์กลุ่มพรีเมียมเอนทรี ( PremiumEntrySegment : 150cc - 160cc )",
+    "cache_type": "query",
+    "chunk_id": null,
+    "original_prompt": "Honda PCX 160 competitors alternatives",
+    "queryparam": {
+      "mode": "global",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "hl_keywords": "competitors, alternatives, model comparison",
+      "ll_keywords": "Honda PCX 160",
+      "user_prompt": "",
+      "enable_rerank": true
+    },
+    "create_time": 1768930877,
+    "update_time": 1768930877,
+    "_id": "global:query:4c9f0d46b776e3ec866839913c0df84f"
+  },
+  "global:keywords:dc928f78c9ca376835ddf70233da1f4a": {
+    "return": "{\"high_level_keywords\": [\"Competitors\", \"Vehicle comparison\"], \"low_level_keywords\": [\"Honda PCX 160\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "Honda PCX 160 competitors",
+    "queryparam": {
+      "mode": "global",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": true
+    },
+    "create_time": 1768931968,
+    "update_time": 1768931968,
+    "_id": "global:keywords:dc928f78c9ca376835ddf70233da1f4a"
+  },
+  "global:query:116bebe9811e61a00ce2ec41b2c24b1a": {
+    "return": "The main competitors for the Honda PCX 160 in the premium entry-level scooter market (150cc-160cc) are the Honda ADV160, Yamaha NMAX155, and Yamaha Aerox155. These models are often compared in terms of their engine technologies and features.\n\nKey comparisons include:\n*   **Engine Technology**\n    *   The Honda PCX 160, along with the Honda ADV160, utilizes the eSP+ (Enhanced Smart Power Plus) 4-valve engine, which is a 156.93cc unit designed for improved efficiency and performance at higher RPMs. This engine features a larger bore and shorter stroke to reduce piston friction, as well as a roller bearing on the crankshaft for smoother operation. [2]\n    *   The Yamaha NMAX155 and Aerox155, on the other hand, feature the 155cc BlueCore engine with VVA (Variable Valve Actuation). This system uses two camshafts for intake valves, switching between them at 6,000 RPM to provide good torque at low speeds for fuel efficiency and strong acceleration at higher speeds. [2]\n*   **Market Positioning and Features**\n    *   The Honda ADV160 is often positioned as an alternative for riders who frequently encounter poor road conditions or enjoy natural landscapes, featuring Showa sub-tank shock absorbers and adjustable windshields. [3]\n    *   The Yamaha NMAX155 is highlighted for its agility in urban environments and strong initial acceleration due to its VVA system. [3]\n    *   Discussions and comparisons across platforms like BikeJunction, YouTube, and Reddit frequently feature the Honda PCX 160 against these Yamaha models and the Honda ADV160 to help consumers make purchasing decisions. [1, 10, 13]\n\n### References\n- [1] 160vsYamahaNmax155 - WhichisBetter ? - BikeJunction , เข้าถึงเมื่อมกราคม 19 , 2026https : / / thebikejunction.com / compare - bikes / honda - pcx - 160 - vs - yamaha - nmax - 1558.PCX160VS.NMAX155 / SPEEDTEST / FRIENDLYRACE / Part1 - YouTube , เข้าถึงเมื่อมกราคม 19 , 2026https : / / www.youtube.com / watch ? v = iQG1a - SVfnk9.Honda เปิดศักราชใหม่ด้วย AllNewPCX160 - www.overridemag.com , เข้าถึงเมื่อมกราคม 19 , 2026https : / / www.overridemag.com / content / 14712 / - honda - % E0 % B9 % 80 % E0 % B8 % 9B % E0 % B8 % B4 % E0 % B8 % 94 % E0 % B8 % A8 % E0 % B8 % B1 % E0 % B8 % 81 % E0 % B8 % A3 % E0 % B8 % B2 % E0 % B8 % 8A % E0 % B9 % 83 % E0 % B8 % AB % E0 % B8 % A1 % E0 % B9 % 88 % E0 % B8 % 94 % E0 % B9 % 89 % E0 % B8 % A7 % E0 % B8 % A2 - all - new - pcx160 - 10.Click160 , ADV160 , PCX160 , AEROX160andNMAX160whichoneshouldIbuyandwhy : r / Thailand - Reddit , เข้าถึงเมื่อมกราคม 19 , 2026https : / / www.reddit.com / r / Thailand / comments / 1k2u8j0 / click _ 160 _ adv _ 160 _ pcx _ 160 _ aerox _ 160 _ and _ nmax _ 160 / 11.Whatwouldyouchoosebetweenhondapcxlastgenandyamahanmaxlastgen ? - Reddit , เข้าถึงเมื่อมกราคม 19 , 2026https : / / www.reddit.com / r / scooters / comments / 1ctnejb / what _ would _ you _ choose _ between _ honda _ pcx _ last _ gen / 12.Cananyonetellmewhatscooterswillbegood / worthbuyingHondaAdv150orYamahaAerox155 - Reddit , เข้าถึงเมื่อมกราคม 19 , 2026https : / / www.reddit.com / r / scooters / comments / 1dbtqlu / can _ anyone _ tell _ me _ what _ scooters _ will _ be _ good / 13.NMAXvs.PCXvs.ADV160vs.Aerox | ScooterComparison - YouTube , เข้าถึงเมื่อ มกราคม 19 , 2026https : / / www.youtube.com / watch ? v = 9s3Ni7sM11g14.HondaADV160vsHondaPCX160Comparison - KnowWhichisBetter - CarmudiPhilippines , เข้าถึงเมื่อมกราคม 19 , 2026https : / / www.carmudi.com.ph / motorcycle - compare / honda - adv - 160 - vs - honda - pcx160 / 15.รถ PCX นี่ดีไหมครับมีปัญหาอะไรบ้างไหมครับ - Pantip , เข้าถึงเมื่อมกราคม 19 , 2026https : / / pantip.com / topic / 4250728016.Pcx มีข้อดีข้อเสียอะไรบ้าง - Pantip , เข้าถึงเมื่อมกราคม 19 , 2026https : / / pantip.com / topic / 4255371217.รีวิวการใช้งานคลัชคาร์บอน Forza2018 - Pantip , เข้าถึงเมื่อมกราคม 19 , 2026https : / / pantip.com / topic / 3863587918.สอบถามหน่อยครับพอดีจะซื้อ PCX2025 - Pantip , เข้าถึงเมื่อมกราคม 19 , 2026https : / / pantip.com / topic / 4319650219.น  ามันเครื่องต่างเบอร์กันผสมกันได้ไหมครับ ? - Pantip , เข้าถึงเมื่อมกราคม 19 , 2026https : / / pantip.com / topic / 39836172 / desktop20.Yamaha งานเข้าอีกแล้วโผล่รถน  ามันเครื่องหายอีกรุ่น ! ! ! ! - Pantip , เข้าถึงเมื่อมกราคม 19 , 2026https : / / pantip.com / topic / 376404\n- [2] รายงานการวิเคราะห์เชิงลึกด้านเทคนิคและกลยุทธ์การขายสําหรับรถจักรยานยนต์กลุ่มพรีเมียมสกู๊ตเตอร์ในประเทศไทย ( พ.ศ.2567 - 2569 ) ส่วนที่ 1 : การวิเคราะห์กลุ่มพรีเมียมเอนทรี ( PremiumEntrySegment : 150cc - 160cc ) กลุ่มนี้คือฐานลูกค้าที่ใหญ่ที่สุดสําหรับตลาดพรีเมียมเป็นจุดเปลี่ยนสําคัญจากรถใช้งานขนาดเล็ก ( 110 - 125cc ) ขึ้นมาสู่รถที่มีสมรรถนะสําหรับการเดินทางระยะกลางคู่แข่งหลักคือ Honda และ Yamaha ที่ต่างงัดเทคโนโลยีเครื่องยนต์ยุคใหม่มาประชันกัน 1.1 การเปรียบเทียบเชิงวิศวกรรมเครื่องยนต์ : eSP + ปะทะ BlueCoreVVA หัวใจสําคัญของการ Upsell ในกลุ่มนี้คือการชี้ให้เห็นถึงความแตกต่างของคาแรคเตอร์เครื่องยนต์ซึ่งส่งผลโดยตรงต่อความรู้สึกในการขับขี่ HondaPCX160 และ ADV160 : วิวัฒนาการสู่ 4 วาล์ว ( eSP + ) เครื่องยนต์ eSP + ( EnhancedSmartPowerPlus ) ขนาด 156.93 ซีซีเป็นการก้าวกระโดดทางวิศวกรรมจากรุ่น 150 เดิมโดยเปลี่ยนจากระบบ 2 วาล์วมาเป็น 4 วาล์วเพื่อเพิ่มประสิทธิภาพในการนําไอดีเข้าและระบายไอเสียออกที่รอบเครื่องยนต์สูง ● ขนาดกระบอกสูบ x ระยะชัก : 60.0x55.5 มม.1 การใช้ลูกสูบขนาดใหญ่ ( BigBore ) และระยะชักที่สั้นลง ( ShortStroke ) เมื่อเทียบกับรุ่นก่อนหน้าบ่งบอกถึงเจตนาในการลดแรงเสียดทานของลูกสูบที่ความเร็วรอบสูงทําให้เครื่องยนต์สามารถลากรอบได้ลึกขึ้นและตอบสนองได้ดีขึ้นในย่านความเร็วปลาย ● เพลาข้อเหวี่ยง : มีการใช้ RollerBearing เพื่อลดแรงสั่นสะเทือนและแรงเสียดทานซึ่งเป็นเทคโนโลยีที่มักพบในรถบิ๊กไบค์ช่วยให้เครื่องยนต์เดินนิ่งขึ้น 3 ● OilJet : ระบบฉีดน  ามันหล่อลื่นใต้ลูกสูบช่วยระบายความร้อนและลดการขยายตัวของลูกสูบเมื่อขับขี่ทางไกลด้วยความเร็วสูงต่อเนื่อง 3YamahaNMAX155 และ Aerox155 : ความอัจฉริยะของวาล์วแปรผัน ( VVA ) เครื่องยนต์ BlueCore ขนาด 155 ซีซีของยามาฮ่ามีจุดขายที่แข็งแกร่งคือระบบ VVA ( VariableValveActuation ) ● หลักการทํางาน : ระบบจะมีลูกเบี้ยว ( Camshaft ) สองชุดสําหรับวาล์วไอดีชุดหนึ่งสําหรับรอบต  า - กลางและอีกชุดสําหรับรอบสูงโดยมีโซลินอยด์ทําหน้าที่สลับการทํางานที่ 6 , 000 รอบต่อนาที 4 ● ผลลัพธ์ : ทําให้รถมีแรงบิดที่ดีในรอบต  าเพื่อการออกตัวที่ประหยัดน  ามันแต่เมื่อต้องการเร่งแซงระบบจะสลับไปใช้แคมองศาสูงทําให้กราฟแรงบิดไม่ตกในช่วงปลาย 4 ● ขนาดกระบอกสูบ x ระยะชัก : 58.0x58.7 มม.6 ซึ่งเป็นแบบ Square ( ใกล้เคียงกัน ) ให้สมดุลที่ดีระหว่างแรงบิดและการหมุนรอบตารางเปรียบเทียบสเปกเครื่องยนต์ 150 - 160cc หัวข้อเปรียบเทียบ HondaPCX160YamahaNMAX155HondaADV160YamahaAerox155 รหัสเครื่องยนต์ eSP + 4 วาล์ว BlueCoreVVA4 วาล์ว eSP + 4 วาล์ว BlueCoreVVA4 วาล์วปริมาตรกระบอกสูบ 156.93cc7155cc6156.9cc2155cc6 แรงม้าสูงสุด 15.8HP @ 8 , 500rpm615.1\n- [3] จุดเด่น : การควบคุมที่เฉียบคม ( SharpHandling ) เหมาะสําหรับการมุดในเมืองท่านั่งจะมีความตั้งตรง ( Upright ) มากกว่า PCX เล็กน้อยทําให้ควบคุมรถได้ง่ายในความเร็วต  า 10 ● ข้อสังเกต : ช่วงล่างเดิมค่อนข้างแข็งกระด้าง ( Stiff ) สะเทือนขึ้นถึงแฮนด์เมื่อเจอหลุมบ่อซึ่งผู้ใช้งานในไทยจํานวนมากต้องเปลี่ยนโช้คอัพหลังเพื่อแก้ปัญหานี้ 13Logic สําหรับ ChatbotUpsell : ● หากลูกค้าเน้น \" ขับขี่ทางไกลออกทริปนั่งสบาย \" - > แนะนํา PCX160 โดยอ้างอิงเรื่องยางรองแฮนด์และท่านั่ง ● หากลูกค้าเน้น \" ขับขี่ในเมืองชอบความคล่องตัว \" - > แนะนํา NMAX155 โดยอ้างอิงเฟรมและอัตราเร่งช่วงต้นจาก VVA1.3HondaADV160 : กลยุทธ์การ Upsell ด้วยช่วงล่างและภาพลักษณ์ ADV160 ไม่ใช่แค่ PCX ยกสูงแต่เป็นการปรับจูนวิศวกรรมเพื่อรองรับสภาพถนนที่เลวร้าย ● โช้คอัพ ShowaSub - tank : จุดขายที่แข็งแรงที่สุดคือโช้คหลังคู่พร้อมซับแทงค์ ( กระปุกแยก ) จากโรงงาน 1 ซับแทงค์ช่วยแยกน  ามันและแก๊สออกจากกันป้องกันการเกิดฟองอากาศ ( Cavitation ) เมื่อโช้คทํางานหนักๆบนถนนขรุขระทําให้แรงหนืดคงที่ตลอดเวลา ● ระยะยุบตัวและระยะห่างจากพื้น : ด้วย GroundClearance ที่ 165 มม.( เทียบกับ PCX ที่ 134 มม.) ทําให้ ADV160 สามารถรูดผ่านลูกระนาดหรือน  าท่วมขังระดับต  าได้ดีกว่ามาก 1 ● Windscreen ปรับระดับได้ : ชิลด์หน้าสามารถปรับความสูงได้ 2 ระดับซึ่ง PCX ทําไม่ได้ 1Logic สําหรับ Chatbot : ใช้ ADV160 เป็นตัว Upsell เมื่อลูกค้าบ่นเรื่อง \" ถนนแถวบ้านไม่ดี \" , \" น  าท่วมขังบ่อย \" หรือ \" ชอบเที่ยวธรรมชาติ \" โดยเน้นความคุ้มค่าของโช้ค Showa ที่ไม่ต้องไปเสียเงินเปลี่ยนเอง 1.4 จุดอ่อนและปัญหาที่พบบ่อย ( DefectAnalysis ) เพื่อสร้างความเชื่อถือ Chatbot ที่ดีต้องไม่เพียงแค่เชียร์สินค้าแต่ต้องให้คําแนะนําในการดูแลรักษาได้ด้วย ● HondaPCX160 : ○ อาการสั่นขณะออกตัว ( CVTJudder ) : ผู้ใช้จํานวนมากรายงานอาการสั่นที่ความเร็วต  าสาเหตุเกิดจากฝุ่นผ้าคลัชสะสมในกะโหลกคลัชหรือหน้าสัมผัสไม่จับตัวกันดีพอ 15 ○ เฟืองปั๊มน  ามันเครื่อง : ในรุ่นปีแรกๆ ( 2021 ) มีรายงานปัญหาเฟืองปั๊มน  ามันเครื่องรูดแต่ Honda ได้มีการปรับปรุงพาร์ทในล็อตหลังๆแล้ว 15 ● YamahaNMAX155 / Aerox155 : ○ น  ามันเครื่องหาย ( OilConsumption ) : เครื่องยนต์ BlueCore ในยุคแรกๆและ XMAX รุ่นก่อนปี 2023 มีชื่อเสียงเรื่องการกินน  ามันเครื่องหากใช้รอบสูงต่อเนื่องแม้ใน NMAX155 จะพบน้อยกว่า XMAX แต่ก็เป็นสิ่งที่ผู้ใช้ควรหมั่นตรวจสอบ 19 ○ โช้คแข็ง : ดังที่กล่าวไปข้างต้นเป็นคาแรคเตอร์ประจําตัวที่ผู้ใช้อาจต้องยอมรับหรือแก้ไข 12 ส่วนที่ 2 : การวิเคราะห์กลุ่มบิ๊กสกู๊ตเตอร์ ( Maxi - ScooterSegment : 300cc - 350cc ) การขยับจาก 150cc มาเป็น 300cc + คือการมองหา \" อํานาจในการเดินทาง \" ( TouringAuthority ) คู่แข่งหลักคือ HondaForza350 และ YamahaXMAX300 ซึ่งมีจุดเด่นที่กินกันไม่ลงคนละด้าน 2.1 ศึกชิงจ้าว",
+    "cache_type": "query",
+    "chunk_id": null,
+    "original_prompt": "Honda PCX 160 competitors",
+    "queryparam": {
+      "mode": "global",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "hl_keywords": "Competitors, Vehicle comparison",
+      "ll_keywords": "Honda PCX 160",
+      "user_prompt": "",
+      "enable_rerank": true
+    },
+    "create_time": 1768931988,
+    "update_time": 1768931988,
+    "_id": "global:query:116bebe9811e61a00ce2ec41b2c24b1a"
   }
 }
