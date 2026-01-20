@@ -41,20 +41,8 @@ app = FastAPI(
 rag = None
 
 # ============================================
-# Pydantic Models
+# Class Definitions
 # ============================================
-
-class QueryRequest(BaseModel):
-    message: str
-    chat_history: List[Dict[str, Any]] = []
-    stock: int
-    mode: str = "global"
-
-class ExplainProductRequest(BaseModel):
-    message: str
-    chat_history: List[Dict[str, Any]] = []
-    mode: str = "global"
-
 class RunChatRequest(BaseModel):
     message: str
     Data_model_stock_price : List[Dict[str, Any]] = []

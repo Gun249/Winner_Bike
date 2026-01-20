@@ -3,7 +3,6 @@ from lightrag import LightRAG
 from .logger import logger
 from .embedding import embedding_func
 from .llm_model import llm_model_func
-import os
 
 WORKING_DIR = "LightRAG_Data"
 
