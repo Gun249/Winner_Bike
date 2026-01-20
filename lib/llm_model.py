@@ -83,7 +83,8 @@ async def llm_model_func(
                 model_name="gemini-2.5-flash", 
                 **kwargs
             )
-
+            logger.info("✅ Gemini draft response received.")
+            return draft_response
             logger.info(f"Draft Response: {draft_response}")    
 
             logger.info("ROUTER: Switching to TYPHOON for Final Response")
@@ -143,16 +144,16 @@ async def llm_model_func(
                 - Provide deeper technical details only if the customer asks a follow-up question.
             """
 
-            return await openai_complete_if_cache(
-                "typhoon-v2.5-30b-a3b-instruct",
-                refine_instruction,
-                system_prompt=system_prompt_for_typhoon,
-                history_messages=history_messages,
-                api_key=os.getenv("TYPHOON_API_KEY"),
-                base_url="https://api.opentyphoon.ai/v1",
-                max_tokens=4096,
-                **kwargs
-            )
+            # return await openai_complete_if_cache(
+            #     "typhoon-v2.5-30b-a3b-instruct",
+            #     refine_instruction,
+            #     system_prompt=system_prompt_for_typhoon,
+            #     history_messages=history_messages,
+            #     api_key=os.getenv("TYPHOON_API_KEY"),
+            #     base_url="https://api.opentyphoon.ai/v1",
+            #     max_tokens=4096,
+            #     **kwargs
+            # )
         except Exception as e:
             logger.error(f"Typhoon Error: {e}")
             return "ขออภัย ระบบขัดข้องชั่วคราว"

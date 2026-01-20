@@ -4,3 +4,9 @@ python-dotenv
 uvicorn
 transformers
 tqdm
+openai
+PyPDF2
+--extra-index-url https://download.pytorch.org/whl/cu121
+torch
+torchvision
+torchaudio

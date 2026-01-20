@@ -1034,5 +1034,257 @@
     "create_time": 1768818006,
     "update_time": 1768818006,
     "_id": "global:query:ffe0e82ba4caf4f92090a0112772b32a"
+  },
+  "global:keywords:9bdfd22879d5e3ca9566a40091cbb644": {
+    "return": "{\"high_level_keywords\": [\"product specifications\", \"product features\", \"technical details\"], \"low_level_keywords\": [\"PCX 160\", \"specs\", \"features\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "PCX 160 specs features",
+    "queryparam": {
+      "mode": "global",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": true
+    },
+    "create_time": 1768912353,
+    "update_time": 1768912353,
+    "_id": "global:keywords:9bdfd22879d5e3ca9566a40091cbb644"
+  },
+  "global:query:1fd6859942a913d125db73083c6d8041": {
+    "return": "The Honda PCX 160 is a premium scooter that features advanced engineering and specific functionalities.\n\n**Engine Specifications and Technology:**\nThe PCX 160 is equipped with a 156.93 cc eSP+ (Enhanced Smart Power Plus) 4-valve engine, which is an upgrade from the previous 2-valve system, enhancing efficiency at high RPMs. Its engine has a bore x stroke of 60.0x55.5 mm, utilizing a larger piston and shorter stroke to reduce friction at high speeds, allowing for deeper revving and better high-speed response. The crankshaft incorporates roller bearings, a technology often found in larger motorcycles, to reduce vibration and friction for smoother engine operation. An OilJet system is also included to spray lubricating oil under the piston, which aids in cooling and minimizes piston expansion during prolonged high-speed riding. The PCX 160 has a maximum horsepower of 15.8 HP at 8,500 rpm.\n\n**Features:**\nThe scooter is designed with an upright riding position, contributing to easier handling at low speeds. For connectivity, the PCX 160 offers Honda RoadSync, which focuses on \"Lifestyle & Control,\" allowing users to make voice commands, answer calls, and listen to music via handlebar buttons.\n\n**Known Issues:**\nSome users have reported CVT judder, which manifests as vibrations during acceleration at low speeds. This issue is often attributed to accumulated clutch dust or improper clutch contact. Early models from 2021 also had reported problems with the oil pump gear, though Honda has since updated these parts in later production batches.\n\n### References\n- [1] รายงานการวิเคราะห์เชิงลึกด้านเทคนิคและกลยุทธ์การขายสําหรับรถจักรยานยนต์กลุ่มพรีเมียมสกู๊ตเตอร์ในประเทศไทย ( พ.ศ.2567 - 2569 )\n- [3] รายงานการวิเคราะห์เชิงลึกด้านเทคนิคและกลยุทธ์การขายสําหรับรถจักรยานยนต์กลุ่มพรีเมียมสกู๊ตเตอร์ในประเทศไทย ( พ.ศ.2567 - 2569 )\n- [15] รถ PCX นี่ดีไหมครับมีปัญหาอะไรบ้างไหมครับ - Pantip\n- [38] CheckoutthenewHondaForza350 ! - DreamPartsStore\n- [39] ศูนย์ honda เช็คระยะ pcx - Pantip",
+    "cache_type": "query",
+    "chunk_id": null,
+    "original_prompt": "PCX 160 specs features",
+    "queryparam": {
+      "mode": "global",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "hl_keywords": "product specifications, product features, technical details",
+      "ll_keywords": "PCX 160, specs, features",
+      "user_prompt": "",
+      "enable_rerank": true
+    },
+    "create_time": 1768912365,
+    "update_time": 1768912365,
+    "_id": "global:query:1fd6859942a913d125db73083c6d8041"
+  },
+  "global:keywords:62da22a9180d617dcb0ee60202b226b5": {
+    "return": "{\"high_level_keywords\": [\"Competitors\", \"Product comparison\", \"Motorcycle comparison\"], \"low_level_keywords\": [\"Honda ADV160\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "Honda ADV160 competitors",
+    "queryparam": {
+      "mode": "global",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": true
+    },
+    "create_time": 1768913609,
+    "update_time": 1768913609,
+    "_id": "global:keywords:62da22a9180d617dcb0ee60202b226b5"
+  },
+  "global:query:3f97d0642502a33ca1729b6cb2a179db": {
+    "return": "The Honda ADV160 operates in the premium entry segment of the motorcycle premium scooter market, primarily competing with other models in the 150cc-160cc range. Its main competitors include:\n\n*   **Honda PCX160:** This model is also produced by Honda and is often compared directly with the ADV160. Both are featured in analyses of the premium entry segment and are topics of comparison on platforms like Carmudi Philippines and YouTube.\n*   **Yamaha NMAX155:** A premium scooter from Yamaha, the NMAX155 is frequently positioned against the ADV160, with comparisons often focusing on engine technology, such as Honda's eSP+ and Yamaha's BlueCoreVVA.\n*   **Yamaha Aerox155:** Another Yamaha premium scooter, the Aerox155 is also considered a competitor to the ADV160 in the same market segment.\n\nThese models are typically analyzed side-by-side in terms of engineering, features, and target customer profiles within the Thai premium scooter market [1].\n\n### References\n- [1] รายงานการวิเคราะห์เชิงลึกด้านเทคนิคและกลยุทธ์การขายสําหรับรถจักรยานยนต์กลุ่มพรีเมียมสกู๊ตเตอร์ในประเทศไทย ( พ.ศ.2567 - 2569 ) ส่วนที่ 1 : การวิเคราะห์กลุ่มพรีเมียมเอนทรี ( PremiumEntrySegment : 150cc - 160cc ) กลุ่มนี้คือฐานลูกค้าที่ใหญ่ที่สุดสําหรับตลาดพรีเมียมเป็นจุดเปลี่ยนสําคัญจากรถใช้งานขนาดเล็ก ( 110 - 125cc ) ขึ้นมาสู่รถที่มีสมรรถนะสําหรับการเดินทางระยะกลางคู่แข่งหลักคือ Honda และ Yamaha ที่ต่างงัดเทคโนโลยีเครื่องยนต์ยุคใหม่มาประชันกัน 1.1 การเปรียบเทียบเชิงวิศวกรรมเครื่องยนต์ : eSP + ปะทะ BlueCoreVVA หัวใจสําคัญของการ Upsell ในกลุ่มนี้คือการชี้ให้เห็นถึงความแตกต่างของคาแรคเตอร์เครื่องยนต์ซึ่งส่งผลโดยตรงต่อความรู้สึกในการขับขี่ HondaPCX160 และ ADV160 : วิวัฒนาการสู่ 4 วาล์ว ( eSP + ) เครื่องยนต์ eSP + ( EnhancedSmartPowerPlus ) ขนาด 156.93 ซีซีเป็นการก้าวกระโดดทางวิศวกรรมจากรุ่น 150 เดิมโดยเปลี่ยนจากระบบ 2 วาล์วมาเป็น 4 วาล์วเพื่อเพิ่มประสิทธิภาพในการนําไอดีเข้าและระบายไอเสียออกที่รอบเครื่องยนต์สูง ● ขนาดกระบอกสูบ x ระยะชัก : 60.0x55.5 มม.1 การใช้ลูกสูบขนาดใหญ่ ( BigBore ) และระยะชักที่สั้นลง ( ShortStroke ) เมื่อเทียบกับรุ่นก่อนหน้าบ่งบอกถึงเจตนาในการลดแรงเสียดทานของลูกสูบที่ความเร็วรอบสูงทําให้เครื่องยนต์สามารถลากรอบได้ลึกขึ้นและตอบสนองได้ดีขึ้นในย่านความเร็วปลาย ● เพลาข้อเหวี่ยง : มีการใช้ RollerBearing เพื่อลดแรงสั่นสะเทือนและแรงเสียดทานซึ่งเป็นเทคโนโลยีที่มักพบในรถบิ๊กไบค์ช่วยให้เครื่องยนต์เดินนิ่งขึ้น 3 ● OilJet : ระบบฉีดน ามันหล่อลื่นใต้ลูกสูบช่วยระบายความร้อนและลดการขยายตัวของลูกสูบเมื่อขับขี่ทางไกลด้วยความเร็วสูงต่อเนื่อง 3YamahaNMAX155 และ Aerox155 : ความอัจฉริยะของวาล์วแปรผัน ( VVA ) เครื่องยนต์ BlueCore ขนาด 155 ซีซีของยามาฮ่ามีจุดขายที่แข็งแกร่งคือระบบ VVA ( VariableValveActuation ) ● หลักการทํางาน : ระบบจะมีลูกเบี้ยว ( Camshaft ) สองชุดสําหรับวาล์วไอดีชุดหนึ่งสําหรับรอบต า - กลางและอีกชุดสําหรับรอบสูงโดยมีโซลินอยด์ทําหน้าที่สลับการทํางานที่ 6 , 000 รอบต่อนาที 4 ● ผลลัพธ์ : ทําให้รถมีแรงบิดที่ดีในรอบต าเพื่อการออกตัวที่ประหยัดน ามันแต่เมื่อต้องการเร่งแซงระบบจะสลับไปใช้แคมองศาสูงทําให้กราฟแรงบิดไม่ตกในช่วงปลาย 4 ● ขนาดกระบอกสูบ x ระยะชัก : 58.0x58.7 มม.6 ซึ่งเป็นแบบ Square ( ใกล้เคียงกัน ) ให้สมดุลที่ดีระหว่างแรงบิดและการหมุนรอบตารางเปรียบเทียบสเปกเครื่องยนต์ 150 - 160cc หัวข้อเปรียบเทียบ HondaPCX160YamahaNMAX155HondaADV160YamahaAerox155 รหัสเครื่องยนต์ eSP + 4 วาล์ว BlueCoreVVA4 วาล์ว eSP + 4 วาล์ว BlueCoreVVA4 วาล์วปริมาตรกระบอกสูบ 156.93cc7155cc6156.9cc2155cc6 แรงม้าสูงสุด 15.8HP @ 8 , 500rpm615.1",
+    "cache_type": "query",
+    "chunk_id": null,
+    "original_prompt": "Honda ADV160 competitors",
+    "queryparam": {
+      "mode": "global",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "hl_keywords": "Competitors, Product comparison, Motorcycle comparison",
+      "ll_keywords": "Honda ADV160",
+      "user_prompt": "",
+      "enable_rerank": true
+    },
+    "create_time": 1768913618,
+    "update_time": 1768913618,
+    "_id": "global:query:3f97d0642502a33ca1729b6cb2a179db"
+  },
+  "global:keywords:f247c934ae87b60185605c714fb1c747": {
+    "return": "{\"high_level_keywords\": [\"Specifications\", \"Vehicle specifications\"], \"low_level_keywords\": [\"Honda\", \"PCX160\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "Honda PCX160 specs",
+    "queryparam": {
+      "mode": "global",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": true
+    },
+    "create_time": 1768913741,
+    "update_time": 1768913741,
+    "_id": "global:keywords:f247c934ae87b60185605c714fb1c747"
+  },
+  "global:query:9e5a816fcb0f4cec537db8f43d82b365": {
+    "return": "The Honda PCX160 is equipped with the eSP+ (Enhanced Smart Power Plus) engine, which is a 4-valve, 156.93cc unit. This engine marks an engineering advancement from the previous 150cc model. Its design features a large bore (60.0 mm) and a short stroke (55.5 mm), which is intended to reduce piston friction at high speeds, allowing the engine to maintain higher RPMs and improve responsiveness at top speeds. The engine also incorporates a roller bearing crankshaft to minimize vibration and friction, a technology typically found in larger motorcycles, contributing to a smoother engine operation. Additionally, it utilizes an oil jet system that sprays lubricating oil under the piston, aiding in heat dissipation and reducing piston expansion during sustained high-speed riding over long distances. The Honda PCX160 produces a maximum of 15.8 horsepower at 8,500 rpm [1].\n\n### References\n\n- [1] รายงานการวิเคราะห์เชิงลึกด้านเทคนิคและกลยุทธ์การขายสำหรับรถจักรยานยนต์กลุ่มพรีเมียมสกู๊ตเตอร์ในประเทศไทย (พ.ศ.2567-2569)",
+    "cache_type": "query",
+    "chunk_id": null,
+    "original_prompt": "Honda PCX160 specs",
+    "queryparam": {
+      "mode": "global",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "hl_keywords": "Specifications, Vehicle specifications",
+      "ll_keywords": "Honda, PCX160",
+      "user_prompt": "",
+      "enable_rerank": true
+    },
+    "create_time": 1768913747,
+    "update_time": 1768913747,
+    "_id": "global:query:9e5a816fcb0f4cec537db8f43d82b365"
+  },
+  "global:keywords:ddcb8e8c5bddee3ba23c8fe70b5c661a": {
+    "return": "{\"high_level_keywords\": [\"Comparison\", \"Specifications\", \"Features\"], \"low_level_keywords\": [\"PCX 160\", \"Wave 110i\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "PCX 160 Wave 110i specs features comparison",
+    "queryparam": {
+      "mode": "global",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": true
+    },
+    "create_time": 1768913986,
+    "update_time": 1768913986,
+    "_id": "global:keywords:ddcb8e8c5bddee3ba23c8fe70b5c661a"
+  },
+  "global:query:50ea8b406c84e1c4cb731cfe9f58c9a5": {
+    "return": "The Honda PCX 160 is classified as a premium entry-segment scooter, featuring a 156.93cc eSP+ 4-valve engine. This engine design incorporates a larger bore and shorter stroke compared to previous models, which helps reduce piston friction at high RPMs, allowing the engine to sustain higher speeds and improve response at the top end. It also utilizes roller bearings to minimize vibration and friction, a technology often found in bigger bikes, resulting in a smoother engine operation. Additionally, an Oil Jet system is used to spray lubricating oil beneath the piston, aiding in heat dissipation and reducing piston expansion during continuous high-speed riding. The PCX 160 is recommended for Touring Riders due to its capabilities for longer journeys [3].\n\nRegarding common issues, the Honda PCX 160 has been reported to experience CVT judder (vibration during acceleration from low speeds), often caused by clutch dust accumulation or improper clutch engagement. Early models from 2021 also had reported problems with the oil pump gear stripping, though Honda has since updated the part in later production batches [2].\n\nHowever, there is no information available in the provided context regarding the Honda Wave 110i to facilitate a comparison of its specifications and features.\n\n### References\n- [1] รายงานการวิเคราะห์เชิงลึกด้านเทคนิคและกลยุทธ์การขายสําหรับรถจักรยานยนต์กลุ่มพรีเมียมสกู๊ตเตอร์ในประเทศไทย ( พ.ศ.2567 - 2569 )\n- [2] Pcx มีข้อดีข้อเสียอะไรบ้าง - Pantip\n- [3] ตารางค่าใช้จ่ายอะไหล่สิ้นเปลืองโดยประมาณ ( บาท ) รายการ HondaPCX160 / ADV160YamahaNMAX155 / Aerox หมายเหตุน  ามันเครื่อง ( สังเคราะห์ ) ~ 250 - 350 ~ 250 - 350 เปลี่ยนทุก 4 , 000 - 6 , 000 กม.39 สายพานขับเคลื่อน ( V - Belt ) ~ 66041 ~ 430 - 45042Yamaha ถูกกว่าอย่างมีนัยสําคัญผ้าเบรกหน้า ~ 51041 ~ 250 - 41044Yamaha มีเกรดเทียบแท้ให้เลือกเยอะกว่าชุดตุ้มน  าหนัก ( เม็ด ) ~ 32041 ~ 300 ราคาใกล้เคียงกัน รอบเช็คระยะใหญ่ 24 , 000 กม.20 , 000 - 24 , 000 กม.เปลี่ยนสายพาน , เม็ด , น  ายาหม้อน  าวิเคราะห์ : โดยรวมแล้วอะไหล่สิ้นเปลืองของ Yamaha มีราคาถูกกว่า Honda ประมาณ 15 - 20 % 45 ซึ่งเป็นจุดขายที่ดีสําหรับลูกค้าที่กังวลเรื่องค่าใช้จ่ายระยะยาวส่วนที่ 6 : บทสรุปและกลยุทธ์ ChatbotUpsell ( StrategicRecommendations ) จากการวิเคราะห์ข้อมูลรอบด้านเราสามารถสร้าง DecisionTree สําหรับ Chatbot ได้ดังนี้ : 6.1 โปรไฟล์ : \" เน้นใช้งานคุ้มค่า \" ( ValueSeeker ) ● Trigger : บ่นเรื่องราคาน  ามัน , งบจํากัด , ใช้ขี่ไปทํางานใกล้ๆ ● แนะนํา : YamahaGrandFilanoHybrid ● เหตุผล : ประหยัดน  ามันที่สุด ( Hybrid ) , ราคาอะไหล่ถูก , ที่เก็บของใหญ่ , คนซ้อนนั่งสบาย ● Upsell : ถ้าอยากได้ความเร็วเพิ่ม - > ไป Giorno + ( เครื่องแรงกว่า ) 6.2 โปรไฟล์ : \" เดินทางไกล / ออกทริป \" ( TouringRider ) ● Trigger : ขี่ข้ามจังหวัด , ชอบความเร็ว , เบื่อลมปะทะ ● แนะนํา : HondaPCX160 ( เริ่มต้น ) หรือ Forza350 ( ที่สุด ) ● UpselltoForza : \" ถ้าพี่ต้องขี่ 100 - 120 กม./ ชม.ยาวๆ Forza จะทําให้เครื่องไม่โทรมและชิลด์ไฟฟ้าจะช่วยให้พี่ไม่เหนื่อยจากลมตีครับ \" 6.3 โปรไฟล์ : \" สายลุย / ถนนพัง \" ( Adventure / RoughRoad ) ● Trigger : ถนนซอยบ้านไม่ดี , น  าท่วมขัง , ชอบเที่ยวธรรมชาติ ● แนะนํา : HondaADV160 ● KeyMessage : \" โช้ค Showa ซับแทงค์ไม่ได้มีไว้เท่ๆครับแต่มันช่วยให้รถนิ่งเวลาเจอหลุมรูดผ่านได้มั่นใจกว่า PCX เยอะครับ \" 6.4 โปรไฟล์ : \" สายเทคโนโลยี / Gadget \" ( TechLover ) ● Trigger : ชอบหน้าจอล  าๆ , กลัวหลงทาง , ชอบของเล่น ● แนะนํา : YamahaXMAX300TechMax ● KeyMessage : \" ตัวนี้จบเลยครับมีแผนที่ Garmin บนหน้าจอไม่ต้องเอามือถือมาตากแดดตากฝนประหยัดค่า GPS แยกไปได้เป็นหมื่นครับ \" 6.5 มุมมองอนาคตปี 2025 / 2026 ( FutureOutlook ) ● YamahaNMAXTurbo : มีข่าวลือหนาหูเกี่ยวกับการเปิดตัว NMAX ที่ใช้ระบบเกียร์ไฟฟ้า YECVT ( YamahaElectricCVT ) ที่จําล",
+    "cache_type": "query",
+    "chunk_id": null,
+    "original_prompt": "PCX 160 Wave 110i specs features comparison",
+    "queryparam": {
+      "mode": "global",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "hl_keywords": "Comparison, Specifications, Features",
+      "ll_keywords": "PCX 160, Wave 110i",
+      "user_prompt": "",
+      "enable_rerank": true
+    },
+    "create_time": 1768913997,
+    "update_time": 1768913997,
+    "_id": "global:query:50ea8b406c84e1c4cb731cfe9f58c9a5"
+  },
+  "global:keywords:0883fc4d8531433b7b5750ec33b7a0ac": {
+    "return": "{\"high_level_keywords\": [\"specs\", \"features\", \"selling points\"], \"low_level_keywords\": [\"Honda PCX 160\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "Honda PCX 160 specs features selling points",
+    "queryparam": {
+      "mode": "global",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": true
+    },
+    "create_time": 1768914546,
+    "update_time": 1768914546,
+    "_id": "global:keywords:0883fc4d8531433b7b5750ec33b7a0ac"
+  },
+  "global:query:a4424e5bee5820a144ddbbc37734608c": {
+    "return": "The Honda PCX 160 is a premium scooter, part of the Motorcycle Premium Scooter Market in Thailand, that boasts several advanced features and specific characteristics. It is particularly recommended for touring riders due to its comfortable seating and suitability for long-distance travel [reference_id: None].\n\n### Key Specifications and Features\n\n*   **Engine Technology**: The PCX 160 is equipped with the eSP+ (Enhanced Smart Power Plus) engine, an advanced Honda technology that offers enhanced power and efficiency [reference_id: None].\n*   **Valves**: It represents an engineering leap from the previous 150cc model, featuring a 4-valve system instead of the original 2-valve system. This design aims to improve the efficiency of intake and exhaust at high engine speeds [reference_id: None].\n*   **Engine Displacement**: The engine has a displacement of 156.93 cc [reference_id: None].\n*   **Bore x Stroke**: The bore and stroke measure 60.0x55.5 mm. The use of a large bore piston and a shorter stroke helps reduce piston friction at high RPMs, allowing the engine to rev higher and respond better at top speeds [reference_id: None].\n*   **Maximum Horsepower**: The PCX 160 delivers a maximum horsepower of 15.8 HP at 8,500 rpm [reference_id: None].\n*   **Crankshaft**: It incorporates Roller Bearings in the crankshaft to reduce vibration and friction, a technology often found in big bikes, contributing to a smoother engine operation [reference_id: None].\n*   **Cooling System**: An Oil Jet system injects lubricating oil beneath the piston, aiding in heat dissipation and reducing piston expansion during continuous high-speed riding over long distances [reference_id: None].\n*   **Riding Position**: The scooter features an upright riding position, which contributes to easy control at low speeds [reference_id: None].\n*   **Ground Clearance**: The PCX 160 has a ground clearance of 134 mm [reference_id: None].\n\n### Selling Points\n\nThe Honda PCX 160 is positioned as a great option for those who prioritize comfortable, long-distance riding or touring. Its engineering, including the eSP+ 4-valve engine, Roller Bearings, and Oil Jet system, is designed for sustained performance and comfort [reference_id: None].\n\n### Known Issues\n\nSome users have reported issues with the Honda PCX 160:\n\n*   **CVT Judder**: Many users experience a vibration when accelerating from low speeds, often attributed to clutch dust accumulation in the clutch housing or insufficient contact surface [reference_id: None].\n*   **Oil Pump Gear**: Early models (2021) had reports of issues with the oil pump gear slipping, but Honda has since updated the part in later production batches [reference_id: None].\n\n### References\n\n- [1] จุดเด่น : การควบคุมที่เฉียบคม ( SharpHandling ) เหมาะสําหรับการมุดในเมืองท่านั่งจะมีความตั้งตรง ( Upright ) มากกว่า PCX เล็กน้อยทําให้ควบคุมรถได้ง่ายในความเร็วต  า 10 ● ข้อสังเกต : ช่วงล่างเดิมค่อนข้างแข็งกระด้าง ( Stiff ) สะเทือนขึ้นถึงแฮนด์เมื่อเจอหลุมบ่อซึ่งผู้ใช้งานในไทยจํานวนมากต้องเปลี่ยนโช้คอัพหลังเพื่อแก้ปัญหานี้ 13Logic สําหรับ ChatbotUpsell : ● หากลูกค้าเน้น \" ขับขี่ทางไกลออกทริปนั่งสบาย \" - > แนะนํา PCX160 โดยอ้างอิงเรื่องยางรองแฮนด์และท่านั่ง ● หากลูกค้าเน้น \" ขับขี่ในเมืองชอบความคล่องตัว \" - > แนะนํา NMAX155 โดยอ้างอิงเฟรมและอัตราเร่งช่วงต้นจาก VVA1.3HondaADV160 : กลยุทธ์การ Upsell ด้วยช่วงล่างและภาพลักษณ์ ADV160 ไม่ใช่แค่ PCX ยกสูงแต่เป็นการปรับจูนวิศวกรรมเพื่อรองรับสภาพถนนที่เลวร้าย ● โช้คอัพ ShowaSub - tank : จุดขายที่แข็งแรงที่สุดคือโช้คหลังคู่พร้อมซับแทงค์ ( กระปุกแยก ) จากโรงงาน 1 ซับแทงค์ช่วยแยกน  ามันและแก๊สออกจากกันป้องกันการเกิดฟองอากาศ ( Cavitation ) เมื่อโช้คทํางานหนักๆบนถนนขรุขระทําให้แรงหนืดคงที่ตลอดเวลา ● ระยะยุบตัวและระยะห่างจากพื้น : ด้วย GroundClearance ที่ 165 มม.( เทียบกับ PCX ที่ 134 มม.) ทําให้ ADV160 สามารถรูดผ่านลูกระนาดหรือน  าท่วมขังระดับต  าได้ดีกว่ามาก 1 ● Windscreen ปรับระดับได้ : ชิลด์หน้าสามารถปรับความสูงได้ 2 ระดับซึ่ง PCX ทําไม่ได้ 1Logic สําหรับ Chatbot : ใช้ ADV160 เป็นตัว Upsell เมื่อลูกค้าบ่นเรื่อง \" ถนนแถวบ้านไม่ดี \" , \" น  าท่วมขังบ่อย \" หรือ \" ชอบเที่ยวธรรมชาติ \" โดยเน้นความคุ้มค่าของโช้ค Showa ที่ไม่ต้องไปเสียเงินเปลี่ยนเอง 1.4 จุดอ่อนและปัญหาที่พบบ่อย ( DefectAnalysis ) เพื่อสร้างความเชื่อถือ Chatbot ที่ดีต้องไม่เพียงแค่เชียร์สินค้าแต่ต้องให้คําแนะนําในการดูแลรักษาได้ด้วย ● HondaPCX160 : ○ อาการสั่นขณะออกตัว ( CVTJudder ) : ผู้ใช้จํานวนมากรายงานอาการสั่นที่ความเร็วต  าสาเหตุเกิดจากฝุ่นผ้าคลัชสะสมในกะโหลกคลัชหรือหน้าสัมผัสไม่จับตัวกันดีพอ 15 ○ เฟืองปั๊มน  ามันเครื่อง : ในรุ่นปีแรกๆ ( 2021 ) มีรายงานปัญหาเฟืองปั๊มน  ามันเครื่องรูดแต่ Honda ได้มีการปรับปรุงพาร์ทในล็อตหลังๆแล้ว 15 ● YamahaNMAX155 / Aerox155 : ○ น  ามันเครื่องหาย ( OilConsumption ) : เครื่องยนต์ BlueCore ในยุคแรกๆและ XMAX รุ่นก่อนปี 2023 มีชื่อเสียงเรื่องการกินน  ามันเครื่องหากใช้รอบสูงต่อเนื่องแม้ใน NMAX155 จะพบน้อยกว่า XMAX แต่ก็เป็นสิ่งที่ผู้ใช้ควรหมั่นตรวจสอบ 19 ○ โช้คแข็ง : ดังที่กล่าวไปข้างต้นเป็นคาแรคเตอร์ประจําตัวที่ผู้ใช้อาจต้องยอมรับหรือแก้ไข 12 ส่วนที่ 2 : การวิเคราะห์กลุ่มบิ๊กสกู๊ตเตอร์ ( Maxi - ScooterSegment : 300cc - 350cc ) การขยับจาก 150cc มาเป็น 300cc + คือการมองหา \" อํานาจในการเดินทาง \" ( TouringAuthority ) คู่แข่งหลักคือ HondaForza350 และ YamahaXMAX300 ซึ่งมีจุดเด่นที่กินกันไม่ลงคนละด้าน 2.1 ศึกชิงจ้าว\n- [2] รายงานการวิเคราะห์เชิงลึกด้านเทคนิคและกลยุทธ์การขายสําหรับรถจักรยานยนต์กลุ่มพรีเมียมสกู๊ตเตอร์ในประเทศไทย ( พ.ศ.2567 - 2569 ) ส่วนที่ 1 : การวิเคราะห์กลุ่มพรีเมียมเอนทรี ( PremiumEntrySegment : 150cc - 160cc ) กลุ่มนี้คือฐานลูกค้าที่ใหญ่ที่สุดสําหรับตลาดพรีเมียมเป็นจุดเปลี่ยนสําคัญจากรถใช้งานขนาดเล็ก ( 110 - 125cc ) ขึ้นมาสู่รถที่มีสมรรถนะสําหรับการเดินทางระยะกลางคู่แข่งหลักคือ Honda และ Yamaha ที่ต่างงัดเทคโนโลยีเครื่องยนต์ยุคใหม่มาประชันกัน 1.1 การเปรียบเทียบเชิงวิศวกรรมเครื่องยนต์ : eSP + ปะทะ BlueCoreVVA หัวใจสําคัญของการ Upsell ในกลุ่มนี้คือการชี้ให้เห็นถึงความแตกต่างของคาแรคเตอร์เครื่องยนต์ซึ่งส่งผลโดยตรงต่อความรู้สึกในการขับขี่ HondaPCX160 และ ADV160 : วิวัฒนาการสู่ 4 วาล์ว ( eSP + ) เครื่องยนต์ eSP + ( EnhancedSmartPowerPlus ) ขนาด 156.93 ซีซีเป็นการก้าวกระโดดทางวิศวกรรมจากรุ่น 150 เดิมโดยเปลี่ยนจากระบบ 2 วาล์วมาเป็น 4 วาล์วเพื่อเพิ่มประสิทธิภาพในการนําไอดีเข้าและระบายไอเสียออกที่รอบเครื่องยนต์สูง ● ขนาดกระบอกสูบ x ระยะชัก : 60.0x55.5 มม.1 การใช้ลูกสูบขนาดใหญ่ ( BigBore ) และระยะชักที่สั้นลง ( ShortStroke ) เมื่อเทียบกับรุ่นก่อนหน้าบ่งบอกถึงเจตนาในการลดแรงเสียดทานของลูกสูบที่ความเร็วรอบสูงทําให้เครื่องยนต์สามารถลากรอบได้ลึกขึ้นและตอบสนองได้ดีขึ้นในย่านความเร็วปลาย ● เพลาข้อเหวี่ยง : มีการใช้ RollerBearing เพื่อลดแรงสั่นสะเทือนและแรงเสียดทานซึ่งเป็นเทคโนโลยีที่มักพบในรถบิ๊กไบค์ช่วยให้เครื่องยนต์เดินนิ่งขึ้น 3 ● OilJet : ระบบฉีดน  ามันหล่อลื่นใต้ลูกสูบช่วยระบายความร้อนและลดการขยายตัวของลูกสูบเมื่อขับขี่ทางไกลด้วยความเร็วสูงต่อเนื่อง 3YamahaNMAX155 และ Aerox155 : ความอัจฉริยะของวาล์วแปรผัน ( VVA ) เครื่องยนต์ BlueCore ขนาด 155 ซีซีของยามาฮ่ามีจุดขายที่แข็งแกร่งคือระบบ VVA ( VariableValveActuation ) ● หลักการทํางาน : ระบบจะมีลูกเบี้ยว ( Camshaft ) สองชุดสําหรับวาล์วไอดีชุดหนึ่งสําหรับรอบต  า - กลางและอีกชุดสําหรับรอบสูงโดยมีโซลินอยด์ทําหน้าที่สลับการทํางานที่ 6 , 000 รอบต่อนาที 4 ● ผลลัพธ์ : ทําให้รถมีแรงบิดที่ดีในรอบต  าเพื่อการออกตัวที่ประหยัดน  ามันแต่เมื่อต้องการเร่งแซงระบบจะสลับไปใช้แคมองศาสูงทําให้กราฟแรงบิดไม่ตกในช่วงปลาย 4 ● ขนาดกระบอกสูบ x ระยะชัก : 58.0x58.7 มม.6 ซึ่งเป็นแบบ Square ( ใกล้เคียงกัน ) ให้สมดุลที่ดีระหว่างแรงบิดและการหมุนรอบตารางเปรียบเทียบสเปกเครื่องยนต์ 150 - 160cc หัวข้อเปรียบเทียบ HondaPCX160YamahaNMAX155HondaADV160YamahaAerox155 รหัสเครื่องยนต์ eSP + 4 วาล์ว BlueCoreVVA4 วาล์ว eSP + 4 วาล์ว BlueCoreVVA4 วาล์วปริมาตรกระบอกสูบ 156.93cc7155cc6156.9cc2155cc6 แรงม้าสูงสุด 15.8HP @ 8 , 500rpm615.1\n- [3] ศูนย์ honda เช็คระยะ pcx - Pantip , เข้าถึงเมื่อมกราคม 19 , 2026https : / / pantip.com / topic / 3102247840.ChangeOil : every1.5kor6k ? : r / PHMotorcycles - Reddit , เข้าถึงเมื่อมกราคม 19 , 2026https : / / www.reddit.com / r / PHMotorcycles / comments / 1j2gzoo / change _ oil _ every _ 15k _ or _ 6k / ? tl = en41.MaintenanceServicePartsHondaPCX1602021202220232024 - PowerPhuket , เข้าถึงเมื่อมกราคม 19 , 2026https : / / www.powerphuket.com / en / 1191 - maintenance - parts - pcx42.สายพาน - บีเจแอลมอเตอร์ไบค์ : InspiredbyLnwShop.com ( v2 ) , เข้าถึงเมื่อมกราคม 19 , 2026https : / / www.bjlmotorbike.com / category / 128 / yamaha - % E0 % B8 % AD % E0 % B8 % B0 % E0 % B9 % 84 % E0 % B8 % AB % E0 % B8 % A5 % E0 % B9 % 88 % E0 % B9 % 81 % E0 % B8 % 97 % E0 % B9 % 89 / % E0 % B8 % AA % E0 % B8 % B2 % E0 % B8 % A2 % E0 % B8 % 9E % E0 % B8 % B2 % E0 % B8 % 9943.( Nmax155 ) ชุดสายพาน YamahaNmax155",
+    "cache_type": "query",
+    "chunk_id": null,
+    "original_prompt": "Honda PCX 160 specs features selling points",
+    "queryparam": {
+      "mode": "global",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "hl_keywords": "specs, features, selling points",
+      "ll_keywords": "Honda PCX 160",
+      "user_prompt": "",
+      "enable_rerank": true
+    },
+    "create_time": 1768914568,
+    "update_time": 1768914568,
+    "_id": "global:query:a4424e5bee5820a144ddbbc37734608c"
+  },
+  "global:keywords:9feffb652e4e75a09129b4360cd4a132": {
+    "return": "{\"high_level_keywords\": [\"Honda PCX 150\"], \"low_level_keywords\": [\"specs\", \"features\", \"selling points\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "Honda PCX 150 specs features selling points",
+    "queryparam": {
+      "mode": "global",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": true
+    },
+    "create_time": 1768914620,
+    "update_time": 1768914620,
+    "_id": "global:keywords:9feffb652e4e75a09129b4360cd4a132"
+  },
+  "global:query:da2acdf87035c813b03b667d84d9cae7": {
+    "return": "The Honda PCX 160, an evolution from its 150cc predecessor, features a 4-valve eSP+ (Enhanced Smart Power Plus) engine, indicating a significant engineering upgrade from the previous 2-valve system. This engine has a displacement of 156.93cc with a bore x stroke of 60.0x55.5 mm. The design, with a large bore and shorter stroke, aims to reduce piston friction at high speeds, allowing the engine to rev higher and respond better at top speeds. It also incorporates Roller Bearings in the crankshaft to reduce vibration and friction, a technology often found in bigger bikes, resulting in a smoother engine operation. Additionally, an Oil Jet system lubricates under the piston to help dissipate heat and reduce piston expansion during prolonged high-speed riding [3].\n\nKey features and selling points of the Honda PCX 160 include:\n*   **Engine Technology** The eSP+ 4-valve engine provides enhanced power and efficiency [3].\n*   **Riding Position** The PCX generally offers an upright riding position [1].\n*   **Target Audience** It is recommended for Touring Riders, emphasizing comfortable long-distance travel, especially when considering features like handlebar rubber mounts and seating [5].\n*   **Comparisons** The PCX160 is a premium scooter produced by Honda for the Motorcycle Premium Scooter Market in Thailand [KB_entity_1, KB_entity_2].\n\nHowever, some users have reported an issue with **CVT Judder**, which manifests as vibrations at low speeds. This is typically attributed to accumulated clutch dust in the clutch bell or insufficient contact between the clutch surfaces [1]. Early models from 2021 also had reported problems with the oil pump gear slipping, though Honda has since updated the parts in later production batches [1].\n\n### References\n- [1] จุดเด่น : การควบคุมที่เฉียบคม ( SharpHandling ) เหมาะสําหรับการมุดในเมืองท่านั่งจะมีความตั้งตรง ( Upright ) มากกว่า PCX เล็กน้อยทําให้ควบคุมรถได้ง่ายในความเร็วต า 10 ● ข้อสังเกต : ช่วงล่างเดิมค่อนข้างแข็งกระด้าง ( Stiff ) สะเทือนขึ้นถึงแฮนด์เมื่อเจอหลุมบ่อซึ่งผู้ใช้งานในไทยจํานวนมากต้องเปลี่ยนโช้คอัพหลังเพื่อแก้ปัญหานี้ 13Logic สําหรับ ChatbotUpsell : ● หากลูกค้าเน้น \" ขับขี่ทางไกลออกทริปนั่งสบาย \" - > แนะนํา PCX160 โดยอ้างอิงเรื่องยางรองแฮนด์และท่านั่ง ● หากลูกค้าเน้น \" ขับขี่ในเมืองชอบความคล่องตัว \" - > แนะนํา NMAX155 โดยอ้างอิงเฟรมและอัตราเร่งช่วงต้นจาก VVA1.3HondaADV160 : กลยุทธ์การ Upsell ด้วยช่วงล่างและภาพลักษณ์ ADV160 ไม่ใช่แค่ PCX ยกสูงแต่เป็นการปรับจูนวิศวกรรมเพื่อรองรับสภาพถนนที่เลวร้าย ● โช้คอัพ ShowaSub - tank : จุดขายที่แข็งแรงที่สุดคือโช้คหลังคู่พร้อมซับแทงค์ ( กระปุกแยก ) จากโรงงาน 1 ซับแทงค์ช่วยแยกน ามันและแก๊สออกจากกันป้องกันการเกิดฟองอากาศ ( Cavitation ) เมื่อโช้คทํางานหนักๆบนถนนขรุขระทําให้แรงหนืดคงที่ตลอดเวลา ● ระยะยุบตัวและระยะห่างจากพื้น : ด้วย GroundClearance ที่ 165 มม.( เทียบกับ PCX ที่ 134 มม.) ทําให้ ADV160 สามารถรูดผ่านลูกระนาดหรือน าท่วมขังระดับต าได้ดีกว่ามาก 1 ● Windscreen ปรับระดับได้ : ชิลด์หน้าสามารถปรับความสูงได้ 2 ระดับซึ่ง PCX ทําไม่ได้ 1Logic สําหรับ Chatbot : ใช้ ADV160 เป็นตัว Upsell เมื่อลูกค้าบ่นเรื่อง \" ถนนแถวบ้านไม่ดี \" , \" น าท่วมขังบ่อย \" หรือ \" ชอบเที่ยวธรรมชาติ \" โดยเน้นความคุ้มค่าของโช้ค Showa ที่ไม่ต้องไปเสียเงินเปลี่ยนเอง 1.4 จุดอ่อนและปัญหาที่พบบ่อย ( DefectAnalysis ) เพื่อสร้างความเชื่อถือ Chatbot ที่ดีต้องไม่เพียงแค่เชียร์สินค้าแต่ต้องให้คําแนะนําในการดูแลรักษาได้ด้วย ● HondaPCX160 : ○ อาการสั่นขณะออกตัว ( CVTJudder ) : ผู้ใช้จํานวนมากรายงานอาการสั่นที่ความเร็วต าสาเหตุเกิดจากฝุ่นผ้าคลัชสะสมในกะโหลกคลัชหรือหน้าสัมผัสไม่จับตัวกันดีพอ 15 ○ เฟืองปั๊มน ามันเครื่อง : ในรุ่นปีแรกๆ ( 2021 ) มีรายงานปัญหาเฟืองปั๊มน ามันเครื่องรูดแต่ Honda ได้มีการปรับปรุงพาร์ทในล็อตหลังๆแล้ว 15 ● YamahaNMAX155 / Aerox155 : ○ น ามันเครื่องหาย ( OilConsumption ) : เครื่องยนต์ BlueCore ในยุคแรกๆและ XMAX รุ่นก่อนปี 2023 มีชื่อเสียงเรื่องการกินน ามันเครื่องหากใช้รอบสูงต่อเนื่องแม้ใน NMAX155 จะพบน้อยกว่า XMAX แต่ก็เป็นสิ่งที่ผู้ใช้ควรหมั่นตรวจสอบ 19 ○ โช้คแข็ง : ดังที่กล่าวไปข้างต้นเป็นคาแรคเตอร์ประจําตัวที่ผู้ใช้อาจต้องยอมรับหรือแก้ไข 12 ส่วนที่ 2 : การวิเคราะห์กลุ่มบิ๊กสกู๊ตเตอร์ ( Maxi - ScooterSegment : 300cc - 350cc ) การขยับจาก 150cc มาเป็น 300cc + คือการมองหา \" อํานาจในการเดินทาง \" ( TouringAuthority ) คู่แข่งหลักคือ HondaForza350 และ YamahaXMAX300 ซึ่งมีจุดเด่นที่กินกันไม่ลงคนละด้าน 2.1 ศึกชิงจ้าว\n- [3] รายงานการวิเคราะห์เชิงลึกด้านเทคนิคและกลยุทธ์การขายสําหรับรถจักรยานยนต์กลุ่มพรีเมียมสกู๊ตเตอร์ในประเทศไทย ( พ.ศ.2567 - 2569 ) ส่วนที่ 1 : การวิเคราะห์กลุ่มพรีเมียมเอนทรี ( PremiumEntrySegment : 150cc - 160cc ) กลุ่มนี้คือฐานลูกค้าที่ใหญ่ที่สุดสําหรับตลาดพรีเมียมเป็นจุดเปลี่ยนสําคัญจากรถใช้งานขนาดเล็ก ( 110 - 125cc ) ขึ้นมาสู่รถที่มีสมรรถนะสําหรับการเดินทางระยะกลางคู่แข่งหลักคือ Honda และ Yamaha ที่ต่างงัดเทคโนโลยีเครื่องยนต์ยุคใหม่มาประชันกัน 1.1 การเปรียบเทียบเชิงวิศวกรรมเครื่องยนต์ : eSP + ปะทะ BlueCoreVVA หัวใจสําคัญของการ Upsell ในกลุ่มนี้คือการชี้ให้เห็นถึงความแตกต่างของคาแรคเตอร์เครื่องยนต์ซึ่งส่งผลโดยตรงต่อความรู้สึกในการขับขี่ HondaPCX160 และ ADV160 : วิวัฒนาการสู่ 4 วาล์ว ( eSP + ) เครื่องยนต์ eSP + ( EnhancedSmartPowerPlus ) ขนาด 156.93 ซีซีเป็นการก้าวกระโดดทางวิศวกรรมจากรุ่น 150 เดิมโดยเปลี่ยนจากระบบ 2 วาล์วมาเป็น 4 วาล์วเพื่อเพิ่มประสิทธิภาพในการนําไอดีเข้าและระบายไอเสียออกที่รอบเครื่องยนต์สูง ● ขนาดกระบอกสูบ x ระยะชัก : 60.0x55.5 มม.1 การใช้ลูกสูบขนาดใหญ่ ( BigBore ) และระยะชักที่สั้นลง ( ShortStroke ) เมื่อเทียบกับรุ่นก่อนหน้าบ่งบอกถึงเจตนาในการลดแรงเสียดทานของลูกสูบที่ความเร็วรอบสูงทําให้เครื่องยนต์สามารถลากรอบได้ลึกขึ้นและตอบสนองได้ดีขึ้นในย่านความเร็วปลาย ● เพลาข้อเหวี่ยง : มีการใช้ RollerBearing เพื่อลดแรงสั่นสะเทือนและแรงเสียดทานซึ่งเป็นเทคโนโลยีที่มักพบในรถบิ๊กไบค์ช่วยให้เครื่องยนต์เดินนิ่งขึ้น 3 ● OilJet : ระบบฉีดน ามันหล่อลื่นใต้ลูกสูบช่วยระบายความร้อนและลดการขยายตัวของลูกสูบเมื่อขับขี่ทางไกลด้วยความเร็วสูงต่อเนื่อง 3YamahaNMAX155 และ Aerox155 : ความอัจฉริยะของวาล์วแปรผัน ( VVA ) เครื่องยนต์ BlueCore ขนาด 155 ซีซีของยามาฮ่ามีจุดขายที่แข็งแกร่งคือระบบ VVA ( VariableValveActuation ) ● หลักการทํางาน : ระบบจะมีลูกเบี้ยว ( Camshaft ) สองชุดสําหรับวาล์วไอดีชุดหนึ่งสําหรับรอบต า - กลางและอีกชุดสําหรับรอบสูงโดยมีโซลินอยด์ทําหน้าที่สลับการทํางานที่ 6 , 000 รอบต่อนาที 4 ● ผลลัพธ์ : ทําให้รถมีแรงบิดที่ดีในรอบต าเพื่อการออกตัวที่ประหยัดน ามันแต่เมื่อต้องการเร่งแซงระบบจะสลับไปใช้แคมองศาสูงทําให้กราฟแรงบิดไม่ตกในช่วงปลาย 4 ● ขนาดกระบอกสูบ x ระยะชัก : 58.0x58.7 มม.6 ซึ่งเป็นแบบ Square ( ใกล้เคียงกัน ) ให้สมดุลที่ดีระหว่างแรงบิดและการหมุนรอบตารางเปรียบเทียบสเปกเครื่องยนต์ 150 - 160cc หัวข้อเปรียบเทียบ HondaPCX160YamahaNMAX155HondaADV160YamahaAerox155 รหัสเครื่องยนต์ eSP + 4 วาล์ว BlueCoreVVA4 วาล์ว eSP + 4 วาล์ว BlueCoreVVA4 วาล์วปริมาตรกระบอกสูบ 156.93cc7155cc6156.9cc2155cc6 แรงม้าสูงสุด 15.8HP @ 8 , 500rpm615.1\n- [5] Y - ConnectvsRoadSync ● Y - Connect ( Yamaha ) : เน้น \" VehicleHealth \" ( สุขภาพรถ ) แจ้งเตือนน ามันเครื่องแบตเตอรี่และจุดจอดรถล่าสุดเหมาะกับคนที่ดูแลรถไม่เก่ง 36 ● RoadSync ( Honda ) : เน้น \" Lifestyle & Control \" สั่งงานด้วยเสียงรับสายโทรออกฟังเพลงผ่านปุ่มที่แฮนด์เหมาะกับคนที่ใช้ชีวิตติดมือถือและต้องสื่อสารตลอดเวลา 38 ส่วนที่ 5 : ต้นทุนการเป็นเจ้าของ ( CostofOwnership ) ข้อมูลราคาอะไหล่และการบํารุงรักษาจากศูนย์บริการในไทยเพื่อความโปร่งใสในการขายตารางค่าใช้จ่ายอะไหล่สิ้นเปลืองโดยประมาณ ( บาท ) รายการ HondaPCX160 / ADV160YamahaNMAX155 / Aerox หมายเหตุน ามันเครื่อง ( สังเคราะห์ ) ~ 250 - 350 ~ 250 - 350 เปลี่ยนทุก 4 , 000 - 6 , 000 กม.39 สายพานขับเคลื่อน ( V - Belt ) ~ 66041 ~ 430 - 45042Yamaha ถูกกว่าอย่างมีนัยสําคัญผ้าเบรกหน้า ~ 51041 ~ 250 - 41044Yamaha มีเกรดเทียบแท้ให้เลือกเยอะกว่าชุดตุ้มน าหนัก ( เม็ด ) ~ 32041 ~ 300 ราคาใกล้เคียงกัน รอบเช็คระยะใหญ่ 24 , 000 กม.20 , 000 - 24 , 000 กม.เปลี่ยนสายพาน , เม็ด , น ายาหม้อน าวิเคราะห์ : โดยรวมแล้วอะไหล่สิ้นเปลืองของ Yamaha มีราคาถูกกว่า Honda ประมาณ 15 - 20 % 45 ซึ่งเป็นจุดขายที่ดีสําหรับลูกค้าที่กังวลเรื่องค่าใช้จ่ายระยะยาวส่วนที่ 6 : บทสรุปและกลยุทธ์ ChatbotUpsell ( StrategicRecommendations ) จากการวิเคราะห์ข้อมูลรอบด้านเราสามารถสร้าง DecisionTree สําหรับ Chatbot ได้ดังนี้ : 6.1 โปรไฟล์ : \" เน้นใช้งานคุ้มค่า \" ( ValueSeeker ) ● Trigger : บ่นเรื่องราคาน ามัน , งบจํากัด , ใช้ขี่ไปทํางานใกล้ๆ ● แนะนํา : YamahaGrandFilanoHybrid ● เหตุผล : ประหยัดน ามันที่สุด ( Hybrid ) , ราคาอะไหล่ถูก , ที่เก็บของใหญ่ , คนซ้อนนั่งสบาย ● Upsell : ถ้าอยากได้ความเร็วเพิ่ม - > ไป Giorno + ( เครื่องแรงกว่า ) 6.2 โปรไฟล์ : \" เดินทางไกล / ออกทริป \" ( TouringRider ) ● Trigger : ขี่ข้ามจังหวัด , ชอบความเร็ว , เบื่อลมปะทะ ● แนะนํา : HondaPCX160 ( เริ่มต้น ) หรือ Forza350 ( ที่สุด ) ● UpselltoForza : \" ถ้าพี่ต้องขี่ 100 - 120 กม./ ชม.ยาวๆ Forza จะทําให้เครื่องไม่โทรมและชิลด์ไฟฟ้าจะช่วยให้พี่ไม่เหนื่อยจากลมตีครับ \" 6.3 โปรไฟล์ : \" สายลุย / ถนนพัง \" ( Adventure / RoughRoad ) ● Trigger : ถนนซอยบ้านไม่ดี , น าท่วมขัง , ชอบเที่ยวธรรมชาติ ● แนะนํา : HondaADV160 ● KeyMessage : \" โช้ค Showa ซับแทงค์ไม่ได้มีไว้เท่ๆครับแต่มันช่วยให้รถนิ่งเวลาเจอหลุมรูดผ่านได้มั่นใจกว่า PCX เยอะครับ \" 6.4 โปรไฟล์ : \" สายเทคโนโลยี / Gadget \" ( TechLover ) ● Trigger : ชอบหน้าจอล าๆ , กลัวหลงทาง , ชอบของเล่น ● แนะนํา : YamahaXMAX300TechMax ● KeyMessage : \" ตัวนี้จบเลยครับมีแผนที่ Garmin บนหน้าจอไม่ต้องเอามือถือมาตากแดดตากฝนประหยัดค่า GPS แยกไปได้เป็นหมื่นครับ \" 6.5 มุมมองอนาคตปี 2025 / 2026 ( FutureOutlook ) ● YamahaNMAXTurbo : มีข่าวลือหนาหูเกี่ยวกับการเปิดตัว NMAX ที่ใช้ระบบเกียร์ไฟฟ้า YECVT ( YamahaElectricCVT ) ที่จําล",
+    "cache_type": "query",
+    "chunk_id": null,
+    "original_prompt": "Honda PCX 150 specs features selling points",
+    "queryparam": {
+      "mode": "global",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "hl_keywords": "Honda PCX 150",
+      "ll_keywords": "specs, features, selling points",
+      "user_prompt": "",
+      "enable_rerank": true
+    },
+    "create_time": 1768914639,
+    "update_time": 1768914639,
+    "_id": "global:query:da2acdf87035c813b03b667d84d9cae7"
   }
 }
