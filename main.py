@@ -3,21 +3,19 @@ import json
 import os
 import asyncio
 import re
-from typing import List, Optional, Dict, Any
+from typing import List, Dict, Any
 
 # Third-party imports
 import uvicorn
 from fastapi import FastAPI
 from pydantic import BaseModel
 from openai import OpenAI
-from tqdm import tqdm
 
-# LightRAG imports
-from lightrag import QueryParam
 
 # Local imports
 from lib.logger import logger
 from lib.initialize_lightrag import initialize_lightrag
+from lib.tools import set_rag_instance, create_check_stock_logic,tools_schema, check_tool_call_in_text
 # from lib.pdf import load_pdfs_to_rag
 
 
@@ -62,6 +60,21 @@ def clean_Reference(text: str) -> str:
     text = re.sub(r'\(\d+\)', '', text)
     return text.strip()
 
+def create_chat_history(chat):
+        formatted_history = ""
+        if chat:
+            formatted_history = "--- Conversation History ---\n"
+            for msg in chat:
+
+                role = msg.get("role", "Unknown")
+                content = msg.get("content", "")
+                
+
+                display_role = "User" if role.lower() == "user" else "AI"
+                
+                formatted_history += f"{display_role}: {content}\n"
+            formatted_history += "----------------------------\n"
+        return formatted_history
 
 
 # ============================================
@@ -86,118 +99,8 @@ async def shutdown_event():
         await rag.finalize_storages()
         logger.info("Shutdown complete.")
 
-# ============================================
-# Tool Functions
-# ============================================
-
-async def lightrag_tool(query: str) -> str:
-    """Query the LightRAG knowledge base"""
-    result = await rag.aquery(
-        query,
-        param=QueryParam(mode="global")
-    )
-    return result
-
-def create_check_stock_logic(inventory_data: List[Dict[str, Any]]):
-    """Factory function to create check_stock_logic with inventory data"""
-    def check_stock_logic(model_name: str) -> str:
-        """Check stock logic and return formatted string"""
-        for item in inventory_data:
-            if item.get("product_name", "").lower() == model_name.lower():
-                stock = item.get("stock_quantity", 0)
-                price = item.get("price", "N/A")
-
-                if stock > 0:
-                    return f"✅ Available | Model: {model_name} | Price: {price} บาท | Stock: {stock} units"
-                else:
-                    return f"❌ Out of Stock | Model: {model_name} | INSTRUCTION: Call lightrag_tool(query='{model_name} alternatives') immediately."
-        return f"❓ Not Found | Model: {model_name} not in inventory."
-    return check_stock_logic
-
-# Tool schema for function calling
-tools_schema = [
-    {
-        "type": "function",
-        "function": {
-            "name": "check_stock_logic",
-            "description": "Check real-time stock and price. Use this whenever user asks about availability.",
-            "parameters": {
-                "type": "object",
-                "properties": {
-                    "model_name": {
-                        "type": "string",
-                        "description": "The model name to check (e.g. 'PCX 160', 'Wave')."
-                    }
-                },
-                "required": ["model_name"]
-            }
-        }
-    },
-    {
-        "type": "function",
-        "function": {
-            "name": "lightrag_tool",
-            "description": "Retrieve technical specs, pros/cons, and FIND ALTERNATIVES if stock is empty.",
-            "parameters": {
-                "type": "object",
-                "properties": {
-                    "query": {
-                        "type": "string",
-                        "description": "Search keyword (e.g. 'PCX 160 specs', 'PCX 160 competitors')."
-                    }
-                },
-                "required": ["query"]
-            }
-        }
-    }
-]
 
 
-
-def check_tool_call_in_text(content: str, tool_calls: List) -> Optional[List]:
-    """Check for tool call in text content and extract JSON arguments"""
-    if not tool_calls and content and "<tool_call>" in content:
-        logger.warning("⚠️ Detected text-based tool call")
-        
-        pattern = r'<tool_call>(.*?)</tool_call>'
-        match = re.search(pattern, content, re.DOTALL)
-        
-        if match:
-            json_str = match.group(1).strip()
-            try:
-                tool_data = json.loads(json_str)
-                
-                class FakeToolCall:
-                    def __init__(self, name, args):
-                        self.id = "call_fake_123"
-                        self.type = "function"
-                        self.function = type('obj', (object,), {
-                            'name': name,
-                            'arguments': json.dumps(args)
-                        })
-
-                return [FakeToolCall(tool_data["name"], tool_data["arguments"])]
-                
-            except Exception as e:
-                logger.error(f"❌ Error parsing tool call: {e}")
-    return None
-
-
-def create_chat_history(chat):
-        formatted_history = ""
-        if chat:
-            formatted_history = "--- Conversation History ---\n"
-            for msg in chat:
-
-                role = msg.get("role", "Unknown")
-                content = msg.get("content", "")
-                
-
-                display_role = "User" if role.lower() == "user" else "AI"
-                
-                formatted_history += f"{display_role}: {content}\n"
-            formatted_history += "----------------------------\n"
-        return formatted_history
 
 # ============================================
 # API Routes
@@ -214,43 +117,45 @@ async def run_chat(query: RunChatRequest) -> Dict[str, str]:
         - Answer directly. Short and clear. No fluff.
 
         ### TOOLS (Use them, don't guess)
-        1. `check_stock_logic`: Check availability/price
-        2. `lightrag_tool`: Get specs/alternatives
+        1. `check_stock_logic`: Check availability/price OR list all models.
+        2. `lightrag_tool`: Get specs/alternatives.
 
-        ### WORKFLOW
-        **Stock Check:**
-        - Call check_stock_logic first
-        - ✅ Available → Say: "มีครับ [Model] ราคา [Price] บาท"
-        - ❌ Out of Stock → Call lightrag_tool for alternatives, then recommend
+        ### WORKFLOW (STRICT)
 
-        **Explain Product:**
+        1. **Specific Stock Check (ถามรุ่นเจาะจง)**
+        - User: "มี PCX ไหม", "PCX ราคาเท่าไหร่"
+        - Action: Call `check_stock_logic(model_name="PCX")`.
+        - ✅ Available → "มีของครับ [Model] สี [Color] ราคา [Price] บาท"
+        - ❌ Out of Stock → Call `lightrag_tool` for alternatives immediately.
+
+        2. **General Inquiry (ถามว่ามีรถอะไรบ้าง)**
+        - User: "ที่ร้านมีรถอะไรบ้าง", "มีรุ่นไหนแนะนำไหม", "ขอดูรายการรถหน่อย"
+        - Action: Call `check_stock_logic(model_name="ALL")`.
+        - Response: List the available models nicely (bullet points).
+            "ตอนนี้หน้าร้านมีตามนี้ครับ:
+            - [Model A]: [Price] บาท (มีของ)
+            - [Model B]: [Price] บาท (หมด)"
+
+        3. **Explain Product (ถามสเปค)**
         - Trigger: "สเปค", "ดียังไง", "อธิบายหน่อย"
-        - Call lightrag_tool → Summarize in plain Thai (focus on benefits)
+        - Action: Call `lightrag_tool`. Summarize benefits.
 
-        **Recommendation:**
-        - Trigger: "แนะนำรถ", "รถไหนดี"
-        - Call lightrag_tool → Only recommend what the tool returns
+        4. **Recommendation (ถามแนะนำรถ)**
+        - Trigger: "ขับในเมืองรุ่นไหนดี", "รถออกทริป"
+        - Action: Call `lightrag_tool`. Recommend ONLY based on tool results.
 
-        ### RESPONSE RULES (CRITICAL)
-        Your response MUST be a polished Thai customer chat reply that:
-        1. Answers ONLY what the customer asked - don't volunteer extra info
-        2. Keeps it SHORT and DIRECT - no lengthy explanations
-        3. Sounds like a real person chatting, NOT an advertisement or sales pitch
-        4. Does NOT introduce new topics unless the customer asks
-        5. Provides technical details ONLY when customer explicitly requests them
-        6. Is conversational and natural (like talking to a friend at a shop)
-        7. Never mentions "draft", "raw data", "database", or technical processes
-
-        ### STRICT RULES
-        - Always respond in FINAL Thai. No English unless technical terms.
-        - Don't lie about stock availability.
-        - Be honest if you don't know something.
-    """
+        ### RESPONSE RULES
+        1. **Short & Direct:** Answer ONLY what is asked.
+        2. **Natural Thai:** Chat like a friend ("พี่ลองดูตัวนี้ไหมครับ").
+        3. **No Tech Jargon:** Never mention "database", "json", or "tool".
+        4. **Honesty:** If stock is 0, say it's out of stock.
+        """
     
     logger.info(f"Running chat for query: {query.message[:50]}...")
     
     # Create closure with inventory data
     check_stock_fn = create_check_stock_logic(query.Data_model_stock_price)
+    rag_tool = await set_rag_instance(rag)
     
     chat_history = create_chat_history(query.chat_history)
     
@@ -289,7 +194,7 @@ async def run_chat(query: RunChatRequest) -> Dict[str, str]:
                 logger.info(f"→ {tool_name}: {function_args}")
 
                 if tool_name == "lightrag_tool":
-                    function_response = await lightrag_tool(query=function_args.get("query"))
+                    function_response = await rag_tool(query=function_args.get("query"))
                     logger.info(f"← lightrag: {function_response[:80]}...")
                 elif tool_name == "check_stock_logic":
                     function_response = check_stock_fn(model_name=function_args.get("model_name"))

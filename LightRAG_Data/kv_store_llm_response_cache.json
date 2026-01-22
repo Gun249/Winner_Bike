@@ -1538,5 +1538,89 @@
     "create_time": 1768933280,
     "update_time": 1768933280,
     "_id": "global:query:72a1c5781e27fed87001679b603a597a"
+  },
+  "global:keywords:46568426056ca3d06de2175e232759d3": {
+    "return": "{\"high_level_keywords\": [\"Specifications\"], \"low_level_keywords\": [\"Yamaha NMAX 155\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "Yamaha NMAX 155 specs",
+    "queryparam": {
+      "mode": "global",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": true
+    },
+    "create_time": 1768975079,
+    "update_time": 1768975079,
+    "_id": "global:keywords:46568426056ca3d06de2175e232759d3"
+  },
+  "global:query:d798ba7149377e5a3086bb7406b38a73": {
+    "return": "The Yamaha NMAX 155 features a BlueCoreVVA 4-valve engine with a displacement of 155cc. It is capable of producing 15.1 horsepower at 8,000 rpm [3].\n\nHowever, there are some known issues associated with the Yamaha NMAX 155:\n*   **Oil Consumption** The BlueCore engines in earlier models, including the NMAX 155, have been known to consume engine oil, especially when driven at high RPMs continuously. Users are advised to regularly check the engine oil level [1].\n*   **Stiff Shocks** The suspension, specifically the shocks, is noted for being quite stiff, which might require modification or acceptance by the user [1].\n\n### References\n\n- [1] ปรับปรุงพาร์ทในล็อตหลังๆแล้ว 15 ● YamahaNMAX155 / Aerox155 : ○ น  ามันเครื่องหาย ( OilConsumption ) : เครื่องยนต์ BlueCore ในยุคแรกๆและ XMAX รุ่นก่อนปี 2023 มีชื่อเสียงเรื่องการกินน  ามันเครื่องหากใช้รอบสูงต่อเนื่องแม้ใน NMAX155 จะพบน้อยกว่า XMAX แต่ก็เป็นสิ่งที่ผู้ใช้ควรหมั่นตรวจสอบ 19 ○ โช้คแข็ง : ดังที่กล่าวไปข้างต้นเป็นคาแรคเตอร์ประจําตัวที่ผู้ใช้อาจต้องยอมรับหรือแก้ไข 12 ส่วนที่ 2 : การวิเคราะห์กลุ่มบิ๊กสกู๊ตเตอร์ ( Maxi - ScooterSegment : 300cc - 350cc ) การขยับจาก 150cc มาเป็น 300cc + คือการมองหา \" อํานาจในการเดินทาง \" ( TouringAuthority ) คู่แข่งหลักคือ HondaForza350 และ YamahaXMAX300 ซึ่งมีจุดเด่นที่กินกันไม่ลงคนละด้าน 2.1 ศึกชิงจ้าวแห่งความจุ : 330ccvs292cc กลยุทธ์ของฮอนด้าในการขยับจาก Forza300 มาเป็น 350 ( ความจุจริง 329.6cc ) คือการ \" ฆ่า \" คู่แข่งด้วยตัวเลขแรงบิด ● HondaForza350 : เครื่องยนต์ eSP + 329.6cc ให้แรงบิดสูงสุด 31.5Nm ที่รอบต  าเพียง 5 , 250rpm21 สิ่งนี้มีความหมายมหาศาลในการขับขี่จริงเพราะรถจะออกตัวและเร่งแซงได้โดยไม่ต้องเค้นคันเร่งมากทําให้เครื่องยนต์สึกหรอน้อยกว่าและประหยัดน  ามันในย่านความเร็วเดินทาง ● YamahaXMAX300 : เครื่องยนต์ BlueCore292cc ให้แรงบิด 29.0Nm ที่ 5 , 750rpm22 แม้ตัวเลขจะน้อยกว่าไม่มากแต่ต้องใช้รอบเครื่องสูงกว่าเพื่อให้ได้กําลังนั้นมาซึ่งสะท้อนถึงคาแรคเตอร์ที่ชอบรอบจัด ( Rev - happy ) ของยามาฮ่าตารางเปรียบเทียบสเปก Maxi - Scooter หัวข้อเปรียบเทียบ HondaForza350 ( 2024 / 2025 ) YamahaXMAX300 ( Connected ) ปริมาตรกระบอกสูบ 329.6cc23292cc24 ขนาดกระบอกสูบ x ระยะชัก 77.0x70.7 มม.2570.0x75.9 มม.22 แรงม้าสูงสุด ~ 28.8HP ( 21.5kW ) 2127.6HP ( 20.6kW ) @ 7 , 250rpm22 แรงบิดสูงสุด 31.5Nm @ 5 , 250rpm2129.0Nm @ 5 , 750rpm22 ชิลด์หน้า ( Windshield ) ปรับไฟฟ้า ( ระยะ 150 - 180 มม.) 26 ปรับมือ ( ต้องใช้เครื่องมือ / ขันน็อต ) 22 ความจุถังน  ามัน 11.7 ลิตร 2713.0 ลิตร 27 น  าหนักตัวรถ 184 กก.27181 กก.28 ระบบนําทาง HondaRoadSync ( สั่งงานด้วยเสียง ) GarminStreetCross ( แสดงแผนที่บนจอ ) 29 ระบบกันสะเทือนหน้าเทเลสโคปิคทั่วไปเทเลสโคปิคแบบแผงคอคู่ ( DualClamp ) 2.2 ฟีเจอร์ไม้ตาย ( KillerFeatures ) สําหรับการ UpsellHondaForza350 : กระจกบังลมไฟฟ้า ( ElectricWindshield ) นี่คือฟีเจอร์ที่ Chatbot ต้องเน้นย  าที่สุดหากลูกค้ามีความลังเลการปรับระดับชิลด์หน้าได้ด้วยนิ้วโป้งซ้ายขณะขับขี่คือความสะดวกสบายขั้นสูงสุด 26 ● สถานการณ์ : ขับในเมืองลดชิลด์ลงเพื่อรับลมร้อน - > ขึ้นทางด่วนยกชิลด์ขึ้นเพื่อตัดเสียงลม - > ฝนตกยกชิลด์ขึ้นเพื่อกันเม็ดฝน ● เปรียบเทียบ : XMAX ต้องจอดรถและไขน็อตเพื่อปรับระดับซึ่งในทางปฏิบัติผู้ใช้มักจะปรับไว้ตําแหน่งเดียวตลอด\n- [3] รายงานการวิเคราะห์เชิงลึกด้านเทคนิคและกลยุทธ์การขายสําหรับรถจักรยานยนต์กลุ่มพรีเมียมสกู๊ตเตอร์ในประเทศไทย ( พ.ศ.2567 - 2569 ) ส่วนที่ 1 : การวิเคราะห์กลุ่มพรีเมียมเอนทรี ( PremiumEntrySegment : 150cc - 160cc ) กลุ่มนี้คือฐานลูกค้าที่ใหญ่ที่สุดสําหรับตลาดพรีเมียมเป็นจุดเปลี่ยนสําคัญจากรถใช้งานขนาดเล็ก ( 110 - 125cc ) ขึ้นมาสู่รถที่มีสมรรถนะสําหรับการเดินทางระยะกลางคู่แข่งหลักคือ Honda และ Yamaha ที่ต่างงัดเทคโนโลยีเครื่องยนต์ยุคใหม่มาประชันกัน 1.1 การเปรียบเทียบเชิงวิศวกรรมเครื่องยนต์ : eSP + ปะทะ BlueCoreVVA หัวใจสําคัญของการ Upsell ในกลุ่มนี้คือการชี้ให้เห็นถึงความแตกต่างของคาแรคเตอร์เครื่องยนต์ซึ่งส่งผลโดยตรงต่อความรู้สึกในการขับขี่ HondaPCX160 และ ADV160 : วิวัฒนาการสู่ 4 วาล์ว ( eSP + ) เครื่องยนต์ eSP + ( EnhancedSmartPowerPlus ) ขนาด 156.93 ซีซีเป็นการก้าวกระโดดทางวิศวกรรมจากรุ่น 150 เดิมโดยเปลี่ยนจากระบบ 2 วาล์วมาเป็น 4 วาล์วเพื่อเพิ่มประสิทธิภาพในการนําไอดีเข้าและระบายไอเสียออกที่รอบเครื่องยนต์สูง ● ขนาดกระบอกสูบ x ระยะชัก : 60.0x55.5 มม.1 การใช้ลูกสูบขนาดใหญ่ ( BigBore ) และระยะชักที่สั้นลง ( ShortStroke ) เมื่อเทียบกับรุ่นก่อนหน้าบ่งบอกถึงเจตนาในการลดแรงเสียดทานของลูกสูบที่ความเร็วรอบสูงทําให้เครื่องยนต์สามารถลากรอบได้ลึกขึ้นและตอบสนองได้ดีขึ้นในย่านความเร็วปลาย ● เพลาข้อเหวี่ยง : มีการใช้ RollerBearing เพื่อลดแรงสั่นสะเทือนและแรงเสียดทานซึ่งเป็นเทคโนโลยีที่มักพบในรถบิ๊กไบค์ช่วยให้เครื่องยนต์เดินนิ่งขึ้น 3 ● OilJet : ระบบฉีดน  ามันหล่อลื่นใต้ลูกสูบช่วยระบายความร้อนและลดการขยายตัวของลูกสูบเมื่อขับขี่ทางไกลด้วยความเร็วสูงต่อเนื่อง 3YamahaNMAX155 และ Aerox155 : ความอัจฉริยะของวาล์วแปรผัน ( VVA ) เครื่องยนต์ BlueCore ขนาด 155 ซีซีของยามาฮ่ามีจุดขายที่แข็งแกร่งคือระบบ VVA ( VariableValveActuation ) ● หลักการทํางาน : ระบบจะมีลูกเบี้ยว ( Camshaft ) สองชุดสําหรับวาล์วไอดีชุดหนึ่งสําหรับรอบต  า - กลางและอีกชุดสําหรับรอบสูงโดยมีโซลินอยด์ทําหน้าที่สลับการทํางานที่ 6 , 000 รอบต่อนาที 4 ● ผลลัพธ์ : ทําให้รถมีแรงบิดที่ดีในรอบต  าเพื่อการออกตัวที่ประหยัดน  ามันแต่เมื่อต้องการเร่งแซงระบบจะสลับไปใช้แคมองศาสูงทําให้กราฟแรงบิดไม่ตกในช่วงปลาย 4 ● ขนาดกระบอกสูบ x ระยะชัก : 58.0x58.7 มม.6 ซึ่งเป็นแบบ Square ( ใกล้เคียงกัน ) ให้สมดุลที่ดีระหว่างแรงบิดและการหมุนรอบตารางเปรียบเทียบสเปกเครื่องยนต์ 150 - 160cc หัวข้อเปรียบเทียบ HondaPCX160YamahaNMAX155HondaADV160YamahaAerox155 รหัสเครื่องยนต์ eSP + 4 วาล์ว BlueCoreVVA4 วาล์ว eSP + 4 วาล์ว BlueCoreVVA4 วาล์วปริมาตรกระบอกสูบ 156.93cc7155cc6156.9cc2155cc6 แรงม้าสูงสุด 15.8HP @ 8 , 500rpm615.1",
+    "cache_type": "query",
+    "chunk_id": null,
+    "original_prompt": "Yamaha NMAX 155 specs",
+    "queryparam": {
+      "mode": "global",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "hl_keywords": "Specifications",
+      "ll_keywords": "Yamaha NMAX 155",
+      "user_prompt": "",
+      "enable_rerank": true
+    },
+    "create_time": 1768975093,
+    "update_time": 1768975093,
+    "_id": "global:query:d798ba7149377e5a3086bb7406b38a73"
+  },
+  "global:keywords:6858a2e3a349fbaeaa933ab3699eade2": {
+    "return": "{\"high_level_keywords\": [\"specifications\", \"product details\"], \"low_level_keywords\": [\"Honda PCX 160\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "Honda PCX 160 specs",
+    "queryparam": {
+      "mode": "global",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": true
+    },
+    "create_time": 1769060007,
+    "update_time": 1769060007,
+    "_id": "global:keywords:6858a2e3a349fbaeaa933ab3699eade2"
+  },
+  "global:query:73651d2130b45fb6608256dd48794691": {
+    "return": "The Honda PCX 160 is a premium scooter that utilizes advanced eSP+ (Enhanced Smart Power Plus) engine technology. Its engine is a 4-valve, 156.93 cc unit. The bore and stroke dimensions are 60.0 x 55.5 mm. This design, featuring a large bore and a shorter stroke, aims to reduce piston friction at high RPMs, allowing the engine to rev higher and provide better response at top speeds [1].\n\nFurther engineering details include a crankshaft equipped with a Roller Bearing to minimize vibration and friction, a technology commonly found in larger motorcycles, contributing to a smoother engine operation. It also incorporates an OilJet system, which lubricates beneath the piston to help dissipate heat and reduce piston expansion during extended high-speed rides [1]. The Honda PCX 160 delivers a maximum horsepower of 15.8 HP at 8,500 rpm [1].\n\n### References\n\n- [1] รายงานการวิเคราะห์เชิงลึกด้านเทคนิคและกลยุทธ์การขายสำหรับรถจักรยานยนต์กลุ่มพรีเมียมสกู๊ตเตอร์ในประเทศไทย (พ.ศ.2567-2569)",
+    "cache_type": "query",
+    "chunk_id": null,
+    "original_prompt": "Honda PCX 160 specs",
+    "queryparam": {
+      "mode": "global",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "hl_keywords": "specifications, product details",
+      "ll_keywords": "Honda PCX 160",
+      "user_prompt": "",
+      "enable_rerank": true
+    },
+    "create_time": 1769060016,
+    "update_time": 1769060016,
+    "_id": "global:query:73651d2130b45fb6608256dd48794691"
   }
 }
