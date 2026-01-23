@@ -82,7 +82,7 @@ tools_schema = [
 def check_tool_call_in_text(content: str, tool_calls: List) -> Optional[List]:
     """Check for tool call in text content and extract JSON arguments"""
     if not tool_calls and content and "<tool_call>" in content:
-        logger.warning("⚠️ Detected text-based tool call")
+        logger.warning("Detected text-based tool call")
         
         pattern = r'<tool_call>(.*?)</tool_call>'
         match = re.search(pattern, content, re.DOTALL)
@@ -92,6 +92,7 @@ def check_tool_call_in_text(content: str, tool_calls: List) -> Optional[List]:
             try:
                 tool_data = json.loads(json_str)
                 
+                #Mock Data for OpenAI tool call structure
                 class FakeToolCall:
                     def __init__(self, name, args):
                         self.id = "call_fake_123"
@@ -104,5 +105,5 @@ def check_tool_call_in_text(content: str, tool_calls: List) -> Optional[List]:
                 return [FakeToolCall(tool_data["name"], tool_data["arguments"])]
                 
             except Exception as e:
-                logger.error(f"❌ Error parsing tool call: {e}")
+                logger.error(f"Error parsing tool call: {e}")
     return None

@@ -29,7 +29,7 @@ async def llm_model_func(
         try:
             return await gemini_model_complete(
                 prompt,
-                system_prompt=system_prompt_for_gemini, # ตรวจสอบว่าตัวแปรนี้ถูก define ไว้หรือยัง ถ้าไม่มีให้ใช้ system_prompt ปกติ
+                system_prompt=system_prompt_for_gemini, 
                 history_messages=history_messages,
                 api_key=os.getenv("GOOGLE_API_KEY"),
                 model_name="gemini-2.5-flash", 

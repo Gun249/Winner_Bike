@@ -1622,5 +1622,89 @@
     "create_time": 1769060016,
     "update_time": 1769060016,
     "_id": "global:query:73651d2130b45fb6608256dd48794691"
+  },
+  "global:keywords:4b8770df90a176a0de597f41c65d5d8d": {
+    "return": "{\"high_level_keywords\": [\"Specifications\", \"Vehicle details\"], \"low_level_keywords\": [\"Honda ADV 160\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "Honda ADV 160 specs",
+    "queryparam": {
+      "mode": "global",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": true
+    },
+    "create_time": 1769108600,
+    "update_time": 1769108600,
+    "_id": "global:keywords:4b8770df90a176a0de597f41c65d5d8d"
+  },
+  "global:query:63f98fbcf92c80f7c84f48ecec0b8c98": {
+    "return": "The Honda ADV 160 is equipped with a 156.9cc eSP+ (Enhanced Smart Power Plus) 4-valve engine, which is an evolution from its 150cc predecessor, moving from a 2-valve to a 4-valve system. This engine is designed with a big-bore piston (60.0x55.5 mm cylinder bore x stroke) and a shorter stroke to reduce piston friction at high speeds, allowing for higher revs and better response at top-end speeds. It also features a crankshaft with roller bearings to reduce vibration and friction, a technology often found in big bikes, and an OilJet system for lubricating under the piston to help dissipate heat (รายงานการวิเคราะห์เชิงลึกด้านเทคนิคและกลยุทธ์การขายสําหรับรถจักรยานยนต์กลุ่มพรีเมียมสกู๊ตเตอร์ในประเทศไทย ( พ.ศ.2567 - 2569 )).\n\nKey features of the Honda ADV 160 include:\n*   **Sharp Handling** - It is known for precise control, making it suitable for city maneuvering (จุดเด่น : การควบคุมที่เฉียบคม ( SharpHandling)).\n*   **Riding Position** - It has a slightly more upright riding position compared to the PCX, which enhances control at low speeds (จุดเด่น : การควบคุมที่เฉียบคม ( SharpHandling)).\n*   **Suspension** - A strong selling point is its dual rear shock absorbers with a sub-tank from Showa. The sub-tank helps prevent cavitation when the shocks work hard on rough roads, maintaining consistent damping force (จุดเด่น : การควบคุมที่เฉียบคม ( SharpHandling)).\n*   **Ground Clearance** - With a ground clearance of 165 mm (compared to 134 mm for the PCX), the ADV 160 is better equipped to handle speed bumps or low-level flooding (จุดเด่น : การควบคุมที่เฉียบคม ( SharpHandling)).\n*   **Adjustable Windscreen** - The front windshield can be adjusted to two different heights, a feature not available on the PCX (จุดเด่น : การควบคุมที่เฉียบคม ( SharpHandling)).\n\nA notable observation about the ADV 160's original suspension is that it can be quite stiff, leading to vibrations felt in the handlebars when encountering potholes. Many users in Thailand address this by replacing the rear shock absorbers (จุดเด่น : การควบคุมที่เฉียบคม ( SharpHandling)).\n\n### References\n\n*   รายงานการวิเคราะห์เชิงลึกด้านเทคนิคและกลยุทธ์การขายสําหรับรถจักรยานยนต์กลุ่มพรีเมียมสกู๊ตเตอร์ในประเทศไทย ( พ.ศ.2567 - 2569 )\n*   จุดเด่น : การควบคุมที่เฉียบคม ( SharpHandling )",
+    "cache_type": "query",
+    "chunk_id": null,
+    "original_prompt": "Honda ADV 160 specs",
+    "queryparam": {
+      "mode": "global",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "hl_keywords": "Specifications, Vehicle details",
+      "ll_keywords": "Honda ADV 160",
+      "user_prompt": "",
+      "enable_rerank": true
+    },
+    "create_time": 1769108607,
+    "update_time": 1769108607,
+    "_id": "global:query:63f98fbcf92c80f7c84f48ecec0b8c98"
+  },
+  "global:keywords:c27b29b23a107501b59ac6ce471edca7": {
+    "return": "{\"high_level_keywords\": [\"Specifications\", \"Product information\"], \"low_level_keywords\": [\"PCX 160\", \"specs\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "PCX 160 specs",
+    "queryparam": {
+      "mode": "global",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": true
+    },
+    "create_time": 1769108630,
+    "update_time": 1769108630,
+    "_id": "global:keywords:c27b29b23a107501b59ac6ce471edca7"
+  },
+  "global:query:f85ccb4741064da8281755c539ca4e5a": {
+    "return": "The Honda PCX160 features an eSP+ 4-valve engine with a displacement of 156.93cc. Its engine design includes a bore and stroke of 60.0x55.5 mm, utilizing a larger piston and shorter stroke to reduce friction at high RPMs, allowing the engine to rev higher and improve response at top speeds. The engine also incorporates Roller Bearings on the crankshaft to reduce vibration and friction, a technology often found in bigger bikes, resulting in smoother engine operation. Additionally, an Oil Jet system is present to inject lubricating oil beneath the piston, aiding in heat dissipation and reducing piston expansion during sustained high-speed riding [3].\n\nThe PCX160 has a maximum horsepower of 15.8 HP at 8,500 rpm. It is designed with an upright riding position, which is noted to be slightly more upright than the NMAX155, facilitating easier control at low speeds [3, 1]. Its ground clearance is 134 mm [1]. The recommended maintenance includes changing engine oil every 4,000-6,000 km, with a major service interval at 24,000 km. Approximate costs for consumable parts include a drive belt at 660 baht and front brake pads at 510 baht [5].\n\nCommon issues reported for the Honda PCX160 include CVT judder (vibration during acceleration at low speeds) caused by clutch dust accumulation or insufficient clutch engagement. Early models (2021) also had reports of oil pump gear problems, which Honda has addressed in later production batches [1].\n\n### References\n\n- [1] รายงานการวิเคราะห์เชิงลึกด้านเทคนิคและกลยุทธ์การขายสำหรับรถจักรยานยนต์กลุ่มพรีเมียมสกู๊ตเตอร์ในประเทศไทย (พ.ศ.2567-2569)\n- [3] รายงานการวิเคราะห์เชิงลึกด้านเทคนิคและกลยุทธ์การขายสำหรับรถจักรยานยนต์กลุ่มพรีเมียมสกู๊ตเตอร์ในประเทศไทย (พ.ศ.2567-2569)\n- [5] รายงานการวิเคราะห์เชิงลึกด้านเทคนิคและกลยุทธ์การขายสำหรับรถจักรยานยนต์กลุ่มพรีเมียมสกู๊ตเตอร์ในประเทศไทย (พ.ศ.2567-2569)",
+    "cache_type": "query",
+    "chunk_id": null,
+    "original_prompt": "PCX 160 specs",
+    "queryparam": {
+      "mode": "global",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "hl_keywords": "Specifications, Product information",
+      "ll_keywords": "PCX 160, specs",
+      "user_prompt": "",
+      "enable_rerank": true
+    },
+    "create_time": 1769108635,
+    "update_time": 1769108635,
+    "_id": "global:query:f85ccb4741064da8281755c539ca4e5a"
   }
 }

@@ -1,18 +1,18 @@
-# Standard library imports
+
 import json
 import os
 import asyncio
 import re
 from typing import List, Dict, Any
 
-# Third-party imports
+
 import uvicorn
 from fastapi import FastAPI
 from pydantic import BaseModel
 from openai import OpenAI
 
 
-# Local imports
+
 from lib.logger import logger
 from lib.initialize_lightrag import initialize_lightrag
 from lib.tools import set_rag_instance, create_check_stock_logic,tools_schema, check_tool_call_in_text
@@ -153,7 +153,7 @@ async def run_chat(query: RunChatRequest) -> Dict[str, str]:
     
     logger.info(f"Running chat for query: {query.message[:50]}...")
     
-    # Create closure with inventory data
+
     check_stock_fn = create_check_stock_logic(query.Data_model_stock_price)
     rag_tool = await set_rag_instance(rag)
     
@@ -185,7 +185,6 @@ async def run_chat(query: RunChatRequest) -> Dict[str, str]:
         tool_calls = response_message.tool_calls or check_tool_call_in_text(response_message.content, None)
         
         if tool_calls:
-            logger.info(f"🔧 Tool calls: {len(tool_calls)}")
             messages.append(response_message)
 
             for tool_call in tool_calls:
@@ -195,10 +194,10 @@ async def run_chat(query: RunChatRequest) -> Dict[str, str]:
 
                 if tool_name == "lightrag_tool":
                     function_response = await rag_tool(query=function_args.get("query"))
-                    logger.info(f"← lightrag: {function_response[:80]}...")
+                    logger.info(f"lightrag: {function_response[:80]}...")
                 elif tool_name == "check_stock_logic":
                     function_response = check_stock_fn(model_name=function_args.get("model_name"))
-                    logger.info(f"← stock: {function_response}")
+                    logger.info(f"stock: {function_response}")
                 else:
                     logger.warning(f"Unknown tool: {tool_name}")
                     continue
@@ -212,7 +211,7 @@ async def run_chat(query: RunChatRequest) -> Dict[str, str]:
 
             continue  
         else:
-            logger.info("✓ Final response ready")
+            logger.info("Final response ready")
             return {'response': response_message.content}
     
     logger.warning(f"⚠️ Max loop ({MAX_LOOP}) reached")
