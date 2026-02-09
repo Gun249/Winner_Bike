@@ -6,8 +6,6 @@ from .llm_model import llm_model_func
 
 WORKING_DIR = "LightRAG_Data"
 
-
-
 async def initialize_lightrag():
     logger.info("🚀 กำลัง Initialize LightRAG...")
 
@@ -20,6 +18,7 @@ async def initialize_lightrag():
             chunk_token_size =600,
             chunk_overlap_token_size=100,
         )
+        # rag.llm_response_cache = DummyKVStorage()
         logger.debug(f"Working directory: {WORKING_DIR}")
         logger.info("✅ Initialize LightRAG สำเร็จ")
         return rag

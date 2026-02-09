@@ -15,7 +15,7 @@ from openai import OpenAI
 
 from lib.logger import logger
 from lib.initialize_lightrag import initialize_lightrag
-from lib.tools import set_rag_instance, create_check_stock_logic,tools_schema, check_tool_call_in_text
+from lib.tools import set_rag_instance, create_check_stock_logic,tools_schema, check_tool_call_in_text, web_search_tool
 # from lib.pdf import load_pdfs_to_rag
 
 
@@ -111,45 +111,43 @@ async def run_chat(query: RunChatRequest) -> Dict[str, str]:
     """Chat endpoint with tool calling support"""
     
     system_prompt_for_typhoon = """
-        ### ROLE & PERSONA
-        You are a motorcycle consultant at "Winner Bike" (Thai local shop style).
-        - Speak Thai, friendly, honest. Use "ผม" and "ครับ".
-        - Answer directly. Short and clear. No fluff.
+    ### ROLE & PERSONA
+    You are a motorcycle consultant at "Winner Bike".
+    - Address the customer as "คุณ". Use "ผม/ครับ".
+    - Answer directly, short, and clear. No fluff.
 
-        ### TOOLS (Use them, don't guess)
-        1. `check_stock_logic`: Check availability/price OR list all models.
-        2. `lightrag_tool`: Get specs/alternatives.
+    ### 🚨 STRICT KNOWLEDGE RULE (IMPORTANT)
+    - DO NOT use your internal pre-trained knowledge about motorcycle specs or prices.
+    - If a model is NOT in `check_stock_logic` AND NOT in `lightrag_tool`, you MUST admit you don't have the info and then call `web_search_tool`.
+    - NEVER guess specs. If the tool response is empty or "I don't know", you MUST use the next tool in priority.
 
-        ### WORKFLOW (STRICT)
+    ### TOOLS PRIORITY & FALLBACK
+    1. `check_stock_logic`: Check this FIRST for any model mentioned.
+    2. `lightrag_tool`: Check this SECOND for specs/details.
+    3. `web_search_tool`: **MANDATORY FALLBACK.** Use this if:
+       - The user asks about a model that is "Not Found" in our stock.
+       - You need to compare two models but `lightrag_tool` only provides info for one of them.
+       - The information from `lightrag_tool` is insufficient to answer the specific question.
 
-        1. **Specific Stock Check (ถามรุ่นเจาะจง)**
-        - User: "มี PCX ไหม", "PCX ราคาเท่าไหร่"
-        - Action: Call `check_stock_logic(model_name="PCX")`.
-        - ✅ Available → "มีของครับ [Model] สี [Color] ราคา [Price] บาท"
-        - ❌ Out of Stock → Call `lightrag_tool` for alternatives immediately.
+    ### WORKFLOW (STRICT)
 
-        2. **General Inquiry (ถามว่ามีรถอะไรบ้าง)**
-        - User: "ที่ร้านมีรถอะไรบ้าง", "มีรุ่นไหนแนะนำไหม", "ขอดูรายการรถหน่อย"
-        - Action: Call `check_stock_logic(model_name="ALL")`.
-        - Response: List the available models nicely (bullet points).
-            "ตอนนี้หน้าร้านมีตามนี้ครับ:
-            - [Model A]: [Price] บาท (มีของ)
-            - [Model B]: [Price] บาท (หมด)"
+    1. **Greeting:** Greet "คุณ" warmly. No tools needed.
+    2. **Stock & Specs Check:**
+       - Call `check_stock_logic`. 
+       - If model not in stock, call `lightrag_tool`.
+       - **[CRITICAL]** If comparing A and B, and you only have info for A: 
+         -> Call `web_search_tool` for B immediately. DO NOT answer using your own memory.
+    
+    3. **Comparison Logic:**
+       - When comparing, if any data point (like price or engine spec) is missing from our internal tools, search it on the web.
+       - Summarize the web data clearly but tell the user: "ข้อมูลนี้เป็นข้อมูลทั่วไปจากอินเทอร์เน็ตนะครับ"
 
-        3. **Explain Product (ถามสเปค)**
-        - Trigger: "สเปค", "ดียังไง", "อธิบายหน่อย"
-        - Action: Call `lightrag_tool`. Summarize benefits.
-
-        4. **Recommendation (ถามแนะนำรถ)**
-        - Trigger: "ขับในเมืองรุ่นไหนดี", "รถออกทริป"
-        - Action: Call `lightrag_tool`. Recommend ONLY based on tool results.
-
-        ### RESPONSE RULES
-        1. **Short & Direct:** Answer ONLY what is asked.
-        2. **Natural Thai:** Chat like a friend ("พี่ลองดูตัวนี้ไหมครับ").
-        3. **No Tech Jargon:** Never mention "database", "json", or "tool".
-        4. **Honesty:** If stock is 0, say it's out of stock.
-        """
+    ### RESPONSE RULES
+    1. **STRICTLY NO BOLD TEXT:** Do NOT use **PCX** or **Aerox**. Write as normal text.
+    2. **Honesty:** If a model is not sold at our shop, say "ทางร้านไม่ได้จำหน่ายรุ่น [Model] ครับ" before giving other info.
+    3. **No Tech Jargon:** No "database", "JSON", "Tool".
+    4. **Pivot:** After giving info from Web Search, always recommend a similar model that we HAVE in stock.
+    """
     
     logger.info(f"Running chat for query: {query.message[:50]}...")
     
@@ -158,6 +156,9 @@ async def run_chat(query: RunChatRequest) -> Dict[str, str]:
     rag_tool = await set_rag_instance(rag)
     
     chat_history = create_chat_history(query.chat_history)
+
+    logger.info(f"Chat history:\n{chat_history}")
+    
     
     messages = [{"role": "system", "content": system_prompt_for_typhoon}]
     
@@ -166,7 +167,7 @@ async def run_chat(query: RunChatRequest) -> Dict[str, str]:
     
     messages.append({"role": "user", "content": query.message})
     
-    MAX_LOOP = 3  
+    MAX_LOOP = 7
     count = 0
     
     while count < MAX_LOOP:
@@ -194,10 +195,16 @@ async def run_chat(query: RunChatRequest) -> Dict[str, str]:
 
                 if tool_name == "lightrag_tool":
                     function_response = await rag_tool(query=function_args.get("query"))
-                    logger.info(f"lightrag: {function_response[:80]}...")
+                    if function_response:
+                        logger.info(f"lightrag: {function_response[:80]}...")
+                    else:
+                        logger.warning("lightrag: ได้รับคำตอบเป็นค่าว่าง (None)")
                 elif tool_name == "check_stock_logic":
                     function_response = check_stock_fn(model_name=function_args.get("model_name"))
                     logger.info(f"stock: {function_response}")
+                elif tool_name == "web_search_tool":
+                    function_response = web_search_tool(query=function_args.get("query"), max_results=function_args.get("max_results",3))
+                    logger.info(f"web_search: {function_response[:80]}...")
                 else:
                     logger.warning(f"Unknown tool: {tool_name}")
                     continue

@@ -4,6 +4,8 @@ import re
 import json
 from .logger import logger
 import asyncio
+from duckduckgo_search import DDGS
+
 
 
 async def set_rag_instance(rag_instance):
@@ -42,6 +44,53 @@ def create_check_stock_logic(inventory_data: List[Dict[str, Any]]):
         return f"❓ Not Found | Model: {model_name} not in inventory."
     return check_stock_logic
 
+
+def web_search_tool(query: str, max_results: int = 3) -> str:
+    """
+    ค้นหาข้อมูลจาก Web (DuckDuckGo)
+    - query: คำค้นหา
+    - max_results: จำนวนผลลัพธ์ (แนะนำ 3-5)
+    """
+    results_list = []
+    
+    print(f"🌍 กำลังค้นหา: {query} ...")  # Debug ดูว่าค้นคำว่าอะไร
+    
+    try:
+        # ใช้ backend='lite' หรือ 'html' เพื่อความเสถียร (ลดโอกาสได้ค่าว่าง)
+        # region='th-th' เพื่อเน้นข้อมูลในไทย
+        with DDGS() as ddgs:
+            search_gen = ddgs.text(
+                keywords=query,
+                region='th-th',
+                max_results=max_results,
+                backend='lite' 
+            )
+            
+            # ดึงข้อมูลจาก Generator
+            for r in search_gen:
+                results_list.append(r)
+
+    except Exception as e:
+        logger.error(f"Error web search: {e}")
+        return f"❌ เกิดข้อผิดพลาดในการค้นหา: {e}"
+
+    # --- ส่วนสำคัญ: จัดการผลลัพธ์ ---
+    if results_list:
+        formatted_results = "🔍 Web Search Results:\n"
+        for i, res in enumerate(results_list, 1):
+            title = res.get('title', 'No Title')
+            body = res.get('body', 'No Content')
+            href = res.get('href', '#')
+            formatted_results += f"{i}. {title}\n   เนื้อหา: {body}\n   ลิงก์: {href}\n\n"
+        return formatted_results
+    else:
+        # ถ้าหาไม่เจอ ต้องบอก LLM ว่า "พอแล้ว" อย่าให้มันพยายาม Search คำเดิมซ้ำ
+        return (
+            "❌ ไม่พบผลลัพธ์ (No results found). "
+            "System Hint: กรุณาอย่าค้นหาคำเดิมซ้ำ หากข้อมูลไม่เพียงพอ "
+            "ให้ตอบลูกค้าเท่าที่ทราบ หรือแนะนำให้ติดต่อร้านโดยตรง"
+        )
+
 tools_schema = [
     {
         "type": "function",
@@ -76,6 +125,23 @@ tools_schema = [
                 "required": ["query"]
             }
         }
+    },
+    {
+    "type": "function",
+    "function": {
+        "name": "web_search_tool",
+        "description": "FALLBACK TOOL: Use this ONLY when internal tools (check_stock/lightrag) return no results. specific use cases: 1. Finding technical specifications (engine, cc, weight) for models not in our inventory. 2. Looking up competitor models for comparison. 3. Checking general market prices or launch dates in Thailand.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "query": {
+                    "type": "string",
+                    "description": "Specific search keywords. Combine model name with context terms like 'specs', 'price thailand', 'review', or 'comparison'. Example: 'Yamaha XMAX 2024 specs thailand'"
+                }
+            },
+            "required": ["query"]
+        }
+    }
     }
 ]
 

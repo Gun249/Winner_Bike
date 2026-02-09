@@ -10,3 +10,4 @@ PyPDF2
 torch
 torchvision
 torchaudio
+duckduckgo-search
