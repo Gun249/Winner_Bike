@@ -4,9 +4,10 @@ import re
 import json
 from .logger import logger
 import asyncio
-from duckduckgo_search import DDGS
+from tavily import TavilyClient
+import os
 
-
+tavily = TavilyClient(api_key=os.getenv("tavily_KEY"))
 
 async def set_rag_instance(rag_instance):
     rag = rag_instance
@@ -23,74 +24,54 @@ def create_check_stock_logic(inventory_data: List[Dict[str, Any]]):
     """Factory function to create check_stock_logic with inventory data"""
     def check_stock_logic(model_name: str) -> str:
         """Check stock logic and return formatted string"""
+        
+        # 1. กรณีค้นหาทั้งหมด (ALL)
+        if model_name.upper() == "ALL":
+            inventory_list = []
+            for inv_item in inventory_data:
+                inv_model = inv_item.get("product_name", "Unknown Model")
+                inv_price = inv_item.get("price", "N/A")
+                inv_stock = inv_item.get("stock_quantity", 0)
+                status = "มีของ" if inv_stock > 0 else "หมด"
+                inventory_list.append(f"- {inv_model}: {inv_price} บาท ({status})")
+            return "ตอนนี้หน้าร้านมีตามนี้ครับ:\n" + "\n".join(inventory_list)
+
+        # 2. กรณีค้นหารายรุ่น (Partial Match Logic)
+        # ตัดช่องว่างหัวท้ายและแปลงเป็นตัวพิมพ์เล็ก
+        search_query = model_name.lower().strip()
+        
         for item in inventory_data:
-            if item.get("product_name", "").lower() == model_name.lower():
+            db_product_name = item.get("product_name", "").lower()
+            
+            # --- แก้ไขจุดนี้: ใช้ 'in' แทน '==' ---
+            # เพื่อให้ "Fazzio" ค้นเจอใน "Yamaha Fazzio Hybrid" ได้
+            if search_query in db_product_name:
                 stock = item.get("stock_quantity", 0)
                 price = item.get("price", "N/A")
+                full_name = item.get("product_name") # ดึงชื่อเต็มจาก DB มาแสดง
 
                 if stock > 0:
-                    return f"✅ Available | Model: {model_name} | Price: {price} บาท | Stock: {stock} units"
+                    return f"✅ Available | Model: {full_name} | Price: {price} บาท | Stock: {stock} units"
                 else:
-                    return f"❌ Out of Stock | Model: {model_name} | INSTRUCTION: Call lightrag_tool(query='{model_name} alternatives') immediately."
-            elif model_name.upper() == "ALL":
-                inventory_list = []
-                for inv_item in inventory_data:
-                    inv_model = inv_item.get("product_name", "Unknown Model")
-                    inv_price = inv_item.get("price", "N/A")
-                    inv_stock = inv_item.get("stock_quantity", 0)
-                    status = "มีของ" if inv_stock > 0 else "หมด"
-                    inventory_list.append(f"- {inv_model}: {inv_price} บาท ({status})")
-                return "ตอนนี้หน้าร้านมีตามนี้ครับ:\n" + "\n".join(inventory_list)
+                    return f"❌ Out of Stock | Model: {full_name} | INSTRUCTION: Call lightrag_tool(query='{model_name} alternatives') immediately."
+
+        # 3. หาไม่เจอจริงๆ
         return f"❓ Not Found | Model: {model_name} not in inventory."
+        
     return check_stock_logic
 
-
-def web_search_tool(query: str, max_results: int = 3) -> str:
-    """
-    ค้นหาข้อมูลจาก Web (DuckDuckGo)
-    - query: คำค้นหา
-    - max_results: จำนวนผลลัพธ์ (แนะนำ 3-5)
-    """
-    results_list = []
-    
-    print(f"🌍 กำลังค้นหา: {query} ...")  # Debug ดูว่าค้นคำว่าอะไร
-    
+def web_search_tool(query: str) -> str:
+    logger.info(f"Performing web search for query: {query}")
     try:
-        # ใช้ backend='lite' หรือ 'html' เพื่อความเสถียร (ลดโอกาสได้ค่าว่าง)
-        # region='th-th' เพื่อเน้นข้อมูลในไทย
-        with DDGS() as ddgs:
-            search_gen = ddgs.text(
-                keywords=query,
-                region='th-th',
-                max_results=max_results,
-                backend='lite' 
-            )
-            
-            # ดึงข้อมูลจาก Generator
-            for r in search_gen:
-                results_list.append(r)
+        response = tavily.search(query=query, max_results=3,search_depth="advanced")
 
+        context = "ผลลัพธ์การค้นหาเว็บ:\n"
+        for result in response['results']:
+            context += f"- {result['title']}: {result['content']}\n"
+        return context
     except Exception as e:
-        logger.error(f"Error web search: {e}")
-        return f"❌ เกิดข้อผิดพลาดในการค้นหา: {e}"
-
-    # --- ส่วนสำคัญ: จัดการผลลัพธ์ ---
-    if results_list:
-        formatted_results = "🔍 Web Search Results:\n"
-        for i, res in enumerate(results_list, 1):
-            title = res.get('title', 'No Title')
-            body = res.get('body', 'No Content')
-            href = res.get('href', '#')
-            formatted_results += f"{i}. {title}\n   เนื้อหา: {body}\n   ลิงก์: {href}\n\n"
-        return formatted_results
-    else:
-        # ถ้าหาไม่เจอ ต้องบอก LLM ว่า "พอแล้ว" อย่าให้มันพยายาม Search คำเดิมซ้ำ
-        return (
-            "❌ ไม่พบผลลัพธ์ (No results found). "
-            "System Hint: กรุณาอย่าค้นหาคำเดิมซ้ำ หากข้อมูลไม่เพียงพอ "
-            "ให้ตอบลูกค้าเท่าที่ทราบ หรือแนะนำให้ติดต่อร้านโดยตรง"
-        )
-
+        logger.error(f"Error during web search: {e}")
+        return "❌ เกิดข้อผิดพลาดในการค้นหาเว็บ"
 tools_schema = [
     {
         "type": "function",

@@ -1,0 +1,31 @@
+{
+  "doc-103b5496d41a31243a30d55504d82aa2": {
+    "status": "processed",
+    "chunks_count": 13,
+    "chunks_list": [
+      "chunk-9bc1aea559d48934b375455f5c7e9261",
+      "chunk-2986245dfab8dd11974ec7b9a445b7b2",
+      "chunk-2d9b55124b45de391d25204258fb17df",
+      "chunk-308c55ac71ce6ec7ba94f05ad99c96cd",
+      "chunk-b8a5fe9ee0712dd2819e710a19e81b01",
+      "chunk-d8623dbbbb3e7f3d9c59ff00ace3bac5",
+      "chunk-cae2861d9037248b6aa9647d80426d94",
+      "chunk-ac7c8ae6610795e6be7b0d6e9abce086",
+      "chunk-810ae33ed1033e6d55775973aa7169b3",
+      "chunk-bbf75717d3a0499fb46a71d29fa205c7",
+      "chunk-5cd05d93eb374f0d3f062a75fba91b69",
+      "chunk-7ee232029e82459fd58b0a0dcfd78b44",
+      "chunk-4ff5b9b793c77a38bd5a0581983c3823"
+    ],
+    "content_summary": "รายงานการวิเคราะห์เชิงลึกด้านเทคนิคและกลยุทธ์การขายสําหรับรถจักรยานยนต์กลุ่มพรีเมียมสกู๊ตเตอร์ในประเทศไทย ( พ.ศ.2567 - 2569 ) ส่วนที่ 1 : การวิเคราะห์กลุ่มพรีเมียมเอนทรี ( PremiumEntrySegment : 150cc - 160cc ) กลุ่มนี้คือฐานลูกค้าที่ใหญ่ที่สุดสําหรับ...",
+    "content_length": 23855,
+    "created_at": "2026-01-19T04:28:11.479451+00:00",
+    "updated_at": "2026-01-19T04:34:22.526744+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260119_042811_42239571",
+    "metadata": {
+      "processing_start_time": 1768796891,
+      "processing_end_time": 1768797262
+    }
+  }
+}

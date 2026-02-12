@@ -1,31 +1,26 @@
 {
-  "doc-103b5496d41a31243a30d55504d82aa2": {
+  "doc-c3c8da251eaf80802ed0fde0af1b9adf": {
     "status": "processed",
-    "chunks_count": 13,
+    "chunks_count": 8,
     "chunks_list": [
-      "chunk-9bc1aea559d48934b375455f5c7e9261",
-      "chunk-2986245dfab8dd11974ec7b9a445b7b2",
-      "chunk-2d9b55124b45de391d25204258fb17df",
-      "chunk-308c55ac71ce6ec7ba94f05ad99c96cd",
-      "chunk-b8a5fe9ee0712dd2819e710a19e81b01",
-      "chunk-d8623dbbbb3e7f3d9c59ff00ace3bac5",
-      "chunk-cae2861d9037248b6aa9647d80426d94",
-      "chunk-ac7c8ae6610795e6be7b0d6e9abce086",
-      "chunk-810ae33ed1033e6d55775973aa7169b3",
-      "chunk-bbf75717d3a0499fb46a71d29fa205c7",
-      "chunk-5cd05d93eb374f0d3f062a75fba91b69",
-      "chunk-7ee232029e82459fd58b0a0dcfd78b44",
-      "chunk-4ff5b9b793c77a38bd5a0581983c3823"
+      "chunk-5d0907a3a34f8a96c687d2a3054aeb21",
+      "chunk-c6a03f98df950878b4a73aabce6ee140",
+      "chunk-ee1de5585a2639bb0880245b5943e976",
+      "chunk-2405044569c7185f82d14b4de098f802",
+      "chunk-bce79409643f1f389f28176a8cc91eef",
+      "chunk-ad62f936ef84b637ffe24cd6e9ae3cad",
+      "chunk-a4c9200c73f5b49b5307dbd09ee255bb",
+      "chunk-08b1682f838323bb619fa5dd3a5b985d"
     ],
-    "content_summary": "รายงานการวิเคราะห์เชิงลึกด้านเทคนิคและกลยุทธ์การขายสําหรับรถจักรยานยนต์กลุ่มพรีเมียมสกู๊ตเตอร์ในประเทศไทย ( พ.ศ.2567 - 2569 ) ส่วนที่ 1 : การวิเคราะห์กลุ่มพรีเมียมเอนทรี ( PremiumEntrySegment : 150cc - 160cc ) กลุ่มนี้คือฐานลูกค้าที่ใหญ่ที่สุดสําหรับ...",
-    "content_length": 23855,
-    "created_at": "2026-01-19T04:28:11.479451+00:00",
-    "updated_at": "2026-01-19T04:34:22.526744+00:00",
+    "content_summary": "# Comprehensive Motorcycle Knowledge Base: Thailand Market (2024-2026)\n**Database Version:** 3.0 (Consolidated from 3 Sources)\n**Scope:** Engineering Specs, Defect Analysis, Maintenance Costs, and Sales Strategy.\n\nเอกสารนี้รวบรวมข้อมูลเชิงลึกที่สุดขอ...",
+    "content_length": 13375,
+    "created_at": "2026-02-11T14:54:48.890892+00:00",
+    "updated_at": "2026-02-11T15:07:17.249560+00:00",
     "file_path": "unknown_source",
-    "track_id": "insert_20260119_042811_42239571",
+    "track_id": "insert_20260211_145448_ef1b4f80",
     "metadata": {
-      "processing_start_time": 1768796891,
-      "processing_end_time": 1768797262
+      "processing_start_time": 1770822224,
+      "processing_end_time": 1770822437
     }
   }
 }
