@@ -81,6 +81,10 @@ def create_chat_history(chat):
 # API Routes
 # ============================================
 
+@app.get("/health")
+async def health_check():
+    return {"status": "ok"}
+
 @app.post("/run_chat")
 async def run_chat(query: RunChatRequest) -> Dict[str, str]:
     """Chat endpoint with tool calling support"""
@@ -209,4 +213,5 @@ async def run_chat(query: RunChatRequest) -> Dict[str, str]:
     return {'response': response_message.content if response_message else "ขออภัยครับ เกิดข้อผิดพลาด"}
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="localhost", port=8000)
+    port = int(os.getenv("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
