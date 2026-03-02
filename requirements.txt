@@ -1,11 +1,12 @@
-lightrag-hku
 fastapi
 python-dotenv
 uvicorn
+supabase
 transformers
 tqdm
 openai
 PyPDF2
+tavily
 --extra-index-url https://download.pytorch.org/whl/cu124
 torch
 torchvision

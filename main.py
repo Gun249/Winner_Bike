@@ -5,6 +5,8 @@ import asyncio
 import re
 from typing import List, Dict, Any
 
+from dotenv import load_dotenv
+load_dotenv()
 
 import uvicorn
 from fastapi import FastAPI
@@ -14,9 +16,9 @@ from openai import OpenAI
 
 
 from lib.logger import logger
-from lib.initialize_lightrag import initialize_lightrag
-from lib.tools import set_rag_instance, create_check_stock_logic,tools_schema, check_tool_call_in_text, web_search_tool
-# from lib.pdf import load_pdfs_to_rag
+
+from lib.tools import lightrag_tool, check_stock_logic, tools_schema, check_tool_call_in_text, web_search_tool
+
 
 
 # ============================================
@@ -36,14 +38,13 @@ app = FastAPI(
 )
 
 # Global RAG instance
-rag = None
+# rag = None
 
 # ============================================
 # Class Definitions
 # ============================================
 class RunChatRequest(BaseModel):
     message: str
-    Data_model_stock_price : List[Dict[str, Any]] = []
     chat_history: List[Dict[str, Any]] = []
 
 # ============================================
@@ -76,32 +77,6 @@ def create_chat_history(chat):
             formatted_history += "----------------------------\n"
         return formatted_history
 
-
-# ============================================
-# Application Lifecycle Events
-# ============================================
-
-@app.on_event("startup")
-async def startup_event():
-    """Initialize RAG system on startup"""
-    global rag
-    logger.info("Starting up and initializing LightRAG...")
-    rag = await initialize_lightrag()
-    await rag.initialize_storages()
-    logger.info("System is ready to use.")
-
-@app.on_event("shutdown")
-async def shutdown_event():
-    """Cleanup on shutdown"""
-    global rag
-    if rag:
-        logger.info("Shutting down and finalizing storages...")
-        await rag.finalize_storages()
-        logger.info("Shutdown complete.")
-
-
-
-
 # ============================================
 # API Routes
 # ============================================
@@ -124,7 +99,10 @@ async def run_chat(query: RunChatRequest) -> Dict[str, str]:
     3. **STRICTLY NO MARKDOWN:** Do NOT use `**` or `***`. Write plain text only.
 
     ### TOOLS STRATEGY
-    1. **`check_stock_logic`:** Check availability (Inventory).
+    1. **`check_stock_logic`:** Check availability (Inventory). Returns JSON with fields: product_name, price, stock_quantity.
+       - If `stock_quantity > 0`: item is available.
+       - If `stock_quantity == 0`: item is OUT OF STOCK → immediately call `lightrag_tool(query='<model_name> alternatives')` to find alternatives.
+       - If `status == "not_found"`: model not in inventory → call `lightrag_tool` or `web_search_tool` for info.
     2. **`lightrag_tool`:** Internal Database (Specs, Parts, Upsell candidates).
     3. **`web_search_tool`:** External Web (Fallback).
     4. **CASUAL TALK:** No tools for greetings/thanks.
@@ -162,9 +140,6 @@ async def run_chat(query: RunChatRequest) -> Dict[str, str]:
     logger.info(f"Running chat for query: {query.message[:50]}...")
     
 
-    check_stock_fn = create_check_stock_logic(query.Data_model_stock_price)
-    rag_tool = await set_rag_instance(rag)
-    
     chat_history = create_chat_history(query.chat_history)
 
     logger.info(f"Chat history:\n{chat_history}")
@@ -177,7 +152,7 @@ async def run_chat(query: RunChatRequest) -> Dict[str, str]:
     
     messages.append({"role": "user", "content": query.message})
     
-    MAX_LOOP = 15
+    MAX_LOOP = 5
     count = 0
     
     while count < MAX_LOOP:
@@ -203,13 +178,13 @@ async def run_chat(query: RunChatRequest) -> Dict[str, str]:
                 logger.info(f"→ {tool_name}: {function_args}")
 
                 if tool_name == "lightrag_tool":
-                    function_response = await rag_tool(query=function_args.get("query"))
+                    function_response = await lightrag_tool(query=function_args.get("query"))
                     if function_response:
                         logger.info(f"lightrag: {function_response[:80]}...")
                     else:
                         logger.warning("lightrag: ได้รับคำตอบเป็นค่าว่าง (None)")
                 elif tool_name == "check_stock_logic":
-                    function_response = check_stock_fn(model_name=function_args.get("model_name"))
+                    function_response = await check_stock_logic(model_name=function_args.get("model_name"))
                     logger.info(f"stock: {function_response}")
                 elif tool_name == "web_search_tool":
                     function_response = web_search_tool(query=function_args.get("query"))

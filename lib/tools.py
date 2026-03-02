@@ -1,64 +1,84 @@
-from lightrag import QueryParam
-from typing import List, Dict, Any , Optional
+import httpx
+from typing import List, Optional
 import re
 import json
 from .logger import logger
 import asyncio
 from tavily import TavilyClient
+from supabase import create_client, Client
 import os
 
 tavily = TavilyClient(api_key=os.getenv("tavily_KEY"))
 
-async def set_rag_instance(rag_instance):
-    rag = rag_instance
-    async def lightrag_tool(query: str) -> str:
-        """Query the LightRAG knowledge base"""
-        result = await rag.aquery(
-            query,
-            param=QueryParam(mode="global")
-        )
-        return result
-    return lightrag_tool
+# Supabase singleton client
+supabase_client: Client = create_client(
+    os.getenv("SUPABASE_URL"),
+    os.getenv("SUPABASE_KEY")
+)
 
-def create_check_stock_logic(inventory_data: List[Dict[str, Any]]):
-    """Factory function to create check_stock_logic with inventory data"""
-    def check_stock_logic(model_name: str) -> str:
-        """Check stock logic and return formatted string"""
-        
+async def lightrag_tool(query: str) -> str:
+    api_url = os.getenv("LIGHTRAG_API_URL")
+    
+    if not api_url:
+        logger.error("LIGHTRAG_API_URL is not set in environment variables")
+        return "Error: LightRAG API URL not configured"
+    
+    try:
+        async with httpx.AsyncClient(timeout=60.0) as client:
+            response = await client.post(api_url, json={"query": query, "mode": "global"})
+            response.raise_for_status()
+            
+            return response.json().get("response", "No answer found")
+    except httpx.HTTPStatusError as e:
+        logger.error(f"LightRAG HTTP error: {e.response.status_code} - {e.response.text}")
+        return "Error querying LightRAG"
+    except httpx.ConnectError:
+        logger.error(f"LightRAG: Cannot connect to {api_url} - Is the server running?")
+        return "Error: LightRAG server is not reachable"
+    except Exception as e:
+        logger.error(f"Exception during LightRAG API call: {type(e).__name__}: {e}")  # เพิ่ม type(e).__name__
+        return "Exception occurred while querying LightRAG"
+
+
+async def check_stock_logic(model_name: str) -> str:
+    """Check stock from Supabase products table and return formatted string"""
+    try:
         # 1. กรณีค้นหาทั้งหมด (ALL)
         if model_name.upper() == "ALL":
-            inventory_list = []
-            for inv_item in inventory_data:
-                inv_model = inv_item.get("product_name", "Unknown Model")
-                inv_price = inv_item.get("price", "N/A")
-                inv_stock = inv_item.get("stock_quantity", 0)
-                status = "มีของ" if inv_stock > 0 else "หมด"
-                inventory_list.append(f"- {inv_model}: {inv_price} บาท ({status})")
-            return "ตอนนี้หน้าร้านมีตามนี้ครับ:\n" + "\n".join(inventory_list)
+            # ยิง 2 query พร้อมกัน: DB กรองฝั่ง server แทน Python
+            in_stock_res, out_stock_res = await asyncio.gather(
+                asyncio.to_thread(
+                    lambda: supabase_client.table("products")
+                        .select("product_name, price, stock_quantity")
+                        .gt("stock_quantity", 0)
+                        .execute()
+                ),
+                asyncio.to_thread(
+                    lambda: supabase_client.table("products")
+                        .select("product_name")
+                        .eq("stock_quantity", 0)
+                        .execute()
+                )
+            )
 
-        # 2. กรณีค้นหารายรุ่น (Partial Match Logic)
-        # ตัดช่องว่างหัวท้ายและแปลงเป็นตัวพิมพ์เล็ก
-        search_query = model_name.lower().strip()
-        
-        for item in inventory_data:
-            db_product_name = item.get("product_name", "").lower()
-            
-            # --- แก้ไขจุดนี้: ใช้ 'in' แทน '==' ---
-            # เพื่อให้ "Fazzio" ค้นเจอใน "Yamaha Fazzio Hybrid" ได้
-            if search_query in db_product_name:
-                stock = item.get("stock_quantity", 0)
-                price = item.get("price", "N/A")
-                full_name = item.get("product_name") # ดึงชื่อเต็มจาก DB มาแสดง
+            return json.dumps({
+                "in_stock": in_stock_res.data,
+                "out_of_stock": out_stock_res.data
+            }, ensure_ascii=False)
 
-                if stock > 0:
-                    return f"✅ Available | Model: {full_name} | Price: {price} บาท | Stock: {stock} units"
-                else:
-                    return f"❌ Out of Stock | Model: {full_name} | INSTRUCTION: Call lightrag_tool(query='{model_name} alternatives') immediately."
+        # 2. กรณีค้นหารายรุ่น — ใช้ ilike เพื่อ partial match (case-insensitive)
+        search_query = model_name.strip()
+        response = supabase_client.table("products").select("product_name, price, stock_quantity").ilike("product_name", f"%{search_query}%").execute()
+
+        if response.data:
+            return json.dumps(response.data[0], ensure_ascii=False)
 
         # 3. หาไม่เจอจริงๆ
-        return f"❓ Not Found | Model: {model_name} not in inventory."
-        
-    return check_stock_logic
+        return json.dumps({"status": "not_found", "model": model_name}, ensure_ascii=False)
+
+    except Exception as e:
+        logger.error(f"Supabase check_stock error: {type(e).__name__}: {e}")
+        return f"Error querying stock: {e}"
 
 def web_search_tool(query: str) -> str:
     logger.info(f"Performing web search for query: {query}")
@@ -131,7 +151,7 @@ def check_tool_call_in_text(content: str, tool_calls: List) -> Optional[List]:
     if not tool_calls and content and "<tool_call>" in content:
         logger.warning("Detected text-based tool call")
         
-        pattern = r'<tool_call>(.*?)</tool_call>'
+        pattern = r'<tool_call>(.*?)ground'
         match = re.search(pattern, content, re.DOTALL)
         
         if match:
