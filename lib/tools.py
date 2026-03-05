@@ -24,24 +24,29 @@ async def lightrag_tool(query: str) -> str:
         return "Error: LightRAG API URL not configured"
     
     try:
-        async with httpx.AsyncClient(timeout=60.0) as client:
-            response = await client.post(api_url, json={"query": query, "mode": "global"})
+        async with httpx.AsyncClient(timeout=60.0) as http:
+            response = await http.post(api_url, json={"query": query, "mode": "global"})
             response.raise_for_status()
-            
-            return response.json().get("response", "No answer found")
+            result = response.json().get("response", "No answer found")
+            logger.debug(f"LightRAG response length: {len(result)} chars")
+            return result
     except httpx.HTTPStatusError as e:
-        logger.error(f"LightRAG HTTP error: {e.response.status_code} - {e.response.text}")
+        logger.error(
+            f"LightRAG HTTP error: {e.response.status_code}",
+            exc_info=True,
+        )
         return "Error querying LightRAG"
     except httpx.ConnectError:
-        logger.error(f"LightRAG: Cannot connect to {api_url} - Is the server running?")
+        logger.error("LightRAG: Cannot connect to server – is it running?")
         return "Error: LightRAG server is not reachable"
-    except Exception as e:
-        logger.error(f"Exception during LightRAG API call: {type(e).__name__}: {e}")  # เพิ่ม type(e).__name__
+    except Exception:
+        logger.exception("Unhandled exception during LightRAG API call")
         return "Exception occurred while querying LightRAG"
 
 
 async def check_stock_logic(model_name: str) -> str:
     """Check stock from Supabase products table and return formatted string"""
+    logger.info(f"Checking stock for: {model_name}")
     try:
         # 1. กรณีค้นหาทั้งหมด (ALL)
         if model_name.upper() == "ALL":
@@ -61,6 +66,10 @@ async def check_stock_logic(model_name: str) -> str:
                 )
             )
 
+            logger.info(
+                f"Stock ALL: {len(in_stock_res.data)} in-stock, "
+                f"{len(out_stock_res.data)} out-of-stock"
+            )
             return json.dumps({
                 "in_stock": in_stock_res.data,
                 "out_of_stock": out_stock_res.data
@@ -71,27 +80,31 @@ async def check_stock_logic(model_name: str) -> str:
         response = supabase_client.table("products").select("product_name, price, stock_quantity").ilike("product_name", f"%{search_query}%").execute()
 
         if response.data:
+            logger.info(f"Stock found for '{model_name}': qty={response.data[0].get('stock_quantity')}")
             return json.dumps(response.data[0], ensure_ascii=False)
 
         # 3. หาไม่เจอจริงๆ
+        logger.info(f"Stock not found for '{model_name}'")
         return json.dumps({"status": "not_found", "model": model_name}, ensure_ascii=False)
 
-    except Exception as e:
-        logger.error(f"Supabase check_stock error: {type(e).__name__}: {e}")
-        return f"Error querying stock: {e}"
+    except Exception:
+        logger.exception(f"Supabase check_stock error for '{model_name}'")
+        return json.dumps({"status": "error", "model": model_name}, ensure_ascii=False)
 
 def web_search_tool(query: str) -> str:
-    logger.info(f"Performing web search for query: {query}")
+    logger.info(f"Web search: '{query}'")
     try:
-        response = tavily.search(query=query, max_results=3,search_depth="advanced")
+        response = tavily.search(query=query, max_results=3, search_depth="advanced")
+        results = response.get("results", [])
+        logger.info(f"Web search returned {len(results)} results")
 
         context = "ผลลัพธ์การค้นหาเว็บ:\n"
-        for result in response['results']:
+        for result in results:
             context += f"- {result['title']}: {result['content']}\n"
         return context
-    except Exception as e:
-        logger.error(f"Error during web search: {e}")
-        return "❌ เกิดข้อผิดพลาดในการค้นหาเว็บ"
+    except Exception:
+        logger.exception("Web search failed")
+        return "เกิดข้อผิดพลาดในการค้นหาเว็บ"
 tools_schema = [
     {
         "type": "function",
@@ -149,7 +162,7 @@ tools_schema = [
 def check_tool_call_in_text(content: str, tool_calls: List) -> Optional[List]:
     """Check for tool call in text content and extract JSON arguments"""
     if not tool_calls and content and "<tool_call>" in content:
-        logger.warning("Detected text-based tool call")
+        logger.warning("Detected text-based tool call (model did not use native tool calling)")
         
         pattern = r'<tool_call>(.*?)ground'
         match = re.search(pattern, content, re.DOTALL)
@@ -158,8 +171,9 @@ def check_tool_call_in_text(content: str, tool_calls: List) -> Optional[List]:
             json_str = match.group(1).strip()
             try:
                 tool_data = json.loads(json_str)
+                logger.info(f"Parsed text-based tool call: {tool_data.get('name', 'unknown')}")
                 
-                #Mock Data for OpenAI tool call structure
+                # Mock Data for OpenAI tool call structure
                 class FakeToolCall:
                     def __init__(self, name, args):
                         self.id = "call_fake_123"
@@ -171,6 +185,6 @@ def check_tool_call_in_text(content: str, tool_calls: List) -> Optional[List]:
 
                 return [FakeToolCall(tool_data["name"], tool_data["arguments"])]
                 
-            except Exception as e:
-                logger.error(f"Error parsing tool call: {e}")
+            except Exception:
+                logger.exception("Failed to parse text-based tool call")
     return None

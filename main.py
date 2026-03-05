@@ -3,20 +3,20 @@ import json
 import os
 import asyncio
 import re
+import uuid
+import time
 from typing import List, Dict, Any
 
 from dotenv import load_dotenv
 load_dotenv()
 
 import uvicorn
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
+from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 from openai import OpenAI
 
-
-
-from lib.logger import logger
-
+from lib.logger import logger, request_id_ctx
 from lib.tools import lightrag_tool, check_stock_logic, tools_schema, check_tool_call_in_text, web_search_tool
 
 
@@ -37,8 +37,39 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# Global RAG instance
-# rag = None
+
+# ── Request-ID & Logging Middleware ──────────────────────────
+@app.middleware("http")
+async def request_logging_middleware(request: Request, call_next):
+    rid = request.headers.get("X-Request-ID", uuid.uuid4().hex[:12])
+    request_id_ctx.set(rid)
+
+    start = time.perf_counter()
+    logger.info(f"{request.method} {request.url.path} started")
+
+    try:
+        response = await call_next(request)
+    except Exception:
+        logger.exception("Unhandled exception during request")
+        response = JSONResponse(status_code=500, content={"detail": "Internal Server Error"})
+
+    elapsed_ms = (time.perf_counter() - start) * 1000
+    logger.info(
+        f"{request.method} {request.url.path} -> {response.status_code} ({elapsed_ms:.0f}ms)"
+    )
+    response.headers["X-Request-ID"] = rid
+    return response
+
+
+# ── Lifecycle events ─────────────────────────────────────────
+@app.on_event("startup")
+async def on_startup():
+    logger.info("Winner Bike API started")
+
+
+@app.on_event("shutdown")
+async def on_shutdown():
+    logger.info("Winner Bike API shutting down")
 
 # ============================================
 # Class Definitions
@@ -146,7 +177,6 @@ async def run_chat(query: RunChatRequest) -> Dict[str, str]:
 
     chat_history = create_chat_history(query.chat_history)
 
-    logger.info(f"Chat history:\n{chat_history}")
     
     
     messages = [{"role": "system", "content": system_prompt}]
